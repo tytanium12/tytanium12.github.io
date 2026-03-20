@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TowleVision TikTok Callback</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+    code, pre {
+      background: #f4f4f4;
+      padding: 4px 6px;
+      border-radius: 4px;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      padding: 12px;
+    }
+    .ok { color: #0a7a2f; }
+    .err { color: #b00020; }
+    button {
+      padding: 10px 14px;
+      cursor: pointer;
+      margin-right: 8px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>TikTok authorization received</h1>
+  <p id="status">Reading callback parameters...</p>
+
+  <div id="success" style="display:none;">
+    <p class="ok"><strong>Authorization code received.</strong></p>
+    <p>Copy the values below into your local TowleVision auth flow if needed.</p>
+
+    <h3>Code</h3>
+    <pre id="codeBox"></pre>
+
+    <h3>State</h3>
+    <pre id="stateBox"></pre>
+
+    <button id="copyCodeBtn">Copy code</button>
+    <button id="copyStateBtn">Copy state</button>
+  </div>
+
+  <div id="error" style="display:none;">
+    <p class="err"><strong>TikTok returned an error.</strong></p>
+    <h3>Error</h3>
+    <pre id="errorBox"></pre>
+    <h3>Error Description</h3>
+    <pre id="errorDescBox"></pre>
+  </div>
+
+  <hr />
+  <p>
+    This page is only a static callback receiver for development.
+    Token exchange should happen in your local/backend TowleVision code, not on GitHub Pages.
+  </p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const code = params.get("code") || "";
+    const state = params.get("state") || "";
+    const error = params.get("error") || "";
+    const errorDescription = params.get("error_description") || "";
+
+    const statusEl = document.getElementById("status");
+    const successEl = document.getElementById("success");
+    const errorEl = document.getElementById("error");
+
+    if (error) {
+      statusEl.textContent = "TikTok returned an error.";
+      errorEl.style.display = "block";
+      document.getElementById("errorBox").textContent = error;
+      document.getElementById("errorDescBox").textContent = errorDescription || "(none)";
+    } else if (code) {
+      statusEl.textContent = "TikTok authorization code received successfully.";
+      successEl.style.display = "block";
+      document.getElementById("codeBox").textContent = code;
+      document.getElementById("stateBox").textContent = state || "(none)";
+    } else {
+      statusEl.textContent = "No authorization code or error parameter was found in the URL.";
+    }
+
+    document.getElementById("copyCodeBtn").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(code);
+        alert("Code copied.");
+      } catch {
+        alert("Could not copy code automatically.");
+      }
+    });
+
+    document.getElementById("copyStateBtn").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(state);
+        alert("State copied.");
+      } catch {
+        alert("Could not copy state automatically.");
+      }
+    });
+  </script>
+</body>
+</html>
