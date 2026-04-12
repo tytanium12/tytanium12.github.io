@@ -391,6 +391,42 @@
       margin-bottom: 1rem;
     }
 
+    .proof-stack {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .proof-image-block {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      padding: 0.8rem;
+    }
+
+    .proof-image-block img {
+      margin-bottom: 0.65rem;
+    }
+
+    .proof-image-label {
+      display: inline-block;
+      margin-bottom: 0.35rem;
+      padding: 0.28rem 0.58rem;
+      border-radius: 999px;
+      border: 1px solid rgba(88, 196, 221, 0.22);
+      background: rgba(88, 196, 221, 0.08);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .proof-image-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
     .proof-card h3,
     .project-card h3 {
       margin-bottom: 0.55rem;
@@ -554,7 +590,7 @@
   <main class="page">
     <header class="hero" id="top">
       <div>
-        <div class="eyebrow">Tyrell Towle, PhD • Employer-facing portfolio homepage</div>
+        <div class="eyebrow">Tyrell Towle, PhD • Portfolio Homepage</div>
 
         <h1>TowleVision</h1>
 
@@ -734,14 +770,34 @@
 
       <div class="proof-grid">
         <article class="proof-card">
-          <img
-            src="/assets/images/caption fidelity shot2.png"
-            alt="TowleVision frame showing polished caption rendering with punctuation fidelity"
-          />
-          <h3>Caption fidelity and presentation quality</h3>
+          <div class="proof-stack">
+            <div class="proof-image-block">
+              <img
+                src="/assets/images/caption fidelity shot2.png"
+                alt="TowleVision frame showing polished caption rendering with punctuation fidelity in one caption style"
+              />
+              <div class="proof-image-label">Caption style 1</div>
+              <p class="proof-image-note">
+                Serif presentation with strong punctuation handling, clean line breaks, and visually integrated captions.
+              </p>
+            </div>
+
+            <div class="proof-image-block">
+              <img
+                src="/assets/images/caption fidelity shot.png"
+                alt="TowleVision frame showing an alternate caption style with emphasized highlighted text"
+              />
+              <div class="proof-image-label">Caption style 2</div>
+              <p class="proof-image-note">
+                Alternate caption styling for emphasis-heavy moments while preserving readability and polished presentation.
+              </p>
+            </div>
+          </div>
+
+          <h3>Caption fidelity across styles</h3>
           <p>
-            Captioning is treated as a first-class system concern. The platform supports readable, visually integrated
-            captions with strong handling of punctuation, line breaking, and presentation quality.
+            Captioning is treated as a first-class system concern. TowleVision supports multiple polished caption styles
+            while maintaining punctuation fidelity, readable line breaking, and presentation quality across different output contexts.
           </p>
         </article>
 
@@ -886,7 +942,7 @@
     </section>
 
     <footer>
-      © 2026 TowleVision Insight Lab • Employer-facing homepage for flagship engineering portfolio work.
+      © 2026 TowleVision Insight Lab • Homepage for flagship engineering portfolio work.
     </footer>
   </main>
 </body>
