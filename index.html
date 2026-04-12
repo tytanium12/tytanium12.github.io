@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>TowleVision Insight Lab | AI-Powered Python Automation Platform | Tyrell Towle, PhD</title>
+  <title>TowleVision Insight Lab | Flagship Engineering Portfolio | Tyrell Towle, PhD</title>
 
   <meta
     name="description"
-    content="TowleVision Insight Lab is the flagship portfolio project of Tyrell Towle, PhD: a large, modular, AI-powered Python automation platform spanning narration, captioning, story planning, image generation, video assembly, social clips, metadata, and publishing workflows."
+    content="TowleVision Insight Lab is the flagship engineering portfolio project of Tyrell Towle, PhD: a large, modular, AI-powered Python automation platform spanning narration, captioning, story planning, image generation, video assembly, social clips, metadata, and publishing workflows."
   />
 
   <meta name="author" content="Tyrell Towle, PhD" />
@@ -199,7 +199,7 @@
       font-size: clamp(1.08rem, 2vw, 1.45rem);
       color: #d9e7f7;
       font-weight: 600;
-      max-width: 46rem;
+      max-width: 44rem;
       margin: 0 0 1rem;
     }
 
@@ -209,14 +209,16 @@
     .feature-card p,
     .project-card p,
     .contact-card p,
-    .small-note {
+    .small-note,
+    .proof-image-note,
+    .hero-visual-caption {
       color: var(--muted);
       margin: 0;
     }
 
     .hero-copy {
-      max-width: 52rem;
-      font-size: 1.02rem;
+      max-width: 49rem;
+      font-size: 1rem;
     }
 
     .hero-actions {
@@ -224,6 +226,23 @@
       flex-wrap: wrap;
       gap: 0.85rem;
       margin-top: 1.5rem;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.95rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-links a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .hero-links a:hover {
+      color: var(--text);
     }
 
     .button,
@@ -276,11 +295,25 @@
 
     .hero-visual-label {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
+      flex-direction: column;
+      gap: 0.18rem;
+      align-items: flex-start;
       margin-top: 0.85rem;
-      color: var(--muted);
+    }
+
+    .hero-visual-kicker {
+      display: inline-block;
+      padding: 0.28rem 0.58rem;
+      border-radius: 999px;
+      border: 1px solid rgba(127, 228, 176, 0.22);
+      background: rgba(127, 228, 176, 0.08);
+      color: var(--accent-2);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-visual-caption {
       font-size: 0.92rem;
     }
 
@@ -423,13 +456,6 @@
 
     .proof-image-note {
       font-size: 0.9rem;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .proof-card h3,
-    .project-card h3 {
-      margin-bottom: 0.55rem;
     }
 
     .project-grid {
@@ -590,28 +616,29 @@
   <main class="page">
     <header class="hero" id="top">
       <div>
-        <div class="eyebrow">Tyrell Towle, PhD • Portfolio Homepage</div>
+        <div class="eyebrow">Tyrell Towle, PhD • Flagship Engineering Portfolio Homepage</div>
 
         <h1>TowleVision</h1>
 
         <p class="hero-subtitle">
-          A large, modular, AI-powered Python automation platform built to orchestrate
-          end-to-end multimodal workflows.
+          A large, modular, AI-powered Python automation platform built to orchestrate end-to-end multimodal workflows.
         </p>
 
         <p class="hero-copy">
-          TowleVision is my flagship engineering portfolio project. It demonstrates modular
-          Python architecture, applied AI orchestration, workflow automation, configuration-driven
-          systems design, and product thinking across a complete pipeline from text intake through
-          narration, captions, story planning, image generation, video assembly, social clip generation,
-          metadata, and publishing-oriented workflows.
+          TowleVision is my flagship engineering project. It demonstrates modular Python architecture,
+          applied AI orchestration, workflow automation, and product thinking across a complete pipeline
+          from text intake through narration, captions, planning, image generation, final assembly,
+          social clips, metadata, and publishing-oriented workflows.
         </p>
 
         <div class="hero-actions">
           <a class="button" href="https://github.com/tytanium12" target="_blank" rel="noopener noreferrer">View GitHub</a>
-          <a class="button-secondary" href="#projects">See selected outputs</a>
+          <a class="button-secondary" href="#projects">See selected projects</a>
           <a class="button-secondary" href="mailto:doctortowle@gmail.com">Email</a>
-          <a class="button-secondary" href="art.html">Archived studio page</a>
+        </div>
+
+        <div class="hero-links">
+          <a href="art.html">View archived studio page</a>
         </div>
       </div>
 
@@ -621,8 +648,8 @@
           alt="TowleVision flagship visual showing a cinematic ship scene"
         />
         <div class="hero-visual-label">
-          <span>Flagship output still</span>
-          <span>The Snow Queen • Long-form pipeline showcase</span>
+          <div class="hero-visual-kicker">Flagship output</div>
+          <p class="hero-visual-caption">The Snow Queen • long-form pipeline showcase</p>
         </div>
       </div>
     </header>
@@ -669,8 +696,8 @@
 
       <p class="section-intro">
         TowleVision is presented here as a serious flagship engineering project rather than a creative hobby.
-        The outputs matter, but the deeper value is the system behind them: a large Python platform that coordinates
-        dependent stages, integrates multiple AI capabilities, and turns raw input into polished deliverables.
+        The outputs matter, but the deeper value is the system behind them: a large Python platform that
+        coordinates dependent stages, integrates multiple AI capabilities, and turns raw input into polished deliverables.
       </p>
 
       <div class="grid grid-3">
@@ -744,17 +771,16 @@
           <h3>Why it matters beyond media</h3>
           <p>
             The transferable value here is not limited to video. TowleVision shows how I approach complex technical
-            systems: define the workflow, modularize the stages, integrate AI where it adds leverage, maintain coherence
-            across the pipeline, and keep the outputs usable and polished.
+            systems: define the workflow, modularize the stages, integrate AI where it adds leverage, maintain
+            coherence across the pipeline, and keep the outputs usable and polished.
           </p>
         </article>
 
         <article class="feature-card request-only">
-          <h3>Technical materials available upon request</h3>
+          <h3>Additional technical materials available upon request</h3>
           <p>
             I maintain a private technical appendix for deeper review, including a polished pipeline diagram,
-            a metrics one-pager, and a repo / CLI proof snapshot. These materials are intentionally not embedded
-            publicly on the site.
+            a metrics summary, and a curated repo snapshot.
           </p>
         </article>
       </div>
@@ -764,8 +790,8 @@
       <h2>Visible proof of polish and implementation depth</h2>
 
       <p class="section-intro">
-        These examples are included to show that the system does not stop at orchestration on paper. It produces polished,
-        readable, format-aware outputs with attention to caption fidelity, presentation, and multi-format adaptation.
+        These examples show that the platform produces polished, readable, format-aware outputs with attention
+        to caption fidelity, presentation, and multi-format adaptation.
       </p>
 
       <div class="proof-grid">
@@ -816,11 +842,11 @@
     </section>
 
     <section id="projects">
-      <h2>Selected outputs and supporting projects</h2>
+      <h2>Selected projects</h2>
 
       <p class="section-intro">
-        The projects below are presented as evidence of the platform’s real-world execution, not just as creative samples.
-        Together they show system depth, output quality, and broader technical range.
+        These projects are presented as evidence of real system execution, not just as creative samples.
+        Together they show platform depth, output quality, and broader technical range.
       </p>
 
       <div class="project-grid">
@@ -944,9 +970,9 @@
       <div class="contact-card">
         <div>
           <p>
-            I am using TowleVision Insight Lab as the centerpiece of my portfolio for remote Python, applied AI,
+            I use TowleVision Insight Lab as the centerpiece of my portfolio for remote Python, applied AI,
             automation, workflow systems, scientific software, and pharma-adjacent roles. The best way to evaluate
-            my work is through this platform overview, the selected outputs above, and my GitHub.
+            my work is through this platform overview, the selected projects above, and my GitHub.
           </p>
 
           <ul class="contact-list">
@@ -977,7 +1003,7 @@
     </section>
 
     <footer>
-      © 2026 TowleVision Insight Lab • Homepage for flagship engineering portfolio work.
+      © 2026 TowleVision Insight Lab • Engineering portfolio page for flagship systems and applied AI work.
     </footer>
   </main>
 </body>
