@@ -590,6 +590,42 @@
       line-height: 1.25;
     }
 
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .video-card {
+      background: linear-gradient(180deg, rgba(21, 39, 63, 0.94), rgba(16, 29, 47, 0.98));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+      box-shadow: var(--shadow);
+    }
+
+    .video-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .video-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin: 0.75rem 0 0;
+    }
+
+    .clip-video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.22);
+      object-fit: cover;
+      display: block;
+    }
+
     .step-list,
     .package-list {
       margin: 0;
@@ -681,6 +717,7 @@
       .grid-3,
       .stats,
       .demo-grid,
+      .video-grid,
       .price-card,
       .credibility-grid {
         grid-template-columns: 1fr 1fr;
@@ -719,6 +756,7 @@
       .stats,
       .offer-summary,
       .demo-grid,
+      .video-grid,
       .price-card,
       .credibility-grid {
         grid-template-columns: 1fr;
@@ -797,8 +835,8 @@
 
       <div class="offer-panel">
         <img
-          src="assets/images/short form screen with TV logo.png"
-          alt="Vertical TowleVision social clip example with captions and branding"
+          src="assets/images/services/tv-shorts-services-screenshot.png"
+          alt="TowleVision Shorts Pack example showing captioned vertical video text that says perfect for social media"
         />
         <div class="offer-summary">
           <div class="summary-item">
@@ -857,35 +895,54 @@
       <h2>See It In Action</h2>
 
       <p class="section-intro">
-        Example clips are being prepared from a TowleVision Shorts Pack demonstration video.
-        The finished examples will show the same kind of captioned vertical clips customers receive.
+        These sample clips were created from one TowleVision Shorts Pack source video using the same
+        workflow offered to clients.
       </p>
 
-      <div class="demo-grid" aria-label="Sample package preview">
-        <article class="demo-card">
-          <span>Clip 1</span>
-          <p>One Video, Five Social Clips</p>
+      <div class="video-grid" aria-label="TowleVision Shorts Pack sample clips">
+        <article class="video-card">
+          <h3>One Video, Many Social Clips</h3>
+          <video controls preload="metadata" class="clip-video">
+            <source src="assets/video/shorts-pack/short_05_turn_one_finished_video_into_many_short_towlevision_insight_lab_TowleVision.mp4" type="video/mp4" />
+          </video>
+          <p>A finished video can become multiple useful short-form clips for social media.</p>
         </article>
 
-        <article class="demo-card">
-          <span>Clip 2</span>
-          <p>What the Shorts Pack Includes</p>
+        <article class="video-card">
+          <h3>What the Shorts Pack Includes</h3>
+          <video controls preload="metadata" class="clip-video">
+            <source src="assets/video/shorts-pack/short_01_turn_your_long_form_content_into_reusable_towlevision_insight_lab_TowleVision.mp4" type="video/mp4" />
+          </video>
+          <p>The package includes captioned clips, suggested titles, descriptions, hashtags, timestamps, and delivery notes.</p>
         </article>
 
-        <article class="demo-card">
-          <span>Clip 3</span>
-          <p>Who the Shorts Pack Is For</p>
+        <article class="video-card">
+          <h3>How the Process Works</h3>
+          <video controls preload="metadata" class="clip-video">
+            <source src="assets/video/shorts-pack/short_03_turn_your_finished_video_into_ready_to_post_towlevision_insight_lab_TowleVision.mp4" type="video/mp4" />
+          </video>
+          <p>Send your finished video and notes; TowleVision formats, captions, and packages the clips.</p>
         </article>
 
-        <article class="demo-card">
-          <span>Clip 4</span>
-          <p>How the Process Works</p>
+        <article class="video-card">
+          <h3>Turn Existing Video Into Shareable Clips</h3>
+          <video controls preload="metadata" class="clip-video">
+            <source src="assets/video/shorts-pack/short_02_turn_your_long_videos_into_practical_short_towlevision_insight_lab_TowleVision.mp4" type="video/mp4" />
+          </video>
+          <p>Useful long-form material becomes practical short-form assets that are easier to post and share.</p>
         </article>
 
-        <article class="demo-card">
-          <span>Clip 5</span>
-          <p>A Simple Way to Repurpose Video</p>
+        <article class="video-card">
+          <h3>Focused, Not a Full Agency</h3>
+          <video controls preload="metadata" class="clip-video">
+            <source src="assets/video/shorts-pack/short_04_turn_existing_video_into_clean_short_form_towlevision_insight_lab_TowleVision.mp4" type="video/mp4" />
+          </video>
+          <p>A repeatable clip-and-caption service built for creators, educators, and businesses.</p>
         </article>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button-secondary" href="services/shorts-pack.html#demo">Watch the Full Source Demo</a>
       </div>
     </section>
 
