@@ -221,6 +221,20 @@
       font-size: 1rem;
     }
 
+    .hero-title-link {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .hero-title-link:hover,
+    .hero-title-link:focus {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: rgba(88, 196, 221, 0.55);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.12em;
+    }
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
@@ -808,7 +822,13 @@
         <div class="eyebrow">Featured Service</div>
         <div class="project-tag">TowleVision Shorts Pack</div>
 
-        <h1>Turn One Video Into Five Captioned Social Clips</h1>
+        <h1>
+          <a
+            class="hero-title-link"
+            href="services/shorts-pack.html"
+            aria-label="View the full TowleVision Shorts Pack service page"
+          >Turn One Video Into Five Captioned Social Clips</a>
+        </h1>
 
         <p class="hero-subtitle">
           TowleVision turns your finished video into polished vertical clips with readable captions,
@@ -823,12 +843,12 @@
         <div class="hero-actions">
           <!-- Swap #contact for Stripe/Tally links when launch links are ready. -->
           <a class="button" href="#contact">Order the Shorts Pack</a>
+          <a class="button-secondary" href="services/shorts-pack.html">View Full Service Details</a>
           <a class="button-secondary" href="#demo">See Example Clips</a>
           <a class="button-secondary" href="mailto:contact@towlevision.com">Ask a Question</a>
         </div>
 
         <div class="hero-links">
-          <a href="services/shorts-pack.html">View full service details</a>
           <a href="engineering_portfolio.html">See the engineering portfolio</a>
         </div>
       </div>
@@ -942,7 +962,7 @@
       </div>
 
       <div class="hero-actions">
-        <a class="button-secondary" href="services/shorts-pack.html#demo">Watch the Full Source Demo</a>
+        <a class="button-secondary" href="services/shorts-pack.html#demo">Watch Full Source Demo</a>
       </div>
     </section>
 
@@ -1073,6 +1093,7 @@
           <div class="hero-actions">
             <!-- Swap #contact for Stripe/Tally links when launch links are ready. -->
             <a class="button" href="#contact">Order the Shorts Pack</a>
+            <a class="button-secondary" href="services/shorts-pack.html">View Full Service Details</a>
             <a class="button-secondary" href="#contact">Start Your Shorts Pack</a>
           </div>
         </div>
@@ -1233,6 +1254,7 @@
           <div class="hero-actions" style="margin-top: 1rem;">
             <!-- Swap #contact for Stripe/Tally links when launch links are ready. -->
             <a class="button" href="#contact">Order the Shorts Pack</a>
+            <a class="button-secondary" href="services/shorts-pack.html">View Full Service Details</a>
             <a class="button-secondary" href="#contact">Start Your Shorts Pack</a>
             <a class="button-secondary" href="mailto:contact@towlevision.com">Ask a Question</a>
           </div>
