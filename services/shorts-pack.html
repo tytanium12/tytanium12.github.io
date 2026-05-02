@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TowleVision Shorts Pack | Service Details</title>
+
+  <meta
+    name="description"
+    content="TowleVision Shorts Pack turns one finished video into five captioned vertical social clips with suggested titles, descriptions, hashtags, timestamps, and organized ZIP delivery."
+  />
+
+  <meta name="author" content="Tyrell Towle, PhD" />
+
+  <style>
+    :root {
+      --bg: #071321;
+      --bg-2: #0d1b2c;
+      --panel: rgba(16, 29, 47, 0.92);
+      --panel-2: rgba(21, 39, 63, 0.96);
+      --line: rgba(120, 167, 214, 0.22);
+      --text: #e8eff8;
+      --muted: #a7b8cb;
+      --accent: #58c4dd;
+      --accent-2: #7fe4b0;
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.32);
+      --radius: 20px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(88, 196, 221, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(127, 228, 176, 0.08), transparent 22%),
+        linear-gradient(180deg, #071321 0%, #09192a 100%);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #82dced;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+      padding: 1.25rem 0 4.5rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.3rem 0 1.1rem;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7, 19, 33, 0.88), rgba(7, 19, 33, 0.72));
+      border-bottom: 1px solid rgba(120, 167, 214, 0.08);
+    }
+
+    .nav-inner {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .brand:hover {
+      color: var(--text);
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-size: 1rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 3rem 0 2rem;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.42rem 0.82rem;
+      border-radius: 999px;
+      border: 1px solid rgba(88, 196, 221, 0.24);
+      background: rgba(88, 196, 221, 0.08);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.85rem;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      max-width: 12ch;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.08rem, 2vw, 1.45rem);
+      color: #d9e7f7;
+      font-weight: 600;
+      max-width: 44rem;
+      margin: 0 0 1rem;
+    }
+
+    p,
+    .section-intro,
+    .card p,
+    .fine-print {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .section-intro {
+      max-width: 48rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.84rem 1.1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .button:hover,
+    .button-secondary:hover {
+      transform: translateY(-1px);
+    }
+
+    .button {
+      background: linear-gradient(135deg, var(--accent), #4ba8f0);
+      color: #071321;
+      box-shadow: var(--shadow);
+    }
+
+    .button:hover {
+      color: #071321;
+    }
+
+    .button-secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    section {
+      padding-top: 4.5rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card,
+    .hero-panel {
+      background: linear-gradient(180deg, rgba(21, 39, 63, 0.94), rgba(16, 29, 47, 0.98));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel img {
+      width: 100%;
+      border-radius: 16px;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      max-height: 580px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .card ul {
+      margin: 0.85rem 0 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+    }
+
+    .card li + li {
+      margin-top: 0.38rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.78rem;
+      border-radius: 999px;
+      border: 1px solid rgba(127, 228, 176, 0.2);
+      background: rgba(127, 228, 176, 0.08);
+      color: #dff8e9;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .price {
+      font-size: clamp(3rem, 7vw, 5.4rem);
+      line-height: 0.95;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .demo-card {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      background:
+        linear-gradient(180deg, rgba(88, 196, 221, 0.05), rgba(16, 29, 47, 0.98)),
+        radial-gradient(circle at top, rgba(127, 228, 176, 0.14), transparent 34%);
+      box-shadow: var(--shadow);
+    }
+
+    .demo-card span {
+      color: var(--accent-2);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.5rem;
+    }
+
+    .demo-card p {
+      color: var(--text);
+      font-weight: 750;
+      margin: 0;
+      line-height: 1.25;
+    }
+
+    footer {
+      margin-top: 4.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(120, 167, 214, 0.14);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 1040px) {
+      .hero,
+      .grid-2,
+      .grid-3,
+      .demo-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 1.2rem, var(--max-width));
+      }
+
+      .nav {
+        position: static;
+      }
+
+      .nav-inner {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero,
+      .grid-2,
+      .grid-3,
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: 100%;
+      }
+
+      .brand-subtitle {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">
+        <img
+          src="../assets/images/towlevision-insight-lab-logo.png"
+          alt="TowleVision logo"
+          class="brand-logo"
+        />
+        <span class="brand-text">
+          <span class="brand-title">TowleVision</span>
+          <span class="brand-subtitle">Captioned short-form video packages</span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="shorts-pack.html">Shorts Pack</a>
+        <a href="../engineering_portfolio.html">Engineering Portfolio</a>
+        <a href="../art.html">Art / Studio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="hero" id="top">
+      <div>
+        <div class="eyebrow">TowleVision Shorts Pack</div>
+
+        <h1>Turn One Video Into Five Captioned Social Clips</h1>
+
+        <p class="hero-subtitle">
+          A focused, fixed-scope package for turning one finished video into polished
+          vertical clips with readable captions and practical posting support.
+        </p>
+
+        <p>
+          Send one finished source video up to 15 minutes long and receive five captioned
+          vertical MP4 clips, suggested titles, descriptions, hashtags, timestamps, and
+          customer-facing delivery notes.
+        </p>
+
+        <div class="hero-actions">
+          <!-- Swap #contact for Stripe/Tally links when launch links are ready. -->
+          <a class="button" href="#contact">Order the Shorts Pack</a>
+          <a class="button-secondary" href="#contact">Start Your Shorts Pack</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <img
+          src="../assets/images/short form screen with TV logo.png"
+          alt="Vertical TowleVision social clip example with captions and branding"
+        />
+      </div>
+    </header>
+
+    <section id="get">
+      <h2>What you get</h2>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Clip package</h3>
+          <ul>
+            <li>5 captioned vertical MP4 clips</li>
+            <li>1080x1920 social-video format</li>
+            <li>Burned-in readable captions with word highlighting</li>
+            <li>Source timestamp and duration for each clip</li>
+            <li>One light revision pass</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Posting support</h3>
+          <ul>
+            <li>Suggested title for each clip</li>
+            <li>Suggested description for each clip</li>
+            <li>Suggested hashtags for each clip</li>
+            <li>Customer-facing delivery notes</li>
+            <li>Organized ZIP delivery package</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2>How it works</h2>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>1. Submit your video</h3>
+          <p>
+            Provide one finished video, confirm you own or have permission to use it,
+            and share the audience, tone, project name, and any useful notes.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>2. TowleVision prepares the clips</h3>
+          <p>
+            Strong moments are selected, formatted vertically, captioned for readability,
+            and paired with practical metadata for posting.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>3. You receive the package</h3>
+          <p>
+            Your delivery package includes five captioned vertical MP4 clips, a metadata
+            sheet with suggested titles/descriptions/hashtags, and delivery notes.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="send">
+      <h2>What you send</h2>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Required</h3>
+          <ul>
+            <li>One finished source video</li>
+            <li>Confirmation that you own or have permission to use the content</li>
+            <li>Project or business name</li>
+            <li>Target audience</li>
+            <li>Preferred tone</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Optional but helpful</h3>
+          <ul>
+            <li>Must-use timestamps</li>
+            <li>Moments to avoid</li>
+            <li>Names or terms that must be spelled correctly</li>
+            <li>Logo, website, or social handle</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="receive">
+      <h2>What you receive</h2>
+
+      <article class="card">
+        <h3>A clean ZIP package</h3>
+        <ul>
+          <li><strong>clips/</strong> with five final MP4 files</li>
+          <li><strong>metadata/shorts_metadata.txt</strong> with suggested titles, descriptions, hashtags, and timestamps</li>
+          <li><strong>notes/delivery_notes.txt</strong> with simple delivery notes</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="fit">
+      <h2>Best fit</h2>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Customers</h3>
+          <div class="chip-row">
+            <span class="chip">Educators</span>
+            <span class="chip">Authors</span>
+            <span class="chip">Podcasters</span>
+            <span class="chip">Course creators</span>
+            <span class="chip">Speakers</span>
+            <span class="chip">Small businesses</span>
+            <span class="chip">Coaches</span>
+            <span class="chip">Consultants</span>
+            <span class="chip">Storytelling channels</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Source videos</h3>
+          <div class="chip-row">
+            <span class="chip">Lessons</span>
+            <span class="chip">Interviews</span>
+            <span class="chip">Webinars</span>
+            <span class="chip">Podcast segments</span>
+            <span class="chip">Author videos</span>
+            <span class="chip">Course modules</span>
+            <span class="chip">Lectures</span>
+            <span class="chip">Talks</span>
+            <span class="chip">Business explainers</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="not-included">
+      <h2>Not included</h2>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Outside this package</h3>
+          <ul>
+            <li>Full source-video editing</li>
+            <li>Custom logo animation</li>
+            <li>Custom motion graphics</li>
+            <li>Full brand design</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Also not included</h3>
+          <ul>
+            <li>Platform posting or account management</li>
+            <li>Guaranteed views or viral performance</li>
+            <li>Unlimited revisions</li>
+            <li>Heavy custom agency work</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="revision">
+      <h2>Revision policy</h2>
+
+      <article class="card">
+        <p>
+          One light revision pass is included. A light revision may include caption typo
+          corrections, title/description/hashtag tweaks, or replacing one clip if a selected
+          moment is clearly unsuitable. Large re-edits, new source videos, custom motion
+          graphics, or complete clip reselection may require a new order or custom quote.
+        </p>
+      </article>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+
+      <article class="card">
+        <div class="price">$249</div>
+        <p class="fine-print">
+          Introductory launch price: $249. Available while the Shorts Pack service is being introduced.
+          Typical delivery in 2-3 business days. Covers one finished source video up to 15 minutes long.
+        </p>
+
+        <div class="hero-actions">
+          <!-- Swap #contact for Stripe/Tally links when launch links are ready. -->
+          <a class="button" href="#contact">Order the Shorts Pack</a>
+          <a class="button-secondary" href="#contact">Start Your Shorts Pack</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="demo">
+      <h2>See It In Action</h2>
+
+      <p class="section-intro">
+        Example clips are being prepared from a TowleVision Shorts Pack demonstration video.
+        The finished examples will show the same kind of captioned vertical clips customers receive.
+      </p>
+
+      <div class="demo-grid">
+        <article class="demo-card"><span>Clip 1</span><p>One Video, Five Social Clips</p></article>
+        <article class="demo-card"><span>Clip 2</span><p>What the Shorts Pack Includes</p></article>
+        <article class="demo-card"><span>Clip 3</span><p>Who the Shorts Pack Is For</p></article>
+        <article class="demo-card"><span>Clip 4</span><p>How the Process Works</p></article>
+        <article class="demo-card"><span>Clip 5</span><p>A Simple Way to Repurpose Video</p></article>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Can I send more than one video?</h3>
+          <p>
+            This package covers one finished source video. Multiple videos can be handled as
+            separate orders or quoted separately.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Do you post the clips for me?</h3>
+          <p>
+            No. The package provides final clips and suggested posting metadata; account
+            management and posting are not included.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>What if I need custom graphics?</h3>
+          <p>
+            Custom motion graphics and full brand design are outside the fixed package and
+            may require a custom quote.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>What makes a good source video?</h3>
+          <p>
+            Clear speech, useful standalone moments, and a focused audience make the best
+            short-form source material.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Ready to Order?</h2>
+
+      <article class="card">
+        <h3>Ready to turn one video into five captioned clips?</h3>
+        <p>
+          Have a finished video you want to repurpose? Start with the Shorts Pack, or send
+          a question before ordering.
+        </p>
+
+        <div class="hero-actions">
+          <!-- Swap #contact for Stripe/Tally links when launch links are ready. -->
+          <a class="button" href="#contact">Order the Shorts Pack</a>
+          <a class="button-secondary" href="#contact">Start Your Shorts Pack</a>
+          <a class="button-secondary" href="mailto:contact@towlevision.com">Ask a Question</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      &copy; 2026 TowleVision. Commercial video repurposing, captioned clips, and supporting technical studio work.
+    </footer>
+  </main>
+</body>
+</html>
