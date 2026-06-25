@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBKT28ZZRS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QBKT28ZZRS');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TowleVision Policies | Production Services</title>
+
+  <meta
+    name="description"
+    content="TowleVision production service policies for submitted materials, delivery, revisions, file retention, AI training, third-party services, and performance outcomes."
+  />
+
+  <meta name="author" content="Tyrell Towle, PhD" />
+
+  <style>
+    :root {
+      --bg: #071321;
+      --line: rgba(120, 167, 214, 0.22);
+      --text: #e8eff8;
+      --muted: #a7b8cb;
+      --accent: #58c4dd;
+      --accent-2: #7fe4b0;
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.32);
+      --radius: 20px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(88, 196, 221, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(127, 228, 176, 0.08), transparent 22%),
+        linear-gradient(180deg, #071321 0%, #09192a 100%);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #82dced;
+    }
+
+    .page {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+      padding: 1.25rem 0 4.5rem;
+    }
+
+    .nav {
+      padding: 0.3rem 0 1.1rem;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7, 19, 33, 0.88), rgba(7, 19, 33, 0.72));
+      border-bottom: 1px solid rgba(120, 167, 214, 0.08);
+    }
+
+    .nav-inner {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .brand:hover {
+      color: var(--text);
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-size: 1rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 3rem 0 2rem;
+      max-width: 56rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.42rem 0.82rem;
+      border-radius: 999px;
+      border: 1px solid rgba(88, 196, 221, 0.24);
+      background: rgba(88, 196, 221, 0.08);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.85rem;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p,
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.08rem, 2vw, 1.45rem);
+      color: #d9e7f7;
+      font-weight: 600;
+      margin: 0 0 1rem;
+    }
+
+    section {
+      padding-top: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(21, 39, 63, 0.94), rgba(16, 29, 47, 0.98));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card ul {
+      margin: 0.85rem 0 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+    }
+
+    .card li + li {
+      margin-top: 0.38rem;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.84rem 1.1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      background: linear-gradient(135deg, var(--accent), #4ba8f0);
+      color: #071321;
+      box-shadow: var(--shadow);
+    }
+
+    .button:hover {
+      color: #071321;
+    }
+
+    .button-secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+      margin-left: 0.75rem;
+    }
+
+    footer {
+      margin-top: 4.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(120, 167, 214, 0.14);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 1.2rem, var(--max-width));
+      }
+
+      .nav {
+        position: static;
+      }
+
+      .nav-inner {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-subtitle {
+        white-space: normal;
+      }
+
+      .button-secondary {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img
+          src="assets/images/towlevision-insight-lab-logo.png"
+          alt="TowleVision logo"
+          class="brand-logo"
+        />
+        <span class="brand-text">
+          <span class="brand-title">TowleVision</span>
+          <span class="brand-subtitle">Production service policies</span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="store.html">Store</a>
+        <a href="services/shorts-pack.html">Shorts Pack</a>
+        <a href="mailto:contact@towlevision.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="hero" id="top">
+      <div class="eyebrow">TowleVision Policies</div>
+      <h1>Practical production service policies</h1>
+      <p class="hero-subtitle">
+        A concise overview of ownership, delivery, revisions, retention, third-party services, and outcome expectations.
+      </p>
+      <p>
+        These policies apply to TowleVision production services unless a written project quote states otherwise.
+      </p>
+      <a class="button" href="mailto:contact@towlevision.com">Ask a Question</a>
+      <a class="button-secondary" href="store.html">Back to Store</a>
+    </header>
+
+    <section>
+      <h2>Customer Materials</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Ownership and permission</h3>
+          <p>
+            Customers must own or have permission to use submitted videos, scripts, audio, music, images,
+            logos, names, and other materials provided for a project.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Third-party services</h3>
+          <p>
+            Files may pass through upload, payment, email, or cloud-storage services used to receive and
+            deliver the project.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Delivery and Revisions</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Delivery</h3>
+          <p>
+            Delivery is usually provided through a private download link. Customers should download and
+            back up delivered files promptly.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Revision pass</h3>
+          <p>
+            One light revision pass is included when stated in the service or quote. The Shorts Pack revision
+            window is 7 days after delivery.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>File Retention and AI Training</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>File retention</h3>
+          <p>
+            TowleVision deletes source, working, and delivery files from active storage after the stated
+            revision window.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>AI training</h3>
+          <p>
+            TowleVision does not use customer videos or project files to train AI models.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Outcome Limits</h2>
+      <article class="card">
+        <h3>No performance guarantee</h3>
+        <p>
+          TowleVision does not guarantee views, viral performance, platform acceptance, or business outcomes.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      &copy; 2026 TowleVision. Questions: <a href="mailto:contact@towlevision.com">contact@towlevision.com</a>.
+    </footer>
+  </main>
+</body>
+</html>
