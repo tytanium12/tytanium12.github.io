@@ -13,11 +13,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>TowleVision Examples | Production Demonstrations</title>
+  <title>Contact TowleVision | Project Questions and Service Requests</title>
 
   <meta
     name="description"
-    content="A growing library of TowleVision examples showing captioned clips, visual explainers, narrated media, production workflows, and studio platform work."
+    content="Contact TowleVision for Shorts Pack orders, production service questions, collaboration ideas, demos, and custom media project requests."
   />
 
   <meta name="author" content="Tyrell Towle, PhD" />
@@ -157,8 +157,7 @@
       max-width: 62rem;
     }
 
-    .eyebrow,
-    .category-label {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
       padding: 0.42rem 0.82rem;
@@ -171,12 +170,6 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 1rem;
-    }
-
-    .category-label {
-      color: var(--accent-2);
-      border-color: rgba(127, 228, 176, 0.22);
-      background: rgba(127, 228, 176, 0.08);
     }
 
     h1, h2, h3 {
@@ -210,7 +203,7 @@
       font-size: clamp(1.08rem, 2vw, 1.45rem);
       color: #d9e7f7;
       font-weight: 600;
-      max-width: 54rem;
+      max-width: 52rem;
       margin: 0 0 1rem;
     }
 
@@ -265,8 +258,15 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .card {
@@ -275,6 +275,27 @@
       border-radius: var(--radius);
       padding: 1.25rem;
       box-shadow: var(--shadow);
+    }
+
+    .card ul {
+      margin: 0.85rem 0 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+    }
+
+    .card li + li {
+      margin-top: 0.38rem;
+    }
+
+    .email-display {
+      display: inline-flex;
+      margin-top: 0.9rem;
+      padding: 0.65rem 0.85rem;
+      border-radius: 12px;
+      border: 1px solid rgba(127, 228, 176, 0.22);
+      background: rgba(127, 228, 176, 0.08);
+      color: #dff8e9;
+      font-weight: 800;
     }
 
     footer {
@@ -286,7 +307,7 @@
     }
 
     @media (max-width: 1040px) {
-      .grid {
+      .grid-3 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
@@ -310,7 +331,8 @@
         justify-content: flex-start;
       }
 
-      .grid {
+      .grid-2,
+      .grid-3 {
         grid-template-columns: 1fr;
       }
 
@@ -336,7 +358,7 @@
         />
         <span class="brand-text">
           <span class="brand-title">TowleVision</span>
-          <span class="brand-subtitle">Production examples</span>
+          <span class="brand-subtitle">Contact and project intake</span>
         </span>
       </a>
 
@@ -353,157 +375,119 @@
 
   <main class="page">
     <header class="hero" id="top">
-      <div class="eyebrow">Production Proof</div>
-      <h1>TowleVision Examples</h1>
+      <div class="eyebrow">Contact</div>
+      <h1>Contact TowleVision</h1>
       <p class="hero-subtitle">
-        A growing library of demonstrations showing how TowleVision turns source material
-        into captioned clips, visual explainers, narrated media, and production-ready assets.
+        Have a project, question, collaboration idea, or service request? Start here.
       </p>
       <p>
-        Some areas include finished demos now; others are example categories that will grow
-        as more public work is prepared.
+        Choose the path that best matches your project. The Shorts Pack has a dedicated intake form;
+        quote-based services start with a brief project note.
       </p>
-      <div class="hero-actions">
-        <a class="button" href="store.html">Explore Services</a>
-        <a class="button-secondary" href="services/shorts-pack.html">Start with the Shorts Pack</a>
-        <a class="button-secondary" href="contact.html">Discuss a Custom Project</a>
-      </div>
     </header>
 
     <section>
-      <h2>Example Library</h2>
-      <p class="section-intro">
-        These examples and demonstration areas show the current direction of TowleVision
-        production services and studio platform work.
-      </p>
-
-      <div class="grid">
+      <h2>Best Ways to Start</h2>
+      <div class="grid grid-3">
         <article class="card">
-          <div class="category-label">Demo available</div>
-          <h3>Shorts Pack Demo</h3>
+          <h3>Order the Shorts Pack</h3>
           <p>
-            One source video turned into five captioned vertical social clips.
+            If you have one finished source video and want five captioned vertical social clips,
+            start with the Shorts Pack intake form.
           </p>
           <div class="hero-actions">
-            <a class="button-secondary" href="services/shorts-pack.html#demo">View demo</a>
-            <a class="button-secondary" href="services/shorts-pack.html">Service details</a>
+            <a class="button" href="https://tally.so/r/pb47KJ" target="_blank" rel="noopener">Start Shorts Pack Intake</a>
           </div>
         </article>
 
         <article class="card">
-          <div class="category-label">Example category</div>
-          <h3>Captioned Social Clips</h3>
+          <h3>Ask About a Production Service</h3>
           <p>
-            Readable vertical clips with burned-in captions, word highlighting, and clean delivery.
+            For captioning, technical narration, audio cleanup, script-to-video, audio-to-video,
+            music-to-video, or custom production, send a brief project note.
           </p>
+          <p style="margin-top: 0.9rem;">
+            Email contact@towlevision.com with your project type, source material, target audience,
+            timeline, and any important constraints.
+          </p>
+          <a class="email-display" href="mailto:contact@towlevision.com">contact@towlevision.com</a>
           <div class="hero-actions">
-            <a class="button-secondary" href="services/shorts-pack.html">View service</a>
+            <a class="button-secondary" href="mailto:contact@towlevision.com">Open Email App</a>
           </div>
         </article>
 
         <article class="card">
-          <div class="category-label">Example category</div>
-          <h3>Technical Narration &amp; Captioning</h3>
+          <h3>Collaborate or Request a Demo</h3>
           <p>
-            Specialized content where terminology, pronunciation, acronyms, captions,
-            and spelling consistency matter.
+            If you are interested in TowleVision Studio as software, a demo, collaboration, early use,
+            or a presentation opportunity, describe the idea and what kind of collaboration you have in mind.
           </p>
           <div class="hero-actions">
-            <a class="button-secondary" href="services/technical-narration-captioning.html">View service</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Studio work</div>
-          <h3>Literary / Visual Audiobook Work</h3>
-          <p>
-            Visual storytelling and narrated literary projects created with TowleVision-style
-            production workflows.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="art.html">View studio page</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Technical foundation</div>
-          <h3>Engineering / Studio Platform</h3>
-          <p>
-            The technical portfolio behind TowleVision Studio and related software work.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="engineering_portfolio.html">View portfolio</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Custom direction</div>
-          <h3>Custom Production Possibilities</h3>
-          <p>
-            Scripts, audio, finished videos, music, visuals, captions, and media automation
-            can be combined into custom production workflows.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/custom-production.html">View custom production</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Production category</div>
-          <h3>Audio-to-Video</h3>
-          <p>
-            Finished narration, lectures, podcast segments, and audio essays can become captioned
-            videos with visuals.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/audio-to-video.html">View service</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Production category</div>
-          <h3>Script-to-Video</h3>
-          <p>
-            Finished or near-finished scripts can become narrated, captioned visual media
-            when the scope is a good fit.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/video-from-script.html">View service</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Production category</div>
-          <h3>Music-to-Video</h3>
-          <p>
-            Rights-cleared music can be shaped into visual videos with themed imagery,
-            pacing, and a defined delivery format.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/music-video.html">View service</a>
+            <a class="button-secondary" href="collaborate.html">Learn About Collaboration</a>
           </div>
         </article>
       </div>
     </section>
 
     <section>
-      <h2>Start With a Service</h2>
+      <h2>What to Include in Your Message</h2>
+      <article class="card">
+        <ul>
+          <li>Which service or project type you are asking about</li>
+          <li>What source material you already have</li>
+          <li>Desired output format</li>
+          <li>Target audience</li>
+          <li>Timeline</li>
+          <li>Any technical terms, names, captions, pronunciation, rights, or privacy concerns</li>
+          <li>A link to source material only if you are comfortable sharing it</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Email and Replies</h2>
       <article class="card">
         <p>
-          If you already have a finished video, the Shorts Pack is the simplest starting point.
-          If your project combines scripts, audio, captions, visuals, or unusual production needs,
-          a custom project conversation may be a better fit.
+          TowleVision's public contact email is
+          <a href="mailto:contact@towlevision.com">contact@towlevision.com</a>.
+        </p>
+        <p style="margin-top: 0.9rem;">
+          During the current MVP setup, replies may come from
+          <a href="mailto:contact@towlevision.com">contact@towlevision.com</a> or
+          <a href="mailto:towlevision@gmail.com">towlevision@gmail.com</a>. Please check spam or
+          promotions folders if you are expecting a reply.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Privacy / Data Note</h2>
+      <article class="card">
+        <p>
+          Please do not send confidential, sensitive, or private material unless you are comfortable
+          sharing it through your chosen upload, email, or cloud service. TowleVision does not use
+          customer videos or project files to train AI models.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Next Step</h2>
+      <article class="card">
+        <p>
+          Browse services, start the Shorts Pack intake, or review the practical service policies
+          before sending a project note.
         </p>
         <div class="hero-actions">
-          <a class="button" href="store.html">Explore Services</a>
-          <a class="button-secondary" href="services/shorts-pack.html">Start with the Shorts Pack</a>
-          <a class="button-secondary" href="contact.html">Discuss a Custom Project</a>
+          <a class="button" href="store.html">Browse Services</a>
+          <a class="button-secondary" href="https://tally.so/r/pb47KJ" target="_blank" rel="noopener">Start Shorts Pack Intake</a>
+          <a class="button-secondary" href="policies.html">Read Policies</a>
         </div>
       </article>
     </section>
 
     <footer>
-      &copy; 2026 TowleVision. A growing library of media production examples and demonstrations.
+      &copy; 2026 TowleVision. Contact and project intake for TowleVision production services.
     </footer>
   </main>
 </body>
