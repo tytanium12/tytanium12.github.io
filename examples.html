@@ -13,11 +13,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Audio Cleanup for Speech | TowleVision</title>
+  <title>TowleVision Examples | Production Demonstrations</title>
 
   <meta
     name="description"
-    content="TowleVision speech-focused audio cleanup for voiceovers, lessons, podcasts, interviews, and narration, with noise reduction, volume leveling, and clarity-focused review."
+    content="A growing library of TowleVision examples showing captioned clips, visual explainers, narrated media, production workflows, and studio platform work."
   />
 
   <meta name="author" content="Tyrell Towle, PhD" />
@@ -25,6 +25,7 @@
   <style>
     :root {
       --bg: #071321;
+      --panel: rgba(16, 29, 47, 0.92);
       --line: rgba(120, 167, 214, 0.22);
       --text: #e8eff8;
       --muted: #a7b8cb;
@@ -70,6 +71,10 @@
     }
 
     .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
       padding: 0.3rem 0 1.1rem;
       position: sticky;
       top: 0;
@@ -149,13 +154,11 @@
 
     .hero {
       padding: 3rem 0 2rem;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 2rem;
-      align-items: start;
+      max-width: 62rem;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .category-label {
       display: inline-flex;
       align-items: center;
       padding: 0.42rem 0.82rem;
@@ -168,6 +171,12 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 1rem;
+    }
+
+    .category-label {
+      color: var(--accent-2);
+      border-color: rgba(127, 228, 176, 0.22);
+      background: rgba(127, 228, 176, 0.08);
     }
 
     h1, h2, h3 {
@@ -201,7 +210,7 @@
       font-size: clamp(1.08rem, 2vw, 1.45rem);
       color: #d9e7f7;
       font-weight: 600;
-      max-width: 46rem;
+      max-width: 54rem;
       margin: 0 0 1rem;
     }
 
@@ -250,39 +259,22 @@
     }
 
     .section-intro {
-      max-width: 50rem;
+      max-width: 52rem;
       margin-bottom: 1.3rem;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
 
-    .card,
-    .hero-panel {
+    .card {
       background: linear-gradient(180deg, rgba(21, 39, 63, 0.94), rgba(16, 29, 47, 0.98));
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 1.25rem;
       box-shadow: var(--shadow);
-    }
-
-    .hero-panel {
-      border-color: rgba(127, 228, 176, 0.24);
-    }
-
-    .card ul,
-    .hero-panel ul {
-      margin: 0.85rem 0 0;
-      padding-left: 1.15rem;
-      color: var(--muted);
-    }
-
-    .card li + li,
-    .hero-panel li + li {
-      margin-top: 0.38rem;
     }
 
     footer {
@@ -291,6 +283,12 @@
       border-top: 1px solid rgba(120, 167, 214, 0.14);
       color: var(--muted);
       font-size: 0.92rem;
+    }
+
+    @media (max-width: 1040px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 760px) {
@@ -312,7 +310,6 @@
         justify-content: flex-start;
       }
 
-      .hero,
       .grid {
         grid-template-columns: 1fr;
       }
@@ -331,24 +328,24 @@
 <body>
   <nav class="nav" aria-label="Primary navigation">
     <div class="nav-inner">
-      <a class="brand" href="../index.html">
+      <a class="brand" href="index.html">
         <img
-          src="../assets/images/towlevision-insight-lab-logo.png"
+          src="assets/images/towlevision-insight-lab-logo.png"
           alt="TowleVision logo"
           class="brand-logo"
         />
         <span class="brand-text">
           <span class="brand-title">TowleVision</span>
-          <span class="brand-subtitle">Speech audio cleanup</span>
+          <span class="brand-subtitle">Production examples</span>
         </span>
       </a>
 
       <div class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="../store.html">Store</a>
-        <a href="shorts-pack.html">Shorts Pack</a>
-        <a href="../examples.html">Examples</a>
-        <a href="../collaborate.html">Collaborate</a>
+        <a href="index.html">Home</a>
+        <a href="store.html">Store</a>
+        <a href="services/shorts-pack.html">Shorts Pack</a>
+        <a href="examples.html">Examples</a>
+        <a href="collaborate.html">Collaborate</a>
         <a href="mailto:contact@towlevision.com">Contact</a>
       </div>
     </div>
@@ -356,82 +353,121 @@
 
   <main class="page">
     <header class="hero" id="top">
-      <div>
-        <div class="eyebrow">Audio Cleanup for Speech</div>
-        <h1>Cleaner speech audio for finished media</h1>
-        <p class="hero-subtitle">
-          Speech-focused cleanup for voiceovers, lessons, podcasts, interviews, explainers, and narration.
-        </p>
-        <p>
-          This service focuses on practical improvements such as noise reduction, volume leveling,
-          and clarity-focused cleanup after a quote-based review of the recording.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="mailto:contact@towlevision.com">Request Audio Cleanup</a>
-          <a class="button-secondary" href="../store.html">Back to Store</a>
-        </div>
+      <div class="eyebrow">Production Proof</div>
+      <h1>TowleVision Examples</h1>
+      <p class="hero-subtitle">
+        A growing library of demonstrations showing how TowleVision turns source material
+        into captioned clips, visual explainers, narrated media, and production-ready assets.
+      </p>
+      <p>
+        Some areas include finished demos now; others are example categories that will grow
+        as more public work is prepared.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="store.html">Explore Services</a>
+        <a class="button-secondary" href="services/shorts-pack.html">Start with the Shorts Pack</a>
+        <a class="button-secondary" href="mailto:contact@towlevision.com">Discuss a Custom Project</a>
       </div>
-
-      <aside class="hero-panel">
-        <h2>Good fit</h2>
-        <ul>
-          <li>Voiceovers and narration</li>
-          <li>Lessons, podcasts, and interviews</li>
-          <li>Speech that needs leveling or light cleanup</li>
-          <li>Projects that need export-ready audio when project fit allows</li>
-        </ul>
-      </aside>
     </header>
 
     <section>
-      <h2>What the service focuses on</h2>
+      <h2>Example Library</h2>
+      <p class="section-intro">
+        These examples and demonstration areas show the current direction of TowleVision
+        production services and studio platform work.
+      </p>
+
       <div class="grid">
         <article class="card">
-          <h3>Noise reduction</h3>
+          <div class="category-label">Demo available</div>
+          <h3>Shorts Pack Demo</h3>
           <p>
-            Light background noise can often be reduced so speech is easier to follow.
+            One source video turned into five captioned vertical social clips.
           </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="services/shorts-pack.html#demo">View demo</a>
+            <a class="button-secondary" href="services/shorts-pack.html">Service details</a>
+          </div>
         </article>
 
         <article class="card">
-          <h3>Volume leveling</h3>
+          <div class="category-label">Example category</div>
+          <h3>Captioned Social Clips</h3>
           <p>
-            Speech volume can be made more consistent across a recording or across related clips.
+            Readable vertical clips with burned-in captions, word highlighting, and clean delivery.
           </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="services/shorts-pack.html">View service</a>
+          </div>
         </article>
 
         <article class="card">
-          <h3>Clarity-focused cleanup</h3>
+          <div class="category-label">Example category</div>
+          <h3>Technical Narration &amp; Captioning</h3>
           <p>
-            Cleanup decisions are made to support speech intelligibility and delivery, not to over-process the voice.
+            Specialized content where terminology, pronunciation, acronyms, captions,
+            and spelling consistency matter.
           </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="services/technical-narration-captioning.html">View service</a>
+          </div>
         </article>
 
         <article class="card">
-          <h3>Quote-based review</h3>
+          <div class="category-label">Studio work</div>
+          <h3>Literary / Visual Audiobook Work</h3>
           <p>
-            Some recordings are limited by the original capture. The file is reviewed before scope is confirmed.
+            Visual storytelling and narrated literary projects created with TowleVision-style
+            production workflows.
           </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="art.html">View studio page</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="category-label">Technical foundation</div>
+          <h3>Engineering / Studio Platform</h3>
+          <p>
+            The technical portfolio behind TowleVision Studio and related software work.
+          </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="engineering_portfolio.html">View portfolio</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="category-label">Custom direction</div>
+          <h3>Custom Production Possibilities</h3>
+          <p>
+            Scripts, audio, finished videos, music, visuals, captions, and media automation
+            can be combined into custom production workflows.
+          </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="services/custom-production.html">View custom production</a>
+          </div>
         </article>
       </div>
     </section>
 
     <section>
-      <h2>What to send</h2>
+      <h2>Start With a Service</h2>
       <article class="card">
         <p>
-          Send a short description of the audio, approximate length, recording type, target use,
-          and the main problems you hear.
+          If you already have a finished video, the Shorts Pack is the simplest starting point.
+          If your project combines scripts, audio, captions, visuals, or unusual production needs,
+          a custom project conversation may be a better fit.
         </p>
         <div class="hero-actions">
-          <a class="button" href="mailto:contact@towlevision.com">Request Audio Cleanup</a>
-          <a class="button-secondary" href="../policies.html">Read policies</a>
+          <a class="button" href="store.html">Explore Services</a>
+          <a class="button-secondary" href="services/shorts-pack.html">Start with the Shorts Pack</a>
+          <a class="button-secondary" href="mailto:contact@towlevision.com">Discuss a Custom Project</a>
         </div>
       </article>
     </section>
 
     <footer>
-      &copy; 2026 TowleVision. Questions: <a href="mailto:contact@towlevision.com">contact@towlevision.com</a>.
+      &copy; 2026 TowleVision. A growing library of media production examples and demonstrations.
     </footer>
   </main>
 </body>
