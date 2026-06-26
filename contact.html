@@ -223,6 +223,8 @@
       padding: 0.84rem 1.1rem;
       border-radius: 12px;
       font-weight: 700;
+      font: inherit;
+      cursor: pointer;
       transition: transform 0.15s ease, border-color 0.15s ease;
     }
 
@@ -232,6 +234,7 @@
     }
 
     .button {
+      border: 0;
       background: linear-gradient(135deg, var(--accent), #4ba8f0);
       color: #071321;
       box-shadow: var(--shadow);
@@ -296,6 +299,13 @@
       background: rgba(127, 228, 176, 0.08);
       color: #dff8e9;
       font-weight: 800;
+    }
+
+    .copy-status {
+      min-height: 1.5rem;
+      margin-top: 0.65rem;
+      color: var(--accent-2);
+      font-weight: 700;
     }
 
     footer {
@@ -410,10 +420,17 @@
             Email contact@towlevision.com with your project type, source material, target audience,
             timeline, and any important constraints.
           </p>
-          <a class="email-display" href="mailto:contact@towlevision.com">contact@towlevision.com</a>
+          <span class="email-display">contact@towlevision.com</span>
           <div class="hero-actions">
+            <button
+              class="button"
+              type="button"
+              id="copy-email-button"
+              data-email="contact@towlevision.com"
+            >Copy Email Address</button>
             <a class="button-secondary" href="mailto:contact@towlevision.com">Open Email App</a>
           </div>
+          <p class="copy-status" id="copy-email-status" aria-live="polite"></p>
         </article>
 
         <article class="card">
@@ -490,5 +507,55 @@
       &copy; 2026 TowleVision. Contact and project intake for TowleVision production services.
     </footer>
   </main>
+  <script>
+    (function () {
+      var button = document.getElementById("copy-email-button");
+      var status = document.getElementById("copy-email-status");
+
+      if (!button || !status) {
+        return;
+      }
+
+      function setStatus(message) {
+        status.textContent = message;
+      }
+
+      function copyWithTextarea(text) {
+        var textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.top = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+
+        try {
+          document.execCommand("copy");
+          setStatus("Copied " + text);
+        } catch (error) {
+          setStatus("Copy failed. The email address is visible above.");
+        } finally {
+          document.body.removeChild(textarea);
+        }
+      }
+
+      button.addEventListener("click", function () {
+        var email = button.getAttribute("data-email") || "contact@towlevision.com";
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email)
+            .then(function () {
+              setStatus("Copied " + email);
+            })
+            .catch(function () {
+              copyWithTextarea(email);
+            });
+          return;
+        }
+
+        copyWithTextarea(email);
+      });
+    }());
+  </script>
 </body>
 </html>
