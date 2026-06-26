@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBKT28ZZRS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QBKT28ZZRS');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Custom TowleVision Production | TowleVision</title>
+
+  <meta
+    name="description"
+    content="Custom TowleVision production for projects combining scripts, audio, captions, video, images, and media automation."
+  />
+
+  <meta name="author" content="Tyrell Towle, PhD" />
+
+  <style>
+    :root {
+      --bg: #071321;
+      --line: rgba(120, 167, 214, 0.22);
+      --text: #e8eff8;
+      --muted: #a7b8cb;
+      --accent: #58c4dd;
+      --accent-2: #7fe4b0;
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.32);
+      --radius: 20px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(88, 196, 221, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(127, 228, 176, 0.08), transparent 22%),
+        linear-gradient(180deg, #071321 0%, #09192a 100%);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #82dced;
+    }
+
+    .page {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+      padding: 1.25rem 0 4.5rem;
+    }
+
+    .nav {
+      padding: 0.3rem 0 1.1rem;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7, 19, 33, 0.88), rgba(7, 19, 33, 0.72));
+      border-bottom: 1px solid rgba(120, 167, 214, 0.08);
+    }
+
+    .nav-inner {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .brand:hover {
+      color: var(--text);
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-size: 1rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 3rem 0 2rem;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.42rem 0.82rem;
+      border-radius: 999px;
+      border: 1px solid rgba(88, 196, 221, 0.24);
+      background: rgba(88, 196, 221, 0.08);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.85rem;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      max-width: 12ch;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p,
+    .section-intro,
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.08rem, 2vw, 1.45rem);
+      color: #d9e7f7;
+      font-weight: 600;
+      max-width: 46rem;
+      margin: 0 0 1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.84rem 1.1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .button:hover,
+    .button-secondary:hover {
+      transform: translateY(-1px);
+    }
+
+    .button {
+      background: linear-gradient(135deg, var(--accent), #4ba8f0);
+      color: #071321;
+      box-shadow: var(--shadow);
+    }
+
+    .button:hover {
+      color: #071321;
+    }
+
+    .button-secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    section {
+      padding-top: 4.5rem;
+    }
+
+    .section-intro {
+      max-width: 50rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card,
+    .hero-panel {
+      background: linear-gradient(180deg, rgba(21, 39, 63, 0.94), rgba(16, 29, 47, 0.98));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel {
+      border-color: rgba(127, 228, 176, 0.24);
+    }
+
+    .card ul,
+    .hero-panel ul {
+      margin: 0.85rem 0 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+    }
+
+    .card li + li,
+    .hero-panel li + li {
+      margin-top: 0.38rem;
+    }
+
+    footer {
+      margin-top: 4.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(120, 167, 214, 0.14);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 1.2rem, var(--max-width));
+      }
+
+      .nav {
+        position: static;
+      }
+
+      .nav-inner {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: 100%;
+      }
+
+      .brand-subtitle {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">
+        <img
+          src="../assets/images/towlevision-insight-lab-logo.png"
+          alt="TowleVision logo"
+          class="brand-logo"
+        />
+        <span class="brand-text">
+          <span class="brand-title">TowleVision</span>
+          <span class="brand-subtitle">Custom production service</span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../store.html">Store</a>
+        <a href="shorts-pack.html">Shorts Pack</a>
+        <a href="../examples.html">Examples</a>
+        <a href="../collaborate.html">Collaborate</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="hero" id="top">
+      <div>
+        <div class="eyebrow">Custom TowleVision Production</div>
+        <h1>Custom production for unusual media projects</h1>
+        <p class="hero-subtitle">
+          For projects that combine scripts, audio, captions, video, images, and media automation.
+        </p>
+        <p>
+          Custom production starts with a review before quote, so the project can be scoped around
+          real materials, constraints, timeline, and delivery needs.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="../contact.html">Discuss a Custom Project</a>
+          <a class="button-secondary" href="../store.html">Back to Store</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h2>Good fit</h2>
+        <ul>
+          <li>Educational, literary, technical, storytelling, and presentation media</li>
+          <li>Projects combining scripts, audio, captions, images, and video</li>
+          <li>Specialized projects that need review before pricing</li>
+          <li>Media automation when it supports a clear deliverable</li>
+        </ul>
+      </aside>
+    </header>
+
+    <section>
+      <h2>Common custom directions</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Educational and course media</h3>
+          <p>
+            Lessons, modules, explainers, and instructional material that need narration, captions,
+            visuals, or format adaptation.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Literary and storytelling media</h3>
+          <p>
+            Narrated stories, essays, excerpts, and presentation pieces that need visual pacing and polish.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Technical and presentation media</h3>
+          <p>
+            Product walkthroughs, training assets, research communication, and terminology-heavy presentation work.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Mixed-material projects</h3>
+          <p>
+            Projects that arrive with a mix of scripts, audio, video, images, notes, captions, or partial edits.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>What to send</h2>
+      <article class="card">
+        <p>
+          Send a concise project description, available materials, intended audience, desired length,
+          deadline if any, and the clearest example of what the finished piece should accomplish.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="../contact.html">Discuss a Custom Project</a>
+          <a class="button-secondary" href="../policies.html">Read policies</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      &copy; 2026 TowleVision. Questions: <a href="../contact.html">Contact TowleVision</a>.
+    </footer>
+  </main>
+</body>
+</html>
