@@ -620,6 +620,7 @@
         <a href="engineering_portfolio.html">Engineering Portfolio</a>
         <a href="art.html">Art / Studio</a>
         <a href="#overview">Overview</a>
+        <a href="#snapshot">Snapshot</a>
         <a href="#platform">Platform</a>
         <a href="#proof">Proof</a>
         <a href="#projects">Projects</a>
@@ -670,41 +671,76 @@
       </div>
     </header>
 
-    <section aria-label="TowleVision scale metrics">
+    <section id="snapshot" aria-label="June 2026 engineering snapshot">
+      <h2>June 2026 Engineering Snapshot</h2>
+
+      <p class="section-intro">
+        TowleVision_Codex baseline audit &mdash; June 2026. TowleVision is a local-first AI media
+        production platform built around structured project creation, narration, captioning,
+        image generation, video assembly, review, repair, metadata preparation, and publishing support.
+      </p>
+
       <div class="stats">
         <div class="stat">
-          <span class="stat-value">62,772</span>
-          <span class="stat-label">Python LOC</span>
+          <span class="stat-value">228k+</span>
+          <span class="stat-label">Strict source lines of code</span>
         </div>
         <div class="stat">
-          <span class="stat-value">169</span>
-          <span class="stat-label">Python files</span>
+          <span class="stat-value">254k+</span>
+          <span class="stat-label">Engineering-surface lines</span>
         </div>
         <div class="stat">
-          <span class="stat-value">150</span>
-          <span class="stat-label">Non-<code>__init__</code> Python modules</span>
+          <span class="stat-value">199k+</span>
+          <span class="stat-label">Python lines of code</span>
         </div>
         <div class="stat">
-          <span class="stat-value">11</span>
-          <span class="stat-label">Top-level core subsystems</span>
+          <span class="stat-value">18k+</span>
+          <span class="stat-label">JavaScript lines of code</span>
         </div>
         <div class="stat">
-          <span class="stat-value">34</span>
-          <span class="stat-label">Pipeline steps</span>
+          <span class="stat-value">23k+</span>
+          <span class="stat-label">Frontend lines across local browser tools</span>
         </div>
         <div class="stat">
-          <span class="stat-value">14</span>
-          <span class="stat-label">Distinct AI models</span>
+          <span class="stat-value">30k+</span>
+          <span class="stat-label">Test lines across 78 test files</span>
         </div>
         <div class="stat">
-          <span class="stat-value">15</span>
-          <span class="stat-label">AI implementations / integrations</span>
+          <span class="stat-value">8</span>
+          <span class="stat-label">Complete local browser app groups</span>
         </div>
         <div class="stat">
-          <span class="stat-value">End-to-end</span>
-          <span class="stat-label">Workflow from intake to publishing</span>
+          <span class="stat-value">9</span>
+          <span class="stat-label">Backend/server entrypoints</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">70</span>
+          <span class="stat-label">Registered workflow commands</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">2</span>
+          <span class="stat-label">Built-in Project Runner workflows</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">35</span>
+          <span class="stat-label">Config, schema, and preset files</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">June 2026</span>
+          <span class="stat-label">Baseline audit date</span>
         </div>
       </div>
+
+      <article class="card" style="margin-top: 1rem;">
+        <h3>Snapshot definition</h3>
+        <p>
+          These numbers come from a June 2026 baseline audit of the active TowleVision_Codex
+          development repository. Generated media, runtime project outputs, caches, dependencies,
+          and virtual environments were excluded from source-code counts. The strict LOC definition
+          is nonblank strict source LOC. The engineering-surface number includes broader source,
+          test, frontend, config, schema, preset, script, and documentation surface.
+        </p>
+      </article>
     </section>
 
     <section id="overview">
@@ -753,8 +789,9 @@
       <h2>Flagship platform</h2>
 
       <p class="section-intro">
-        The platform spans an end-to-end workflow from source text through finished long-form and short-form outputs.
-        It is designed around orchestration, modularity, and controlled transformation across many dependent stages.
+        The platform spans a structured workflow from source material through narrated,
+        captioned, image-based video production. It is designed around orchestration,
+        modularity, review, repair, and controlled transformation across many dependent stages.
       </p>
 
       <div class="grid grid-2">
@@ -767,7 +804,7 @@
             <li>Story planning and shot planning</li>
             <li>Image generation, review, and post-processing</li>
             <li>Video assembly and finalization</li>
-            <li>Social clip generation, metadata, and publishing workflows</li>
+            <li>Review, repair, metadata preparation, and publishing support</li>
           </ul>
         </article>
 
@@ -797,6 +834,67 @@
           <p>
             I maintain a private technical appendix for deeper review, including a polished pipeline diagram,
             a metrics summary, and a curated repo snapshot.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="engineering-different">
+      <h2>What Makes the Engineering Different</h2>
+
+      <p class="section-intro">
+        TowleVision treats AI output as editable production material, not a final one-shot result.
+        The system combines configurable presets, artifact tracking, guarded automation, and
+        human-in-the-loop review so media can be inspected, repaired, and rerun through defined paths.
+      </p>
+
+      <div class="grid grid-3">
+        <article class="feature-card">
+          <h3>Structured project packages</h3>
+          <p>
+            Projects are organized around source material, presets, generated artifacts,
+            review decisions, repair sessions, caption edits, metadata plans, and downstream rerun paths.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Local browser app groups</h3>
+          <p>
+            The platform includes Studio Home / Project Workspace, Project Creator and Editor,
+            Script Editor, Project Runner, Video Reviewer, Human Repair GUI, YouTube Upload Assistant,
+            and Music-to-Video Studio.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Registry-driven workflow architecture</h3>
+          <p>
+            Dozens of discrete workflow commands are registered and organized so project creation,
+            narration, captioning, image generation, assembly, review, and repair can be run deliberately.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Human-in-the-loop review</h3>
+          <p>
+            Review and repair layers support images, audio, captions, and final video review, keeping
+            human judgment in the workflow before deliverables are treated as finished.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Guarded publishing support</h3>
+          <p>
+            Upload planning and YouTube publishing support are guarded with dry-run and confirmation
+            safeguards, so publishing-related steps can be reviewed before action.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Serious platform direction</h3>
+          <p>
+            The June 2026 snapshot shows a working local-first platform direction with broad engineering
+            surface area, while still keeping production claims tied to validated workflows and human review.
           </p>
         </article>
       </div>
