@@ -80,6 +80,12 @@
       color: #82dced;
     }
 
+    a:focus-visible {
+      outline: 3px solid rgba(127, 228, 176, 0.75);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
     .page {
       width: min(100% - 2rem, var(--max-width));
       margin: 0 auto;
@@ -317,6 +323,82 @@
       padding-top: 1.1rem;
     }
 
+    .featured-offer {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(245px, 0.82fr);
+      gap: 1.35rem;
+      align-items: stretch;
+      margin-bottom: 1rem;
+      border-color: rgba(127, 228, 176, 0.38);
+      background:
+        linear-gradient(135deg, rgba(88, 196, 221, 0.12), transparent 38%),
+        linear-gradient(180deg, rgba(21, 39, 63, 0.97), rgba(16, 29, 47, 0.99));
+    }
+
+    .featured-offer h3 {
+      font-size: 2.15rem;
+      letter-spacing: 0;
+      max-width: 17ch;
+      margin-top: 0.75rem;
+    }
+
+    .featured-offer .offer-promise {
+      color: #d9e7f7;
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .featured-offer .feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.38rem 1rem;
+      margin-top: 1rem;
+    }
+
+    .featured-offer .feature-list li + li {
+      margin-top: 0;
+    }
+
+    .offer-sidebar {
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid rgba(120, 167, 214, 0.2);
+      padding-left: 1.25rem;
+    }
+
+    .price-label {
+      color: var(--accent-2);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .offer-price {
+      color: var(--text);
+      font-size: 3.6rem;
+      font-weight: 900;
+      line-height: 1;
+      margin: 0.45rem 0 0.55rem;
+    }
+
+    .scope-line {
+      color: var(--text);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .qualification {
+      border-top: 1px solid rgba(120, 167, 214, 0.18);
+      padding-top: 1rem;
+    }
+
+    .secondary-service-grid {
+      max-width: 36rem;
+      grid-template-columns: minmax(0, 1fr);
+    }
+
     .category-label {
       color: var(--accent-2);
       font-size: 0.8rem;
@@ -382,6 +464,21 @@
       .grid-3 {
         grid-template-columns: 1fr 1fr;
       }
+
+      .featured-offer {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-sidebar {
+        border-left: 0;
+        border-top: 1px solid rgba(120, 167, 214, 0.2);
+        padding-left: 0;
+        padding-top: 1.1rem;
+      }
+
+      .secondary-service-grid {
+        max-width: 100%;
+      }
     }
 
     @media (max-width: 760px) {
@@ -415,6 +512,22 @@
 
       .brand-subtitle {
         white-space: normal;
+      }
+
+      .featured-offer .feature-list {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-offer h3 {
+        font-size: 1.8rem;
+      }
+
+      .offer-price {
+        font-size: 3rem;
+      }
+
+      .featured-offer .hero-actions a {
+        width: 100%;
       }
     }
   </style>
@@ -541,10 +654,49 @@
     <section id="captioning-technical">
       <h2>Captioning &amp; Technical Media</h2>
       <p class="section-intro">
-        Captioning and narration support for projects where terminology, spelling, and review matter.
+        Captioning and narration support for projects where terminology, spelling,
+        scientific claims, and review matter.
       </p>
 
-      <div class="grid grid-2">
+      <article class="card service-card featured-offer" aria-labelledby="scientific-explainer-offer-title">
+        <div>
+          <span class="status">Featured service</span>
+          <h3 id="scientific-explainer-offer-title">Scientific Explainer Video</h3>
+          <p class="offer-promise">
+            Turn complex scientific or technical source material into a clear, credible,
+            professionally narrated video.
+          </p>
+          <p>
+            A complete publishing-ready package with careful script refinement,
+            specialized pronunciation preparation, relevant visuals, accurate captions,
+            a custom thumbnail, and suggested publishing metadata.
+          </p>
+          <ul class="feature-list">
+            <li>60-120 second finished explainer</li>
+            <li>Light technical script refinement</li>
+            <li>Formal script-approval checkpoint</li>
+            <li>Narration and specialized pronunciation preparation</li>
+            <li>Accurate captioned and clean video delivery</li>
+            <li>Custom thumbnail, title, and description</li>
+          </ul>
+        </div>
+
+        <div class="offer-sidebar">
+          <div class="price-label">Introductory launch price</div>
+          <div class="offer-price">$1,495</div>
+          <p class="scope-line">One standard 60-120 second scientific or technical explainer.</p>
+          <p class="qualification">
+            Research-intensive, longer, regulated, or unusually complex projects may
+            require a custom quote.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="services/scientific-explainer-video.html">View Service Details</a>
+            <a class="button-secondary" href="contact.html#scientific-explainer-review">Request a Project Review</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="grid secondary-service-grid">
         <article class="card service-card">
           <div class="category-label">Technical Narration &amp; Captioning</div>
           <span class="status">Request quote</span>
@@ -561,20 +713,6 @@
           <div class="hero-actions">
             <a class="button" href="contact.html">Request a Technical Media Quote</a>
             <a class="button-secondary" href="services/technical-narration-captioning.html">View details</a>
-          </div>
-        </article>
-
-        <article class="card service-card">
-          <div class="category-label">Scientific Explainer Video</div>
-          <span class="status">Project review</span>
-          <h3>Scientific Explainer Video</h3>
-          <p>
-            A complete 60-120 second technical explainer with careful script refinement,
-            specialized pronunciation, relevant visuals, accurate captions, and
-            publishing-ready delivery.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/scientific-explainer-video.html">View Service Details</a>
           </div>
         </article>
       </div>

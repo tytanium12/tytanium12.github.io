@@ -512,6 +512,33 @@
       letter-spacing: 0.07em;
     }
 
+    .service-testimonial {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(120, 167, 214, 0.18);
+    }
+
+    .service-testimonial-meta {
+      color: var(--accent-2);
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin: 0 0 0.55rem;
+      text-transform: uppercase;
+    }
+
+    .service-testimonial blockquote {
+      margin: 0;
+      color: #d9e7f7;
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    .service-testimonial-attribution {
+      color: var(--text);
+      font-weight: 700;
+      margin: 0.55rem 0 0;
+    }
+
     .project-image {
       width: 100%;
       border-radius: 16px;
@@ -975,14 +1002,20 @@
         </article>
 
         <article class="card">
-          <div class="project-tag">TowleVision production example available</div>
+          <div class="project-tag">Nutraberry client example available</div>
           <h3>Scientific Explainer Video</h3>
           <p>
             Turn complex scientific or technical source material into a clear 60-120 second
             narrated video with careful scripting, specialized pronunciation, accurate captions,
             relevant visuals, and publishing metadata.
           </p>
+          <div class="service-testimonial" aria-label="Nutraberry client testimonial excerpt">
+            <p class="service-testimonial-meta">Client testimonial - Shared with permission</p>
+            <blockquote>“Tyrell took a technically dense particle-engineering concept and turned it into a clear, accurate and visually compelling explainer.”</blockquote>
+            <p class="service-testimonial-attribution">David Wishnick, Nutraberry</p>
+          </div>
           <div class="hero-actions">
+            <a class="button-secondary" href="services/scientific-explainer-video.html#client-testimonial">Read the full testimonial</a>
             <a class="button-secondary" href="services/scientific-explainer-video.html">View Scientific Explainer Service</a>
           </div>
         </article>
