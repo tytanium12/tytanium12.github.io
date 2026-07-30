@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.towlevision.com/sitemap.xml
+Sitemap: https://towlevision.com/sitemap.xml
