@@ -37,6 +37,9 @@
   <meta name="twitter:image" content="https://www.towlevision.com/assets/images/social/towlevision-social-preview-v3.png" />
   <meta name="author" content="Tyrell Towle, PhD" />
 
+  <link rel="stylesheet" href="assets/css/media.css" />
+  <script defer src="assets/js/click-to-load-video.js"></script>
+
   <style>
     :root {
       --bg: #071321;
@@ -453,6 +456,136 @@
 
       <div class="hero-actions">
         <a class="button-secondary" href="engineering_portfolio.html#snapshot">View Engineering Snapshot</a>
+      </div>
+    </section>
+
+    <section id="inside-towlevision-studio">
+      <h2>Inside TowleVision Studio</h2>
+      <p class="section-intro">
+        TowleVision Studio is the working system behind the production services. These interface
+        views show how projects move from setup and presets through execution, review, and human repair.
+      </p>
+
+      <div class="studio-gallery" aria-label="TowleVision Studio interface gallery">
+        <article class="studio-card">
+          <a
+            class="studio-card__link"
+            href="assets/images/studio/studio-project-workspace.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Project Workspace"
+            data-lightbox-alt="TowleVision Studio project workspace interface"
+            data-lightbox-caption="Manage a production from source material through organized outputs and review steps."
+          >
+            <img class="studio-card__image" src="assets/images/studio/studio-project-workspace.webp" alt="TowleVision Studio project workspace interface" width="1568" height="1003" loading="lazy" decoding="async" />
+            <div class="studio-card__body"><h3>Project Workspace</h3><p>Manage a production from source material through organized outputs and review steps.</p></div>
+          </a>
+        </article>
+
+        <article class="studio-card">
+          <a
+            class="studio-card__link"
+            href="assets/images/studio/studio-project-editor-presets.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Editor Presets"
+            data-lightbox-alt="TowleVision Studio editor presets interface"
+            data-lightbox-caption="Configure project types and reusable production presets."
+          >
+            <img class="studio-card__image" src="assets/images/studio/studio-project-editor-presets.webp" alt="TowleVision Studio editor presets interface" width="1568" height="1003" loading="lazy" decoding="async" />
+            <div class="studio-card__body"><h3>Project Editor Presets</h3><p>Configure project types and reusable production presets.</p></div>
+          </a>
+        </article>
+
+        <article class="studio-card">
+          <a
+            class="studio-card__link"
+            href="assets/images/studio/studio-project-runner.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Runner"
+            data-lightbox-alt="TowleVision Studio project runner interface"
+            data-lightbox-caption="Run and monitor the production pipeline stage by stage."
+          >
+            <img class="studio-card__image" src="assets/images/studio/studio-project-runner.webp" alt="TowleVision Studio project runner interface" width="1568" height="1003" loading="lazy" decoding="async" />
+            <div class="studio-card__body"><h3>Project Runner</h3><p>Run and monitor the production pipeline stage by stage.</p></div>
+          </a>
+        </article>
+
+        <article class="studio-card">
+          <a
+            class="studio-card__link"
+            href="assets/images/studio/studio-image-reviewer.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Image Reviewer"
+            data-lightbox-alt="TowleVision Studio image reviewer interface"
+            data-lightbox-caption="Compare generated candidates and select the strongest visual."
+          >
+            <img class="studio-card__image" src="assets/images/studio/studio-image-reviewer.webp" alt="TowleVision Studio image reviewer interface" width="1568" height="1003" loading="lazy" decoding="async" />
+            <div class="studio-card__body"><h3>Image Reviewer</h3><p>Compare generated candidates and select the strongest visual.</p></div>
+          </a>
+        </article>
+
+        <article class="studio-card">
+          <a
+            class="studio-card__link"
+            href="assets/images/studio/studio-human-repair.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Human Repair"
+            data-lightbox-alt="TowleVision Studio human repair interface"
+            data-lightbox-caption="Reject an unsuitable generated result, describe what the scene actually needs, and apply a stronger replacement without restarting the production."
+          >
+            <img class="studio-card__image" src="assets/images/studio/studio-human-repair.webp" alt="TowleVision Studio human repair interface" width="1586" height="992" loading="lazy" decoding="async" />
+            <div class="studio-card__body"><h3>Human Repair</h3><p>Reject an unsuitable generated result, describe what the scene actually needs, and apply a stronger replacement without restarting the production.</p></div>
+          </a>
+        </article>
+
+        <article class="studio-card">
+          <a
+            class="studio-card__link"
+            href="assets/images/studio/studio-video-reviewer.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Video Reviewer"
+            data-lightbox-alt="TowleVision Studio video reviewer interface"
+            data-lightbox-caption="Review rendered scenes, captions, timing, and final production decisions."
+          >
+            <img class="studio-card__image" src="assets/images/studio/studio-video-reviewer.webp" alt="TowleVision Studio video reviewer interface" width="1586" height="992" loading="lazy" decoding="async" />
+            <div class="studio-card__body"><h3>Video Reviewer</h3><p>Review rendered scenes, captions, timing, and final production decisions.</p></div>
+          </a>
+        </article>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button" href="contact.html">Request a Studio Demo</a>
+      </div>
+
+      <div
+        class="media-lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="studio-lightbox-title"
+        aria-describedby="studio-lightbox-caption"
+        data-media-lightbox-dialog
+        hidden
+      >
+        <div class="media-lightbox__panel">
+          <div class="media-lightbox__header">
+            <h2 class="media-lightbox__title" id="studio-lightbox-title" data-media-lightbox-title>TowleVision Studio interface</h2>
+            <button class="media-lightbox__close" type="button" data-media-lightbox-close aria-label="Close image viewer">Close</button>
+          </div>
+          <img class="media-lightbox__image" src="assets/images/studio/studio-project-workspace.webp" alt="" data-media-lightbox-image />
+          <p class="media-lightbox__caption" id="studio-lightbox-caption" data-media-lightbox-caption></p>
+          <a class="media-lightbox__full" href="assets/images/studio/studio-project-workspace.webp" target="_blank" rel="noopener noreferrer" data-media-lightbox-full>Open full-size image</a>
+        </div>
       </div>
     </section>
 
