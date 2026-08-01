@@ -84,83 +84,6 @@
       padding: 1.25rem 0 4.5rem;
     }
 
-    .nav {
-      padding: 0.3rem 0 1.1rem;
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(7, 19, 33, 0.88), rgba(7, 19, 33, 0.72));
-      border-bottom: 1px solid rgba(120, 167, 214, 0.08);
-    }
-
-    .nav-inner {
-      width: min(100%, var(--max-width));
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0 1rem;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.85rem;
-      min-width: 0;
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .brand:hover {
-      color: var(--text);
-    }
-
-    .brand-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
-      flex: 0 0 auto;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-
-    .brand-title {
-      font-size: 1rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .brand-subtitle {
-      font-size: 0.8rem;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 1rem;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
 
     .hero {
       padding: 3rem 0 2rem;
@@ -313,19 +236,8 @@
         width: min(100% - 1.2rem, var(--max-width));
       }
 
-      .nav {
-        position: static;
-      }
 
-      .nav-inner {
-        padding: 0;
-        flex-direction: column;
-        align-items: flex-start;
-      }
 
-      .nav-links {
-        justify-content: flex-start;
-      }
 
       .hero,
       .grid {
@@ -336,41 +248,32 @@
         max-width: 100%;
       }
 
-      .brand-subtitle {
-        white-space: normal;
-      }
     }
   </style>
+  <link rel="stylesheet" href="../assets/css/media.css?v=20260801-header-shell" />
 </head>
 
 <body>
-  <nav class="nav" aria-label="Primary navigation">
-    <div class="nav-inner">
-      <a class="brand" href="../index.html">
-        <img
-          src="../assets/images/towlevision-insight-lab-logo.png"
-          alt="TowleVision logo"
-          class="brand-logo"
-          width="800"
-          height="800"
-        />
-        <span class="brand-text">
-          <span class="brand-title">TowleVision</span>
-          <span class="brand-subtitle">Speech audio cleanup</span>
+  <header class="tv-site-header">
+    <div class="tv-site-header__inner">
+      <a class="tv-site-brand" href="../index.html">
+        <img class="tv-site-brand__logo" src="../assets/images/towlevision-insight-lab-logo.png" alt="TowleVision logo" width="800" height="800" />
+        <span class="tv-site-brand__text">
+          <span class="tv-site-brand__title">TowleVision</span>
+          <span class="tv-site-brand__subtitle">Speech audio cleanup</span>
         </span>
       </a>
-
-      <div class="nav-links">
+      <nav class="tv-site-nav" aria-label="Primary navigation">
         <a href="../index.html">Home</a>
-        <a href="../store.html">Store</a>
+        <a href="../store.html" aria-current="page">Store</a>
         <a href="shorts-pack.html">Shorts Pack</a>
         <a href="coding-services.html">Software</a>
         <a href="../examples.html">Examples</a>
         <a href="../collaborate.html">Collaborate</a>
         <a href="../contact.html">Contact</a>
-      </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main class="page">
     <header class="hero" id="top">
