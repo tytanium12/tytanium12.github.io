@@ -447,8 +447,23 @@
       grid-template-columns: minmax(0, 52rem);
     }
 
+    .service-demo-subsection {
+      margin-top: clamp(2.75rem, 5vw, 4rem);
+      padding-top: clamp(1.75rem, 3vw, 2.5rem);
+      border-top: 1px solid rgba(120, 167, 214, 0.18);
+    }
+
+    .service-demo-subsection__intro {
+      max-width: 52rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-demo-subsection__intro h3 {
+      font-size: clamp(1.35rem, 2vw, 1.7rem);
+    }
+
     .service-demo-secondary {
-      justify-content: center;
+      justify-content: start;
     }
 
     .card p + p {
@@ -674,29 +689,34 @@
         </div>
       </article>
 
-      <div class="media-range-grid single-media service-demo-secondary">
-        <article class="media-card">
-          <div class="media-player media-player--16x9">
-            <a class="media-player__fallback" href="https://www.youtube.com/watch?v=suMkVMwrWK8" target="_blank" rel="noopener noreferrer">
-              <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="Illustrative syringe scene with a caption containing the term plutonium" width="1280" height="720" loading="lazy" decoding="async" />
-              <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch Scientific Terminology and Technical Captions on YouTube</span>
-            </a>
-            <button class="media-player__button" type="button" data-youtube-id="suMkVMwrWK8" data-youtube-title="TowleVision demonstration of scientific terminology and technical captions" aria-label="Load video: Scientific Terminology and Technical Captions">
-              <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="" width="1280" height="720" loading="lazy" decoding="async" />
-              <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Scientific Terminology and Technical Captions</span>
-            </button>
-          </div>
-          <div class="media-card__body">
-            <h3>Technical Narration and Captioning</h3>
-            <p>
-              This finished demonstration shows specialized terminology handled through careful
-              narration, readable caption timing, accurate spelling, and human review.
-            </p>
-            <div class="hero-actions">
-              <a class="button-secondary" href="services/technical-narration-captioning.html#technical-language-in-practice">View the Full Technical Media Demonstration</a>
+      <div class="service-demo-subsection" aria-labelledby="technical-narration-demo-title">
+        <div class="service-demo-subsection__intro">
+          <h3 id="technical-narration-demo-title">Technical Narration and Captioning</h3>
+          <p>
+            This finished demonstration shows specialized terminology handled through careful
+            narration, readable caption timing, accurate spelling, and human review.
+          </p>
+        </div>
+
+        <div class="media-range-grid single-media service-demo-secondary">
+          <article class="media-card" aria-labelledby="technical-narration-demo-title">
+            <div class="media-player media-player--16x9">
+              <a class="media-player__fallback" href="https://www.youtube.com/watch?v=suMkVMwrWK8" target="_blank" rel="noopener noreferrer">
+                <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="Illustrative syringe scene with a caption containing the term plutonium" width="1280" height="720" loading="lazy" decoding="async" />
+                <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch Scientific Terminology and Technical Captions on YouTube</span>
+              </a>
+              <button class="media-player__button" type="button" data-youtube-id="suMkVMwrWK8" data-youtube-title="TowleVision demonstration of scientific terminology and technical captions" aria-label="Load video: Scientific Terminology and Technical Captions">
+                <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="" width="1280" height="720" loading="lazy" decoding="async" />
+                <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Scientific Terminology and Technical Captions</span>
+              </button>
             </div>
-          </div>
-        </article>
+            <div class="media-card__body">
+              <div class="hero-actions">
+                <a class="button-secondary" href="services/technical-narration-captioning.html">View the Full Technical Media Demonstration</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
