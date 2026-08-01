@@ -34,171 +34,373 @@
   <meta name="twitter:image" content="https://towlevision.com/assets/images/social/towlevision-social-preview-v3.png" />
   <meta name="author" content="Tyrell Towle" />
 
+  <link rel="stylesheet" href="assets/css/media.css?v=20260801-portfolio-shell" />
+
   <style>
     :root {
-      --bg: #0b1a26;
-      --bg-soft: #102636;
-
-      --text: #d3dbe1;
-      --muted: #9fb0bb;
-
-      --accent: #2fa4a0;
-      --accent-soft: #1f7f7b;
-
-      --max-width: 720px;
+      --bg: #071321;
+      --bg-2: #0d1b2c;
+      --panel: rgba(16, 29, 47, 0.92);
+      --panel-2: rgba(21, 39, 63, 0.96);
+      --line: rgba(120, 167, 214, 0.22);
+      --text: #e8eff8;
+      --muted: #a7b8cb;
+      --accent: #58c4dd;
+      --accent-2: #7fe4b0;
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.32);
+      --radius: 20px;
+      --max-width: 1180px;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top left, rgba(88, 196, 221, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(127, 228, 176, 0.08), transparent 22%),
+        linear-gradient(180deg, #071321 0%, #09192a 100%);
       color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.75;
-      font-size: 17px;
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
     }
 
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 4.5rem 1.5rem 6rem;
-    }
-
-    header {
-      margin-bottom: 3.5rem;
-    }
-
-    .site-logo {
+    img {
+      max-width: 100%;
       display: block;
-      margin: 0 0 1.8rem 0;
-      width: 140px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: normal;
-      margin: 0 0 0.6rem;
-      letter-spacing: 0.02em;
-      color: var(--text);
-    }
-
-    h2 {
-      font-size: 1.7rem;
-      font-weight: normal;
-      margin: 4rem 0 1.4rem;
-      color: var(--text);
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      margin: 2.2rem 0 0.5rem;
-      color: var(--text);
-    }
-
-    p {
-      margin: 0 0 1.4rem;
-    }
-
-    .subtitle {
-      font-size: 1.15rem;
-      color: var(--muted);
-      margin-bottom: 1.4rem;
-    }
-
-    .byline {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .nav {
-      margin-top: 1.8rem;
-      font-size: 0.95rem;
-    }
-
-    .nav a {
-      display: inline-block;
-      margin-right: 1.4rem;
-      color: var(--muted);
-      text-decoration: none;
-      border-bottom: none;
-      white-space: nowrap;
-    }
-
-    .nav a:hover {
-      color: var(--accent);
-      border-bottom: 1px solid var(--accent);
-    }
-
-    .section {
-      margin-bottom: 4.5rem;
-    }
-
-    .work-item {
-      margin-bottom: 2.8rem;
-    }
-
-    .work-image {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 1.6rem 0 1.8rem;
-      border-radius: 2px;
     }
 
     a {
       color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid var(--accent);
     }
 
     a:hover {
-      color: var(--accent-soft);
-      border-bottom-color: var(--accent-soft);
+      color: #82dced;
     }
 
-    footer {
-      margin-top: 6rem;
-      font-size: 0.9rem;
+    .page {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+      padding: 1.25rem 0 4.5rem;
+    }
+
+    .creative-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 2rem;
+      align-items: center;
+      padding: 3rem 0 2rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.42rem 0.82rem;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(127, 228, 176, 0.24);
+      border-radius: 999px;
+      color: var(--accent-2);
+      background: rgba(127, 228, 176, 0.08);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 0.85rem;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .subtitle {
+      max-width: 44rem;
+      margin: 0 0 0.7rem;
+      color: #d9e7f7;
+      font-size: clamp(1.08rem, 2vw, 1.45rem);
+      font-weight: 600;
+    }
+
+    .byline {
       color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem 1rem;
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-links a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .hero-links a:hover {
+      color: var(--text);
+    }
+
+    .publishing-mark {
+      display: grid;
+      place-items: center;
+      gap: 0.85rem;
+      min-height: 260px;
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(127, 228, 176, 0.08), transparent 45%),
+        linear-gradient(180deg, rgba(21, 39, 63, 0.8), rgba(16, 29, 47, 0.96));
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .publishing-mark img {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .publishing-mark__label {
+      color: var(--accent-2);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .publishing-mark p,
+    .section-intro,
+    .work-item p,
+    .editorial-section p,
+    .contact-card p {
+      color: var(--muted);
+    }
+
+    section {
+      padding-top: 4.5rem;
+    }
+
+    .creative-intro {
+      max-width: 54rem;
+    }
+
+    .creative-intro p + p,
+    .editorial-section p + p {
+      margin-top: 1rem;
+    }
+
+    .section-intro {
+      max-width: 48rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .work-list {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .work-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(21, 39, 63, 0.94), rgba(16, 29, 47, 0.98));
+      box-shadow: var(--shadow);
+    }
+
+    .work-item--reverse .work-image {
+      order: 2;
+    }
+
+    .work-item__body {
+      padding: 1.5rem;
+    }
+
+    .work-image {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .editorial-section,
+    .contact-card {
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(21, 39, 63, 0.94), rgba(16, 29, 47, 0.98));
+      box-shadow: var(--shadow);
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.84rem 1.1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .button:hover,
+    .button-secondary:hover {
+      transform: translateY(-1px);
+    }
+
+    .button {
+      color: #071321;
+      background: linear-gradient(135deg, var(--accent), #4ba8f0);
+      box-shadow: var(--shadow);
+    }
+
+    .button:hover {
+      color: #071321;
+    }
+
+    .button-secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+
+    @media (max-width: 900px) {
+      .creative-hero,
+      .work-item,
+      .editorial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-item--reverse .work-image {
+        order: 0;
+      }
+
+      .publishing-mark {
+        min-height: 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 1.2rem, var(--max-width));
+      }
+
+      .creative-hero {
+        padding-top: 2rem;
+      }
+
+      h1 {
+        max-width: 100%;
+      }
+
+      .work-image {
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="site-nav__inner">
+      <a class="site-brand" href="index.html">
+        <span class="site-brand__mark" aria-hidden="true">TV</span>
+        <span class="site-brand__text">
+          <span class="site-brand__title">TowleVision</span>
+          <span class="site-brand__subtitle">Creative Work</span>
+        </span>
+      </a>
 
-    <header>
-      <img
-        src="/assets/images/towlevision-logo.png"
-        alt="TowleVision logo"
-        class="site-logo"
-      />
-
-      <h1>TowleVision Creative Work</h1>
-      <div class="subtitle">Cinematic literary adaptations and visual storytelling</div>
-      <div class="byline">The creative-production portfolio of TowleVision</div>
-
-      <nav class="nav" aria-label="Page sections">
+      <div class="site-nav__links">
         <a href="index.html">Home</a>
         <a href="store.html">Store</a>
         <a href="services/shorts-pack.html">Shorts Pack</a>
+        <a href="services/coding-services.html">Software</a>
         <a href="examples.html">Examples</a>
         <a href="collaborate.html">Collaborate</a>
-        <a href="engineering_portfolio.html">Engineering Portfolio</a>
-        <a href="art.html">Creative Work</a>
-        <a href="#work">Work</a>
-        <a href="#practice">Studio Practice</a>
-        <a href="#services">Services</a>
         <a href="contact.html">Contact</a>
-      </nav>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="creative-hero" id="top">
+      <div>
+        <div class="eyebrow">TowleVision portfolio</div>
+        <h1>TowleVision Creative Work</h1>
+        <div class="subtitle">Cinematic literary adaptations and visual storytelling</div>
+        <div class="byline">The creative-production portfolio of TowleVision</div>
+
+        <div class="hero-links">
+          <a href="#work">Selected Works</a>
+          <a href="#practice">Studio Practice</a>
+          <a href="#services">Creative Services</a>
+          <a href="engineering_portfolio.html">Engineering Portfolio</a>
+        </div>
+      </div>
+
+      <aside class="publishing-mark" aria-label="Cinematic Audiobooks project and publishing mark">
+        <img
+          src="/assets/images/towlevision-logo.png"
+          alt="TowleVision Cinematic Audiobooks project and publishing mark"
+        />
+        <div>
+          <div class="publishing-mark__label">Project and publishing mark</div>
+          <strong>Cinematic Audiobooks</strong>
+        </div>
+      </aside>
     </header>
 
-    <section class="section">
+    <section class="creative-intro">
       <p>
         TowleVision Creative Work is the creative-production portfolio of TowleVision. This
         page focuses on the cinematic adaptation and cultural preservation of literary texts,
@@ -216,95 +418,98 @@
       </p>
     </section>
 
-    <section id="work" class="section">
+    <section id="work">
       <h2>Selected Works</h2>
 
-      <p>
+      <p class="section-intro">
         The projects shown here focus primarily on Scandinavian literature, complemented by
         select works from other European traditions. The creative catalog includes both
         short-form adaptations and longer narrative works, unified by a consistent cinematic
         language and emphasis on timeless themes.
       </p>
 
-      <div class="work-item">
-        <h3>The Little Match Girl</h3>
+      <div class="work-list">
+        <article class="work-item">
+          <img
+            src="/assets/images/little-match-girl.png"
+            alt="A solitary figure walking through a snow-covered street at night, illuminated by warm lantern light"
+            class="work-image"
+          />
+          <div class="work-item__body">
+            <h3>The Little Match Girl</h3>
+            <p>
+              A short-form cinematic adaptation of Hans Christian Andersen’s story, exploring
+              isolation, warmth, and imagination through restrained imagery, narration, and
+              captioned storytelling.
+            </p>
+          </div>
+        </article>
 
-        <img
-          src="/assets/images/little-match-girl.png"
-          alt="A solitary figure walking through a snow-covered street at night, illuminated by warm lantern light"
-          class="work-image"
-        />
+        <article class="work-item work-item--reverse">
+          <img
+            src="/assets/images/the-emperors-new-clothes.png"
+            alt="A public scene suggesting spectacle, attention, and collective perception"
+            class="work-image"
+          />
+          <div class="work-item__body">
+            <h3>The Emperor’s New Clothes</h3>
+            <p>
+              A short-form visual and narrative interpretation emphasizing tone, pacing, and
+              irony over spectacle.
+            </p>
+          </div>
+        </article>
 
-        <p>
-          A short-form cinematic adaptation of Hans Christian Andersen’s story, exploring
-          isolation, warmth, and imagination through restrained imagery, narration, and
-          captioned storytelling.
-        </p>
-      </div>
-
-      <div class="work-item">
-        <h3>The Emperor’s New Clothes</h3>
-
-
-        <img
-          src="/assets/images/the-emperors-new-clothes.png"
-          alt="A public scene suggesting spectacle, attention, and collective perception"
-          class="work-image"
-        />
-
-        <p>
-          A short-form visual and narrative interpretation emphasizing tone, pacing, and
-          irony over spectacle.
-        </p>
-      </div>
-
-      <div class="work-item">
-        <h3>A Christmas Carol</h3>
-
-        <img
-          src="/assets/images/a-christmas-carol.png"
-          alt="A solitary figure walking through a lamplit street at night, moving from darkness into warm light"
-          class="work-image"
-        />
-
-        <p>
-          A long-form cinematic adaptation of Charles Dickens’s novella, presenting the
-          story’s moral and emotional arc through extended pacing, illustrated narration,
-          and atmospheric continuity.
-        </p>
+        <article class="work-item">
+          <img
+            src="/assets/images/a-christmas-carol.png"
+            alt="A solitary figure walking through a lamplit street at night, moving from darkness into warm light"
+            class="work-image"
+          />
+          <div class="work-item__body">
+            <h3>A Christmas Carol</h3>
+            <p>
+              A long-form cinematic adaptation of Charles Dickens’s novella, presenting the
+              story’s moral and emotional arc through extended pacing, illustrated narration,
+              and atmospheric continuity.
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="practice" class="section">
-      <h2>Studio Practice</h2>
+    <div class="editorial-grid">
+      <section id="practice" class="editorial-section">
+        <h2>Studio Practice</h2>
 
-      <p>
-        TowleVision Creative Work reflects a focused production practice emphasizing cultural
-        continuity, accessibility, completion, and repeatable craft. Projects are approached
-        as part of an ongoing artistic practice rather than one-off productions, with care
-        given to pacing, visual coherence, and long-form structure.
-      </p>
+        <p>
+          TowleVision Creative Work reflects a focused production practice emphasizing cultural
+          continuity, accessibility, completion, and repeatable craft. Projects are approached
+          as part of an ongoing artistic practice rather than one-off productions, with care
+          given to pacing, visual coherence, and long-form structure.
+        </p>
 
-      <p>
-        Captioning is treated not only as an accessibility feature, but as an integral part
-        of the viewing experience—designed to support comprehension, inclusion, and visual
-        harmony. The studio’s work is intended to remain legible and meaningful across
-        audiences, contexts, and time.
-      </p>
-    </section>
+        <p>
+          Captioning is treated not only as an accessibility feature, but as an integral part
+          of the viewing experience—designed to support comprehension, inclusion, and visual
+          harmony. The studio’s work is intended to remain legible and meaningful across
+          audiences, contexts, and time.
+        </p>
+      </section>
 
-    <section id="services" class="section">
-      <h2>Collaboration &amp; Creative Services</h2>
+      <section id="services" class="editorial-section">
+        <h2>Collaboration &amp; Creative Services</h2>
 
-      <p>
-        In addition to original works, TowleVision offers limited-scope creative-production
-        support for artists, writers, and cultural organizations seeking cinematic presentation
-        of finished or near-finished material. Collaboration is selective and project-based,
-        prioritizing clarity of intent, fixed scope, accessibility, and thoughtful execution.
-      </p>
-    </section>
+        <p>
+          In addition to original works, TowleVision offers limited-scope creative-production
+          support for artists, writers, and cultural organizations seeking cinematic presentation
+          of finished or near-finished material. Collaboration is selective and project-based,
+          prioritizing clarity of intent, fixed scope, accessibility, and thoughtful execution.
+        </p>
+      </section>
+    </div>
 
-    <section id="contact" class="section">
+    <section id="contact" class="contact-card">
       <h2>Contact</h2>
 
       <p>
@@ -312,13 +517,21 @@
         please get in touch.
       </p>
 
-      <p>
-        <a href="https://tally.so/r/ODKx2R?service=collaboration&amp;source_page=art&amp;campaign=website" target="_blank" rel="noopener">Start a Collaboration Conversation</a>
-      </p>
+      <div class="hero-actions">
+        <a class="button" href="https://tally.so/r/ODKx2R?service=collaboration&amp;source_page=art&amp;campaign=website" target="_blank" rel="noopener">Start a Collaboration Conversation</a>
+        <a class="button-secondary" href="examples.html">View Production Examples</a>
+      </div>
     </section>
 
-    <footer>
-      © 2026 TowleVision • Creative Work portfolio
+    <footer class="site-footer">
+      <span>&copy; 2026 TowleVision. Creative Work portfolio.</span>
+      <span class="site-footer__links">
+        <a href="index.html">Home</a>
+        <a href="store.html">Store</a>
+        <a href="examples.html">Examples</a>
+        <a href="contact.html">Contact</a>
+        <a href="policies.html">Policies</a>
+      </span>
     </footer>
 
   </main>
