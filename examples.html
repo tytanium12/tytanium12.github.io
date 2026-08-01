@@ -221,65 +221,31 @@
       box-shadow: var(--shadow);
     }
 
-    .featured-proof {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-      gap: 1.35rem;
-      align-items: start;
-      padding: 1.5rem;
+    .examples-client-proof,
+    .examples-proof-section {
+      width: min(100%, 58rem);
     }
 
-    .shorts-proof {
-      display: block;
+    .examples-client-proof {
       padding: clamp(1.25rem, 2vw, 1.75rem);
     }
 
-    .shorts-proof__header {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.52fr);
-      gap: 1.5rem;
-      align-items: end;
+    .examples-client-proof .proof-video {
+      margin-top: 1.5rem;
+    }
+
+    .examples-proof-section {
+      margin-top: 1.5rem;
     }
 
     .shorts-proof__copy {
-      max-width: 46rem;
-    }
-
-    .shorts-proof__flow {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-      gap: 0.8rem;
-      align-items: center;
-      padding: 1rem;
-      border: 1px solid rgba(88, 196, 221, 0.24);
-      border-radius: 16px;
-      background: rgba(4, 15, 27, 0.46);
-      text-align: center;
-    }
-
-    .shorts-proof__metric {
-      display: grid;
-      gap: 0.15rem;
-      color: var(--muted);
-      font-size: 0.82rem;
-      line-height: 1.25;
-    }
-
-    .shorts-proof__metric strong {
-      color: var(--text);
-      font-size: clamp(1.75rem, 3vw, 2.35rem);
-      line-height: 1;
-    }
-
-    .shorts-proof__arrow {
-      color: var(--accent);
-      font-size: 1.5rem;
-      font-weight: 800;
+      max-width: 48rem;
     }
 
     .shorts-proof__visual {
       display: block;
       margin-top: 1.35rem;
+      aspect-ratio: 16 / 9;
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 16px;
@@ -292,22 +258,22 @@
       color: var(--text);
     }
 
-    .shorts-proof .proof-image {
-      height: auto;
+    .shorts-proof__visual .proof-image {
+      height: 100%;
       border: 0;
       border-radius: 0;
       object-fit: contain;
     }
 
-    .shorts-proof__caption {
+    .examples-media-caption {
       display: block;
-      padding: 0.75rem 1rem;
-      border-top: 1px solid var(--line);
+      margin-top: 0.7rem;
       font-size: 0.9rem;
       font-weight: 600;
     }
 
-    .shorts-proof .hero-actions {
+    .examples-proof-section .hero-actions,
+    .examples-client-proof .hero-actions {
       margin-top: 1rem;
     }
 
@@ -325,8 +291,7 @@
       border: 0;
     }
 
-    .proof-image,
-    .project-image {
+    .proof-image {
       display: block;
       width: 100%;
       border-radius: 14px;
@@ -334,12 +299,89 @@
       object-fit: cover;
     }
 
-    .project-image {
+    .examples-landscape-frame {
+      width: min(100%, 58rem);
       aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #02070d;
     }
 
-    .project-image + h3 {
+    .examples-landscape-frame .media-player {
+      height: 100%;
+      border-bottom: 0;
+    }
+
+    .examples-proof-detail {
+      max-width: 52rem;
       margin-top: 1rem;
+    }
+
+    .creative-project-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .creative-project-column {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .creative-project-entry {
+      align-self: start;
+      min-width: 0;
+      padding: 1.1rem;
+      background: rgba(16, 29, 47, 0.78);
+      box-shadow: none;
+    }
+
+    .creative-project-entry .category-label {
+      margin-bottom: 0.75rem;
+    }
+
+    .creative-project-entry .hero-actions {
+      margin-top: 1rem;
+    }
+
+    .creative-project-video {
+      width: min(100%, calc(80% + 1.75rem));
+      margin: 1.1rem auto 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #02070d;
+    }
+
+    .creative-project-video .media-player {
+      border-bottom: 0;
+    }
+
+    .creative-project-inline {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(110px, 32%);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .creative-project-thumb {
+      display: block;
+      width: 100%;
+      max-width: 170px;
+      height: auto;
+      justify-self: end;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .examples-creative-demo {
+      margin-top: clamp(2.75rem, 5vw, 4rem);
+      padding-top: clamp(1.75rem, 3vw, 2.5rem);
+      border-top: 1px solid rgba(120, 167, 214, 0.18);
     }
 
     .testimonial-quote {
@@ -409,8 +451,17 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .featured-proof {
-        grid-template-columns: 1fr;
+      .creative-project-columns {
+        gap: 0.9rem;
+      }
+
+      .creative-project-inline {
+        grid-template-columns: minmax(0, 1fr) minmax(110px, 32%);
+        gap: 0.8rem;
+      }
+
+      .creative-project-thumb {
+        max-width: 140px;
       }
     }
 
@@ -419,26 +470,33 @@
         width: min(100% - 1.2rem, var(--max-width));
       }
 
-      .shorts-proof__header {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .shorts-proof__flow {
-        max-width: 28rem;
-      }
-
-
-
-
       .grid {
         grid-template-columns: 1fr;
+      }
+
+      .creative-project-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .creative-project-video {
+        width: 100%;
       }
 
       h1 {
         max-width: 100%;
       }
 
+    }
+
+    @media (max-width: 360px) {
+      .creative-project-inline {
+        grid-template-columns: 1fr;
+      }
+
+      .creative-project-thumb {
+        width: min(100%, 160px);
+        justify-self: center;
+      }
     }
   </style>
 </head>
@@ -490,31 +548,26 @@
         Completed external client work, shared with permission.
       </p>
 
-      <article class="card featured-proof">
-        <div>
-          <div class="category-label">External client work</div>
-          <h3>Scientific Explainer for Nutraberry</h3>
-          <p class="permission-note">Shared with client permission</p>
-          <p>
-            Nutraberry needed a concise way to explain a technically dense
-            particle-engineering concept while protecting confidential processing details.
-          </p>
-          <p>
-            TowleVision produced a professionally narrated scientific explainer with careful
-            technical language, specialized pronunciation, relevant visuals, reviewed captions,
-            and a publishing-ready finish.
-          </p>
-          <blockquote class="testimonial-quote">
-            “Tyrell took a technically dense particle-engineering concept and turned it into a
-            clear, accurate and visually compelling explainer. He was highly responsive to feedback
-            and quickly revised the piece to protect confidential processing details while preserving
-            the commercial message.”
-          </blockquote>
-          <p class="testimonial-attribution">David Wishnick, Nutraberry</p>
-          <div class="hero-actions">
-            <a class="button" href="services/scientific-explainer-video.html">View the Full Client Case Study</a>
-          </div>
-        </div>
+      <article class="card examples-client-proof">
+        <div class="category-label">External client work</div>
+        <h3>Scientific Explainer for Nutraberry</h3>
+        <p class="permission-note">Shared with client permission</p>
+        <p>
+          Nutraberry needed a concise way to explain a technically dense
+          particle-engineering concept while protecting confidential processing details.
+        </p>
+        <p>
+          TowleVision produced a professionally narrated scientific explainer with careful
+          technical language, specialized pronunciation, relevant visuals, reviewed captions,
+          and a publishing-ready finish.
+        </p>
+        <blockquote class="testimonial-quote">
+          “Tyrell took a technically dense particle-engineering concept and turned it into a
+          clear, accurate and visually compelling explainer. He was highly responsive to feedback
+          and quickly revised the piece to protect confidential processing details while preserving
+          the commercial message.”
+        </blockquote>
+        <p class="testimonial-attribution">David Wishnick, Nutraberry</p>
         <div class="proof-video">
           <iframe
             src="https://www.youtube-nocookie.com/embed/itUekhpj3jw"
@@ -523,6 +576,9 @@
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
+        </div>
+        <div class="hero-actions">
+          <a class="button" href="services/scientific-explainer-video.html">View the Full Client Case Study</a>
         </div>
       </article>
     </section>
@@ -533,35 +589,19 @@
         Concrete examples of currently offered production workflows.
       </p>
 
-      <article class="card featured-proof shorts-proof">
-        <div class="shorts-proof__header">
-          <div class="shorts-proof__copy">
-            <div class="category-label">Fixed-price demonstrated service</div>
-            <h3>One Finished Source Production &rarr; Five Finished Shorts</h3>
-            <p>
-              One finished, caption-free source production became five ready-to-post vertical
-              shorts. Each clip stands on its own, built around a distinct excerpt rather than
-              an arbitrary cut.
-            </p>
-            <p>
-              Every short includes readable captions and a practical delivery package. Click
-              through to compare the full source with all five finished results.
-            </p>
-          </div>
-          <div
-            class="shorts-proof__flow"
-            aria-label="One finished source production becomes five finished shorts"
-          >
-            <span class="shorts-proof__metric">
-              <strong>1</strong>
-              finished source
-            </span>
-            <span class="shorts-proof__arrow" aria-hidden="true">&rarr;</span>
-            <span class="shorts-proof__metric">
-              <strong>5</strong>
-              finished shorts
-            </span>
-          </div>
+      <article class="examples-proof-section shorts-proof">
+        <div class="shorts-proof__copy">
+          <div class="category-label">Fixed-price demonstrated service</div>
+          <h3>One Finished Source Production &rarr; Five Finished Shorts</h3>
+          <p>
+            One finished, caption-free source production became five ready-to-post vertical
+            shorts. Each clip stands on its own, built around a distinct excerpt rather than
+            an arbitrary cut.
+          </p>
+          <p>
+            Every short includes readable captions and a practical delivery package. Click
+            through to compare the full source with all five finished results.
+          </p>
         </div>
 
         <a
@@ -578,10 +618,10 @@
             loading="lazy"
             decoding="async"
           />
-          <span class="shorts-proof__caption">
-            Open the full demonstration to compare the source with all five finished shorts.
-          </span>
         </a>
+        <p class="examples-media-caption">
+          Open the full demonstration to compare the source with all five finished shorts.
+        </p>
 
         <div class="hero-actions">
           <a class="button" href="services/shorts-pack.html#demo">View the Full Source-to-Shorts Demonstration</a>
@@ -589,33 +629,32 @@
         </div>
       </article>
 
-      <div class="service-demo-subsection" aria-labelledby="technical-narration-demo-title">
+      <div class="service-demo-subsection examples-proof-section" aria-labelledby="technical-narration-demo-title">
         <div class="service-demo-subsection__intro">
           <h3 id="technical-narration-demo-title">Technical Narration and Captioning</h3>
           <p>
-            This finished demonstration shows specialized terminology handled through careful
-            narration, readable caption timing, accurate spelling, and human review.
+            A focused example of technical language prepared for clear spoken and captioned delivery.
           </p>
         </div>
 
-        <div class="media-range-grid single-media service-demo-secondary">
-          <article class="media-card" aria-labelledby="technical-narration-demo-title">
-            <div class="media-player media-player--16x9">
-              <a class="media-player__fallback" href="https://www.youtube.com/watch?v=suMkVMwrWK8" target="_blank" rel="noopener noreferrer">
-                <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="Illustrative syringe scene with a caption containing the term plutonium" width="1280" height="720" loading="lazy" decoding="async" />
-                <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch Scientific Terminology and Technical Captions on YouTube</span>
-              </a>
-              <button class="media-player__button" type="button" data-youtube-id="suMkVMwrWK8" data-youtube-title="TowleVision demonstration of scientific terminology and technical captions" aria-label="Load video: Scientific Terminology and Technical Captions">
-                <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="" width="1280" height="720" loading="lazy" decoding="async" />
-                <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Scientific Terminology and Technical Captions</span>
-              </button>
-            </div>
-            <div class="media-card__body">
-              <div class="hero-actions">
-                <a class="button-secondary" href="services/technical-narration-captioning.html">View the Full Technical Media Demonstration</a>
-              </div>
-            </div>
-          </article>
+        <div class="examples-landscape-frame">
+          <div class="media-player media-player--16x9">
+            <a class="media-player__fallback" href="https://www.youtube.com/watch?v=suMkVMwrWK8" target="_blank" rel="noopener noreferrer">
+              <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="Illustrative syringe scene with a caption containing the term plutonium" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch Scientific Terminology and Technical Captions on YouTube</span>
+            </a>
+            <button class="media-player__button" type="button" data-youtube-id="suMkVMwrWK8" data-youtube-title="TowleVision demonstration of scientific terminology and technical captions" aria-label="Load video: Scientific Terminology and Technical Captions">
+              <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Scientific Terminology and Technical Captions</span>
+            </button>
+          </div>
+        </div>
+        <p class="examples-proof-detail">
+          This finished demonstration shows specialized terminology handled through careful
+          narration, readable caption timing, accurate spelling, and human review.
+        </p>
+        <div class="hero-actions">
+          <a class="button-secondary" href="services/technical-narration-captioning.html">View the Full Technical Media Demonstration</a>
         </div>
       </div>
     </section>
@@ -627,57 +666,128 @@
         narration, captions, and consistent multi-project craft.
       </p>
 
-      <div class="grid">
-        <article class="card">
-          <div class="category-label">Long-form showcase</div>
-          <a href="https://youtu.be/GmUZ5xlt5rM?si=JltPlhY9VXOmEA3J" target="_blank" rel="noopener noreferrer" aria-label="Watch The Snow Queen on YouTube">
-            <img class="project-image" src="assets/images/The Snow Queen thumbnail semifinalist.png" alt="The Snow Queen thumbnail with semifinalist recognition" width="1280" height="720" loading="lazy" decoding="async" />
-          </a>
-          <h3>The Snow Queen</h3>
-          <p class="project-meta">Long-form showcase — Semifinalist recognition</p>
-          <p>
-            End-to-end workflow execution across narration, captioning, story planning,
-            image generation, pacing, and final assembly.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="https://youtu.be/GmUZ5xlt5rM?si=JltPlhY9VXOmEA3J" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-            <a class="button-secondary" href="https://filmfreeway.com/projects/4165757" target="_blank" rel="noopener noreferrer">View Project Page</a>
-          </div>
-        </article>
+      <div class="creative-project-columns">
+        <div class="creative-project-column creative-video-column">
+          <article class="card creative-project-entry">
+            <div class="category-label">Long-form showcase</div>
+            <h3>The Snow Queen</h3>
+            <p class="project-meta">Long-form showcase — Semifinalist recognition</p>
+            <p>
+              End-to-end workflow execution across narration, captioning, story planning,
+              image generation, pacing, and final assembly.
+            </p>
+            <div class="hero-actions">
+              <a class="button-secondary" href="https://youtu.be/GmUZ5xlt5rM?si=JltPlhY9VXOmEA3J" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              <a class="button-secondary" href="https://filmfreeway.com/projects/4165757" target="_blank" rel="noopener noreferrer">View Project Page</a>
+            </div>
+            <div class="creative-project-video">
+              <div class="media-player media-player--16x9">
+                <a class="media-player__fallback" href="https://youtu.be/GmUZ5xlt5rM?si=JltPlhY9VXOmEA3J" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/The Snow Queen thumbnail semifinalist.png" alt="The Snow Queen thumbnail with semifinalist recognition" width="1280" height="720" loading="lazy" decoding="async" />
+                  <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch The Snow Queen on YouTube</span>
+                </a>
+                <button class="media-player__button" type="button" data-youtube-id="GmUZ5xlt5rM" data-youtube-title="The Snow Queen" aria-label="Load video: The Snow Queen">
+                  <img src="assets/images/The Snow Queen thumbnail semifinalist.png" alt="" width="1280" height="720" loading="lazy" decoding="async" />
+                  <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load The Snow Queen</span>
+                </button>
+              </div>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="category-label">Educational production</div>
-          <a href="https://youtu.be/UwoIeYWsClg?si=gxT_jjgktKGmJiMM" target="_blank" rel="noopener noreferrer" aria-label="Watch Lord of the Flies Summary on YouTube">
-            <img class="project-image" src="assets/images/Lord of the Flies in 10 minutes summary yt thumbnail.png" alt="Lord of the Flies Summary YouTube thumbnail" width="1280" height="720" loading="lazy" decoding="async" />
-          </a>
-          <h3>Lord of the Flies Summary</h3>
-          <p>
-            Complex source material shaped into structured, accessible educational media
-            through narration, visuals, pacing, and caption-supported presentation.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="https://youtu.be/UwoIeYWsClg?si=gxT_jjgktKGmJiMM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-          </div>
-        </article>
+          <article class="card creative-project-entry">
+            <div class="category-label">Educational production</div>
+            <h3>Lord of the Flies Summary</h3>
+            <p>
+              Complex source material shaped into structured, accessible educational media
+              through narration, visuals, pacing, and caption-supported presentation.
+            </p>
+            <div class="hero-actions">
+              <a class="button-secondary" href="https://youtu.be/UwoIeYWsClg?si=gxT_jjgktKGmJiMM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+            </div>
+            <div class="creative-project-video">
+              <div class="media-player media-player--16x9">
+                <a class="media-player__fallback" href="https://youtu.be/UwoIeYWsClg?si=gxT_jjgktKGmJiMM" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/Lord of the Flies in 10 minutes summary yt thumbnail.png" alt="Lord of the Flies Summary YouTube thumbnail" width="1280" height="720" loading="lazy" decoding="async" />
+                  <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch Lord of the Flies Summary on YouTube</span>
+                </a>
+                <button class="media-player__button" type="button" data-youtube-id="UwoIeYWsClg" data-youtube-title="Lord of the Flies Summary" aria-label="Load video: Lord of the Flies Summary">
+                  <img src="assets/images/Lord of the Flies in 10 minutes summary yt thumbnail.png" alt="" width="1280" height="720" loading="lazy" decoding="async" />
+                  <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Lord of the Flies Summary</span>
+                </button>
+              </div>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="category-label">Literary adaptation</div>
-          <a href="https://youtu.be/KWygXvIJbmA?si=1fya8JQXKrl7F7C2" target="_blank" rel="noopener noreferrer" aria-label="Watch Beowulf Summary on YouTube">
-            <img class="project-image" src="assets/images/beowulf summary youtube thumbnail.png" alt="Beowulf Summary YouTube thumbnail" width="1280" height="720" loading="lazy" decoding="async" />
-          </a>
-          <h3>Beowulf Summary</h3>
-          <p>
-            A classic text adapted with coherent narration, visual pacing, captions, and a
-            polished finished presentation.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="https://youtu.be/KWygXvIJbmA?si=1fya8JQXKrl7F7C2" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-          </div>
-        </article>
+          <article class="card creative-project-entry">
+            <div class="category-label">Literary adaptation</div>
+            <h3>Beowulf Summary</h3>
+            <p>
+              A classic text adapted with coherent narration, visual pacing, captions, and a
+              polished finished presentation.
+            </p>
+            <div class="hero-actions">
+              <a class="button-secondary" href="https://youtu.be/KWygXvIJbmA?si=1fya8JQXKrl7F7C2" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+            </div>
+            <div class="creative-project-video">
+              <div class="media-player media-player--16x9">
+                <a class="media-player__fallback" href="https://youtu.be/KWygXvIJbmA?si=1fya8JQXKrl7F7C2" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/beowulf summary youtube thumbnail.png" alt="Beowulf Summary YouTube thumbnail" width="1280" height="720" loading="lazy" decoding="async" />
+                  <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch Beowulf Summary on YouTube</span>
+                </a>
+                <button class="media-player__button" type="button" data-youtube-id="KWygXvIJbmA" data-youtube-title="Beowulf Summary" aria-label="Load video: Beowulf Summary">
+                  <img src="assets/images/beowulf summary youtube thumbnail.png" alt="" width="1280" height="720" loading="lazy" decoding="async" />
+                  <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Beowulf Summary</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="creative-project-column creative-image-column">
+          <article class="card creative-project-entry creative-project-inline">
+            <div>
+              <h3>The Little Match Girl</h3>
+              <p>
+                A short-form cinematic adaptation using restrained imagery, narration, and
+                captioned storytelling.
+              </p>
+            </div>
+            <img class="creative-project-thumb" src="assets/images/little-match-girl.png" alt="A solitary figure walking through a snow-covered street at night, illuminated by warm lantern light" width="2400" height="2400" loading="lazy" decoding="async" />
+          </article>
+
+          <article class="card creative-project-entry creative-project-inline">
+            <div>
+              <h3>The Emperor’s New Clothes</h3>
+              <p>
+                A short-form visual and narrative interpretation emphasizing tone, pacing,
+                and irony over spectacle.
+              </p>
+            </div>
+            <img class="creative-project-thumb" src="assets/images/the-emperors-new-clothes.png" alt="A public scene suggesting spectacle, attention, and collective perception" width="2400" height="2400" loading="lazy" decoding="async" />
+          </article>
+
+          <article class="card creative-project-entry creative-project-inline">
+            <div>
+              <h3>A Christmas Carol</h3>
+              <p>
+                A long-form cinematic adaptation using extended pacing, illustrated narration,
+                and atmospheric continuity.
+              </p>
+            </div>
+            <img class="creative-project-thumb" src="assets/images/a-christmas-carol.png" alt="A solitary figure walking through a lamplit street at night, moving from darkness into warm light" width="2048" height="2048" loading="lazy" decoding="async" />
+          </article>
+        </div>
       </div>
 
-      <div class="media-range-grid single-media">
-        <article class="media-card">
+      <div class="examples-creative-demo examples-proof-section" aria-labelledby="historical-storytelling-title">
+        <div class="category-label">Creative demonstration</div>
+        <h3 id="historical-storytelling-title">Historical Storytelling and Cinematic Range</h3>
+        <p class="service-demo-subsection__intro">
+          Historically grounded narration shaped with cinematic pacing, intentional imagery,
+          and readable captions. The visuals interpret the story without claiming to be
+          archival footage or documentary evidence.
+        </p>
+        <div class="examples-landscape-frame">
           <div class="media-player media-player--16x9">
             <a class="media-player__fallback" href="https://www.youtube.com/watch?v=OjDv9l5nQPo" target="_blank" rel="noopener noreferrer">
               <img src="assets/posters/demos/historical-storytelling-cinematic-range.webp" alt="Cinematic historical scene illustrating conflict and advancing forces" width="1280" height="720" loading="lazy" decoding="async" />
@@ -688,42 +798,7 @@
               <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Historical Storytelling and Cinematic Range</span>
             </button>
           </div>
-          <div class="media-card__body">
-            <h3>Historical Storytelling and Cinematic Range</h3>
-            <p>
-              Historically grounded narration shaped with cinematic pacing, intentional imagery,
-              and readable captions. The visuals interpret the story without claiming to be
-              archival footage or documentary evidence.
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <div class="grid">
-        <article class="card">
-          <img class="project-image" src="assets/images/little-match-girl.png" alt="A solitary figure walking through a snow-covered street at night, illuminated by warm lantern light" width="2400" height="2400" loading="lazy" decoding="async" />
-          <h3>The Little Match Girl</h3>
-          <p>
-            A short-form cinematic adaptation using restrained imagery, narration, and
-            captioned storytelling.
-          </p>
-        </article>
-        <article class="card">
-          <img class="project-image" src="assets/images/the-emperors-new-clothes.png" alt="A public scene suggesting spectacle, attention, and collective perception" width="2400" height="2400" loading="lazy" decoding="async" />
-          <h3>The Emperor’s New Clothes</h3>
-          <p>
-            A short-form visual and narrative interpretation emphasizing tone, pacing,
-            and irony over spectacle.
-          </p>
-        </article>
-        <article class="card">
-          <img class="project-image" src="assets/images/a-christmas-carol.png" alt="A solitary figure walking through a lamplit street at night, moving from darkness into warm light" width="2048" height="2048" loading="lazy" decoding="async" />
-          <h3>A Christmas Carol</h3>
-          <p>
-            A long-form cinematic adaptation using extended pacing, illustrated narration,
-            and atmospheric continuity.
-          </p>
-        </article>
+        </div>
       </div>
 
       <div class="hero-actions">
