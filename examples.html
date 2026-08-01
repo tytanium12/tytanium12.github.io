@@ -13,27 +13,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>TowleVision Examples | Production Demonstrations</title>
+  <title>TowleVision Client Work &amp; Production Examples</title>
 
   <meta
     name="description"
-    content="A growing library of TowleVision examples showing captioned clips, visual explainers, narrated media, production workflows, and studio platform work."
+    content="Completed TowleVision client work, service demonstrations, creative and educational productions, and the software engineering behind them."
   />
   <link rel="icon" type="image/png" href="/assets/images/towlevision-insight-lab-logo.png" />
   <link rel="canonical" href="https://towlevision.com/examples.html" />
 
   <meta property="og:site_name" content="TowleVision" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="TowleVision Examples" />
-  <meta property="og:description" content="Explore TowleVision examples showing source videos, captioned clips, visual explainers, technical media, and custom production possibilities." />
+  <meta property="og:title" content="TowleVision Client Work &amp; Production Examples" />
+  <meta property="og:description" content="Explore completed client work, demonstrated production services, creative media, and engineering proof from TowleVision." />
   <meta property="og:url" content="https://towlevision.com/examples.html" />
   <meta property="og:image" content="https://towlevision.com/assets/images/social/towlevision-social-preview-v3.png" />
 
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TowleVision Examples" />
-  <meta name="twitter:description" content="Explore TowleVision examples showing source videos, captioned clips, visual explainers, technical media, and custom production possibilities." />
+  <meta name="twitter:title" content="TowleVision Client Work &amp; Production Examples" />
+  <meta name="twitter:description" content="Explore completed client work, demonstrated production services, creative media, and engineering proof from TowleVision." />
   <meta name="twitter:image" content="https://towlevision.com/assets/images/social/towlevision-social-preview-v3.png" />
   <meta name="author" content="Tyrell Towle, PhD" />
 
@@ -302,6 +302,166 @@
       box-shadow: var(--shadow);
     }
 
+    .featured-proof {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 1.35rem;
+      align-items: start;
+      padding: 1.5rem;
+    }
+
+    .shorts-proof {
+      display: block;
+      padding: clamp(1.25rem, 2vw, 1.75rem);
+    }
+
+    .shorts-proof__header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.52fr);
+      gap: 1.5rem;
+      align-items: end;
+    }
+
+    .shorts-proof__copy {
+      max-width: 46rem;
+    }
+
+    .shorts-proof__flow {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: 0.8rem;
+      align-items: center;
+      padding: 1rem;
+      border: 1px solid rgba(88, 196, 221, 0.24);
+      border-radius: 16px;
+      background: rgba(4, 15, 27, 0.46);
+      text-align: center;
+    }
+
+    .shorts-proof__metric {
+      display: grid;
+      gap: 0.15rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.25;
+    }
+
+    .shorts-proof__metric strong {
+      color: var(--text);
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      line-height: 1;
+    }
+
+    .shorts-proof__arrow {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .shorts-proof__visual {
+      display: block;
+      margin-top: 1.35rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #020a13;
+      color: var(--muted);
+    }
+
+    .shorts-proof__visual:hover {
+      border-color: rgba(88, 196, 221, 0.48);
+      color: var(--text);
+    }
+
+    .shorts-proof .proof-image {
+      height: auto;
+      border: 0;
+      border-radius: 0;
+      object-fit: contain;
+    }
+
+    .shorts-proof__caption {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .shorts-proof .hero-actions {
+      margin-top: 1rem;
+    }
+
+    .proof-video {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #02070d;
+    }
+
+    .proof-video iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .proof-image,
+    .project-image {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      object-fit: cover;
+    }
+
+    .project-image {
+      aspect-ratio: 16 / 9;
+    }
+
+    .project-image + h3 {
+      margin-top: 1rem;
+    }
+
+    .testimonial-quote {
+      margin: 1rem 0 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-2);
+      color: #d9e7f7;
+      font-size: 1.03rem;
+    }
+
+    .testimonial-attribution,
+    .project-meta {
+      margin-top: 0.7rem;
+      color: #dff8e9;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .single-media {
+      grid-template-columns: minmax(0, 52rem);
+    }
+
+    .service-demo-secondary {
+      justify-content: center;
+    }
+
+    .card p + p {
+      margin-top: 0.8rem;
+    }
+
+    section > .card + .media-range-grid,
+    section > .grid + .media-range-grid,
+    section > .media-range-grid + .grid,
+    section > .grid + .grid {
+      margin-top: 1rem;
+    }
+
     footer {
       margin-top: 4.5rem;
       padding-top: 1.2rem;
@@ -314,11 +474,24 @@
       .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .featured-proof {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 760px) {
       .page {
         width: min(100% - 1.2rem, var(--max-width));
+      }
+
+      .shorts-proof__header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .shorts-proof__flow {
+        max-width: 28rem;
       }
 
       .nav {
@@ -382,170 +555,208 @@
       <div class="eyebrow">Production Proof</div>
       <h1>TowleVision Examples</h1>
       <p class="hero-subtitle">
-        A growing library of demonstrations showing how TowleVision turns source material
-        into captioned clips, visual explainers, narrated media, and production-ready assets.
+        Completed client work, demonstrated production services, creative and educational
+        media, and the software engineering behind TowleVision workflows.
       </p>
       <p>
-        Some areas include finished demos now; others are example categories that will grow
-        as more public work is prepared.
+        These examples show how scientific communication, narration, captions, visual
+        storytelling, and human-reviewed production systems come together in finished work.
       </p>
       <div class="hero-actions">
-        <a class="button" href="store.html">Explore Services</a>
-        <a class="button-secondary" href="services/shorts-pack.html">Start with the Shorts Pack</a>
-        <a class="button-secondary" href="https://tally.so/r/ODKx2R?service=custom-production&amp;source_page=examples&amp;campaign=website" target="_blank" rel="noopener">Discuss a Custom Project</a>
+        <a class="button" href="#featured-client-work">View Featured Client Work</a>
+        <a class="button-secondary" href="#service-demonstrations">See Service Demonstrations</a>
+        <a class="button-secondary" href="store.html">Explore Services</a>
       </div>
     </header>
 
-    <section>
-      <h2>Example Library</h2>
+    <section id="featured-client-work">
+      <h2>Featured Client Work</h2>
       <p class="section-intro">
-        These examples and demonstration areas show the current direction of TowleVision
-        production services and studio platform work.
+        Completed external client work, shared with permission.
       </p>
 
-      <div class="grid">
-        <article class="card">
-          <div class="category-label">Demo available</div>
-          <h3>Shorts Pack Demo</h3>
-          <p>
-            One source video turned into five captioned vertical social clips.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/shorts-pack.html#demo">View demo</a>
-            <a class="button-secondary" href="services/shorts-pack.html">Service details</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Example category</div>
-          <h3>Captioned Social Clips</h3>
-          <p>
-            Readable vertical clips with burned-in captions, word highlighting, and clean delivery.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/shorts-pack.html">View service</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Example category</div>
-          <h3>Technical Narration &amp; Captioning</h3>
-          <p>
-            Specialized content where terminology, pronunciation, acronyms, captions,
-            and spelling consistency matter.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/technical-narration-captioning.html">View service</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Scientific and Technical Communication</div>
-          <h3>Nutraberry Scientific Explainer</h3>
+      <article class="card featured-proof">
+        <div>
+          <div class="category-label">External client work</div>
+          <h3>Scientific Explainer for Nutraberry</h3>
           <p class="permission-note">Shared with client permission</p>
           <p>
-            A technically careful explainer showing how TowleVision can transform dense
-            scientific source material into clear narration, relevant visuals, accurate
-            captions, and a polished publishing-ready video.
+            Nutraberry needed a concise way to explain a technically dense
+            particle-engineering concept while protecting confidential processing details.
           </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/scientific-explainer-video.html#production-example">Watch the Nutraberry Example</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Studio work</div>
-          <h3>Literary / Visual Audiobook Work</h3>
           <p>
-            Visual storytelling and narrated literary projects created with TowleVision-style
-            production workflows.
+            TowleVision produced a professionally narrated scientific explainer with careful
+            technical language, specialized pronunciation, relevant visuals, reviewed captions,
+            and a publishing-ready finish.
           </p>
+          <blockquote class="testimonial-quote">
+            “Tyrell took a technically dense particle-engineering concept and turned it into a
+            clear, accurate and visually compelling explainer. He was highly responsive to feedback
+            and quickly revised the piece to protect confidential processing details while preserving
+            the commercial message.”
+          </blockquote>
+          <p class="testimonial-attribution">David Wishnick, Nutraberry</p>
           <div class="hero-actions">
-            <a class="button-secondary" href="art.html">View studio page</a>
+            <a class="button" href="services/scientific-explainer-video.html">View the Full Client Case Study</a>
           </div>
-        </article>
+        </div>
+        <div class="proof-video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/itUekhpj3jw"
+            title="Nutraberry scientific explainer produced by TowleVision"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </article>
+    </section>
 
-        <article class="card">
-          <div class="category-label">Technical foundation</div>
-          <h3>Engineering / Studio Platform</h3>
-          <p>
-            The technical portfolio behind TowleVision Studio and related software work.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="engineering_portfolio.html">View portfolio</a>
+    <section id="service-demonstrations">
+      <h2>Service Demonstrations</h2>
+      <p class="section-intro">
+        Concrete examples of currently offered production workflows.
+      </p>
+
+      <article class="card featured-proof shorts-proof">
+        <div class="shorts-proof__header">
+          <div class="shorts-proof__copy">
+            <div class="category-label">Fixed-price demonstrated service</div>
+            <h3>One Finished Source Production &rarr; Five Finished Shorts</h3>
+            <p>
+              One finished, caption-free source production became five ready-to-post vertical
+              shorts. Each clip stands on its own, built around a distinct excerpt rather than
+              an arbitrary cut.
+            </p>
+            <p>
+              Every short includes readable captions and a practical delivery package. Click
+              through to compare the full source with all five finished results.
+            </p>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Software lineup</div>
-          <h3>Apps, Dashboards &amp; Workflow Tools</h3>
-          <p>
-            TowleVision Studio, AQI Informer, GitVault, websites, dashboards, and focused workflow
-            utilities show the range of practical software work available.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/coding-services.html">Explore software services</a>
+          <div
+            class="shorts-proof__flow"
+            aria-label="One finished source production becomes five finished shorts"
+          >
+            <span class="shorts-proof__metric">
+              <strong>1</strong>
+              finished source
+            </span>
+            <span class="shorts-proof__arrow" aria-hidden="true">&rarr;</span>
+            <span class="shorts-proof__metric">
+              <strong>5</strong>
+              finished shorts
+            </span>
           </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <div class="category-label">Custom direction</div>
-          <h3>Custom Production Possibilities</h3>
-          <p>
-            Scripts, audio, finished videos, music, visuals, captions, and media automation
-            can be combined into custom production workflows.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/custom-production.html">View custom production</a>
+        <a
+          class="shorts-proof__visual"
+          href="services/shorts-pack.html#demo"
+          aria-label="View the full source-to-shorts demonstration"
+        >
+          <img
+            class="proof-image"
+            src="assets/images/services/shorts-pack-source-to-five-shorts.webp"
+            alt="One finished source production shown becoming five captioned, ready-to-post vertical shorts"
+            width="1600"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="shorts-proof__caption">
+            Open the full demonstration to compare the source with all five finished shorts.
+          </span>
+        </a>
+
+        <div class="hero-actions">
+          <a class="button" href="services/shorts-pack.html#demo">View the Full Source-to-Shorts Demonstration</a>
+          <a class="button-secondary" href="services/shorts-pack.html">View the Shorts Pack</a>
+        </div>
+      </article>
+
+      <div class="media-range-grid single-media service-demo-secondary">
+        <article class="media-card">
+          <div class="media-player media-player--16x9">
+            <a class="media-player__fallback" href="https://www.youtube.com/watch?v=suMkVMwrWK8" target="_blank" rel="noopener noreferrer">
+              <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="Illustrative syringe scene with a caption containing the term plutonium" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch Scientific Terminology and Technical Captions on YouTube</span>
+            </a>
+            <button class="media-player__button" type="button" data-youtube-id="suMkVMwrWK8" data-youtube-title="TowleVision demonstration of scientific terminology and technical captions" aria-label="Load video: Scientific Terminology and Technical Captions">
+              <img src="assets/posters/demos/scientific-terminology-technical-captions.webp" alt="" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Scientific Terminology and Technical Captions</span>
+            </button>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Production category</div>
-          <h3>Audio-to-Video</h3>
-          <p>
-            Finished narration, lectures, podcast segments, and audio essays can become captioned
-            videos with visuals.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/audio-to-video.html">View service</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Production category</div>
-          <h3>Script-to-Video</h3>
-          <p>
-            Finished or near-finished scripts can become narrated, captioned visual media
-            when the scope is a good fit.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/video-from-script.html">View service</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="category-label">Production category</div>
-          <h3>Music-to-Video</h3>
-          <p>
-            Rights-cleared music can be shaped into visual videos with themed imagery,
-            pacing, and a defined delivery format.
-          </p>
-          <div class="hero-actions">
-            <a class="button-secondary" href="services/music-video.html">View service</a>
+          <div class="media-card__body">
+            <h3>Technical Narration and Captioning</h3>
+            <p>
+              This finished demonstration shows specialized terminology handled through careful
+              narration, readable caption timing, accurate spelling, and human review.
+            </p>
+            <div class="hero-actions">
+              <a class="button-secondary" href="services/technical-narration-captioning.html#technical-language-in-practice">View the Full Technical Media Demonstration</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
     <section id="creative-technical-range">
-      <h2>Creative and Technical Range</h2>
+      <h2>Creative and Educational Work</h2>
       <p class="section-intro">
-        These finished demonstrations show two different production directions: cinematic
-        historical storytelling and a transparent, review-driven AI production workflow.
+        Completed productions showing long-form visual storytelling, educational adaptation,
+        narration, captions, and consistent multi-project craft.
       </p>
 
-      <div class="media-range-grid">
+      <div class="grid">
+        <article class="card">
+          <div class="category-label">Long-form showcase</div>
+          <a href="https://youtu.be/GmUZ5xlt5rM?si=JltPlhY9VXOmEA3J" target="_blank" rel="noopener noreferrer" aria-label="Watch The Snow Queen on YouTube">
+            <img class="project-image" src="assets/images/The Snow Queen thumbnail semifinalist.png" alt="The Snow Queen thumbnail with semifinalist recognition" loading="lazy" decoding="async" />
+          </a>
+          <h3>The Snow Queen</h3>
+          <p class="project-meta">Long-form showcase — Semifinalist recognition</p>
+          <p>
+            End-to-end workflow execution across narration, captioning, story planning,
+            image generation, pacing, and final assembly.
+          </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="https://youtu.be/GmUZ5xlt5rM?si=JltPlhY9VXOmEA3J" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+            <a class="button-secondary" href="https://filmfreeway.com/projects/4165757" target="_blank" rel="noopener noreferrer">View Project Page</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="category-label">Educational production</div>
+          <a href="https://youtu.be/UwoIeYWsClg?si=gxT_jjgktKGmJiMM" target="_blank" rel="noopener noreferrer" aria-label="Watch Lord of the Flies Summary on YouTube">
+            <img class="project-image" src="assets/images/Lord of the Flies in 10 minutes summary yt thumbnail.png" alt="Lord of the Flies Summary YouTube thumbnail" loading="lazy" decoding="async" />
+          </a>
+          <h3>Lord of the Flies Summary</h3>
+          <p>
+            Complex source material shaped into structured, accessible educational media
+            through narration, visuals, pacing, and caption-supported presentation.
+          </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="https://youtu.be/UwoIeYWsClg?si=gxT_jjgktKGmJiMM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="category-label">Literary adaptation</div>
+          <a href="https://youtu.be/KWygXvIJbmA?si=1fya8JQXKrl7F7C2" target="_blank" rel="noopener noreferrer" aria-label="Watch Beowulf Summary on YouTube">
+            <img class="project-image" src="assets/images/beowulf summary youtube thumbnail.png" alt="Beowulf Summary YouTube thumbnail" loading="lazy" decoding="async" />
+          </a>
+          <h3>Beowulf Summary</h3>
+          <p>
+            A classic text adapted with coherent narration, visual pacing, captions, and a
+            polished finished presentation.
+          </p>
+          <div class="hero-actions">
+            <a class="button-secondary" href="https://youtu.be/KWygXvIJbmA?si=1fya8JQXKrl7F7C2" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="media-range-grid single-media">
         <article class="media-card">
           <div class="media-player media-player--16x9">
             <a class="media-player__fallback" href="https://www.youtube.com/watch?v=OjDv9l5nQPo" target="_blank" rel="noopener noreferrer">
@@ -560,13 +771,54 @@
           <div class="media-card__body">
             <h3>Historical Storytelling and Cinematic Range</h3>
             <p>
-              Historically grounded narration is shaped with cinematic pacing, intentional imagery,
-              and readable captions. The visuals interpret the story without claiming to be archival
-              footage or documentary evidence.
+              Historically grounded narration shaped with cinematic pacing, intentional imagery,
+              and readable captions. The visuals interpret the story without claiming to be
+              archival footage or documentary evidence.
             </p>
           </div>
         </article>
+      </div>
 
+      <div class="grid">
+        <article class="card">
+          <img class="project-image" src="assets/images/little-match-girl.png" alt="A solitary figure walking through a snow-covered street at night, illuminated by warm lantern light" loading="lazy" decoding="async" />
+          <h3>The Little Match Girl</h3>
+          <p>
+            A short-form cinematic adaptation using restrained imagery, narration, and
+            captioned storytelling.
+          </p>
+        </article>
+        <article class="card">
+          <img class="project-image" src="assets/images/the-emperors-new-clothes.png" alt="A public scene suggesting spectacle, attention, and collective perception" loading="lazy" decoding="async" />
+          <h3>The Emperor’s New Clothes</h3>
+          <p>
+            A short-form visual and narrative interpretation emphasizing tone, pacing,
+            and irony over spectacle.
+          </p>
+        </article>
+        <article class="card">
+          <img class="project-image" src="assets/images/a-christmas-carol.png" alt="A solitary figure walking through a lamplit street at night, moving from darkness into warm light" loading="lazy" decoding="async" />
+          <h3>A Christmas Carol</h3>
+          <p>
+            A long-form cinematic adaptation using extended pacing, illustrated narration,
+            and atmospheric continuity.
+          </p>
+        </article>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button-secondary" href="art.html">Explore the Literary Studio Work</a>
+      </div>
+    </section>
+
+    <section id="software-engineering">
+      <h2>Software and Engineering</h2>
+      <p class="section-intro">
+        Representative systems showing the technical infrastructure and engineering capability
+        behind TowleVision production workflows.
+      </p>
+
+      <div class="media-range-grid single-media">
         <article class="media-card">
           <div class="media-player media-player--16x9">
             <a class="media-player__fallback" href="https://www.youtube.com/watch?v=uz95ivrwPLM" target="_blank" rel="noopener noreferrer">
@@ -589,60 +841,93 @@
         </article>
       </div>
 
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="category-label">Media production platform</div>
+          <h3>TowleVision Studio</h3>
+          <p>
+            A local-first media production platform connecting project creation, narration,
+            captioning, image generation, video assembly, review, repair, metadata, and
+            publishing-oriented workflows.
+          </p>
+        </article>
+        <article class="card">
+          <div class="category-label">Development utility</div>
+          <h3>GitVault</h3>
+          <p>
+            A local backup and version-control support system designed to make personal
+            development work easier to protect, mirror, and recover.
+          </p>
+        </article>
+        <article class="card">
+          <div class="category-label">Information tool</div>
+          <h3>AQI Informer</h3>
+          <p>
+            An air-quality information tool that monitors conditions and presents useful
+            information through a simple interface.
+          </p>
+        </article>
+        <article class="card">
+          <div class="category-label">Dashboard example</div>
+          <h3>DABs Dashboard</h3>
+          <p>
+            A custom dashboard and business-operations interface demonstrating the kind of
+            focused internal tool TowleVision can build.
+          </p>
+        </article>
+      </div>
+
       <div class="hero-actions">
-        <a class="button" href="https://tally.so/r/ODKx2R?service=custom-production&amp;source_page=examples&amp;campaign=website" target="_blank" rel="noopener">Discuss a Custom Production</a>
+        <a class="button" href="engineering_portfolio.html">Explore the Engineering Portfolio</a>
+        <a class="button-secondary" href="services/coding-services.html">View Software Services</a>
       </div>
     </section>
 
-    <section id="software-data-ml">
-      <h2>Software, Data &amp; Applied ML Examples</h2>
+    <section id="research-experimental">
+      <h2>Research and Experimental Systems</h2>
       <p class="section-intro">
-        These projects show broader software range without implying public availability, measured
-        performance, or uses beyond their stated experimental and research scope.
+        Research tooling and prototypes presented within their existing experimental scope,
+        without implying commercial maturity or validated outcomes.
       </p>
       <div class="grid">
         <article class="card">
-          <div class="category-label">Computer vision / mobile</div>
+          <div class="category-label">Computer vision / applied ML prototype</div>
           <h3>Mushroom Detection App</h3>
           <p>A computer vision Android app experiment focused on mushroom image recognition and classification-style workflows.</p>
           <p><strong>Not intended for food-safety, medical, or foraging decisions.</strong></p>
-          <div class="hero-actions"><a class="button-secondary" href="services/coding-services.html">View software services</a></div>
         </article>
         <article class="card">
           <div class="category-label">Web automation / research tooling</div>
           <h3>Kannapedia Webscraper</h3>
           <p>A web data extraction tool built to collect and organize structured information from Kannapedia-style cannabis strain and chemotype resources for research and analysis workflows.</p>
           <p>Framed for permitted, publicly accessible information; no endorsement or access to private data is implied.</p>
-          <div class="hero-actions"><a class="button-secondary" href="services/coding-services.html">View software services</a></div>
         </article>
         <article class="card">
           <div class="category-label">Applied data science</div>
           <h3>Cannabis Chemotype ML Model</h3>
           <p>A research-oriented PyTorch/TensorFlow machine learning project exploring cannabis chemotype classification from structured chemical profile data.</p>
           <p>No medical, diagnostic, clinical, legal, cultivation, dosing, or consumption claims are made.</p>
-          <div class="hero-actions"><a class="button-secondary" href="services/coding-services.html">View software services</a></div>
         </article>
       </div>
     </section>
 
-    <section>
-      <h2>Start With a Service</h2>
+    <section id="start-a-project">
+      <h2>Start a Project</h2>
       <article class="card">
         <p>
-          If you already have a finished video, the Shorts Pack is the simplest starting point.
-          If your project combines scripts, audio, captions, visuals, or unusual production needs,
-          a custom project conversation may be a better fit.
+          Have a project that combines scripts, audio, captions, visuals, technical communication,
+          software, or an unusual production need? A short description is enough to begin.
         </p>
         <div class="hero-actions">
-          <a class="button" href="store.html">Explore Services</a>
-          <a class="button-secondary" href="services/shorts-pack.html">Start with the Shorts Pack</a>
-          <a class="button-secondary" href="https://tally.so/r/ODKx2R?service=custom-production&amp;source_page=examples&amp;campaign=website" target="_blank" rel="noopener">Discuss a Custom Project</a>
+          <a class="button" href="https://tally.so/r/ODKx2R?service=custom-production&amp;source_page=examples&amp;campaign=website" target="_blank" rel="noopener">Tell Me About Your Project</a>
+          <a class="button-secondary" href="services/shorts-pack.html">View the Shorts Pack</a>
+          <a class="button-secondary" href="store.html">Explore Services</a>
         </div>
       </article>
     </section>
 
     <footer>
-      &copy; 2026 TowleVision. A growing library of media production examples and demonstrations.
+      &copy; 2026 TowleVision. Client work, demonstrated production services, creative media, and engineering proof.
     </footer>
   </main>
 </body>
