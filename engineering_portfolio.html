@@ -227,13 +227,17 @@
       border-radius: 24px;
       padding: 1rem;
       box-shadow: var(--shadow);
+      align-self: center;
     }
 
-    .hero-visual img {
+    .engineering-hero-media img {
+      display: block;
       width: 100%;
+      height: auto;
       border-radius: 16px;
       aspect-ratio: 16 / 9;
-      object-fit: cover;
+      object-fit: contain;
+      background: #02070d;
     }
 
     .hero-visual-label {
@@ -354,34 +358,59 @@
       font-weight: 700;
     }
 
-    .proof-grid {
+    .engineering-proof-layout {
+      display: grid;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .engineering-caption-proof,
+    .engineering-portrait-proof {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .engineering-landscape-pair {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
+      align-items: start;
     }
 
-    .proof-card img {
-      width: 100%;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      margin-bottom: 1rem;
-    }
-
-    .proof-stack {
-      display: grid;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .proof-image-block {
+    .engineering-landscape-figure,
+    .engineering-portrait-figure {
+      margin: 0;
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 18px;
       padding: 0.8rem;
     }
 
-    .proof-image-block img {
+    .engineering-landscape-figure img,
+    .engineering-portrait-media {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       margin-bottom: 0.65rem;
+    }
+
+    .engineering-portrait-proof {
+      width: min(100%, 58rem);
+      justify-self: center;
+      gap: 1.15rem;
+      align-items: start;
+    }
+
+    .engineering-portrait-figure {
+      width: min(100%, 24rem);
+      justify-self: center;
+      margin-top: 0.1rem;
+    }
+
+    .engineering-portrait-media {
+      margin-bottom: 0;
     }
 
     .proof-image-label {
@@ -403,8 +432,9 @@
 
     .project-grid {
       display: grid;
-      grid-template-columns: 1.15fr 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
+      align-items: start;
     }
 
     .project-tag {
@@ -418,10 +448,10 @@
     }
 
     .project-image {
+      display: block;
       width: 100%;
+      height: auto;
       border-radius: 16px;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
       margin-bottom: 1rem;
     }
 
@@ -491,20 +521,16 @@
       .hero,
       .contact-card,
       .project-grid,
-      .proof-grid,
       .grid-2,
       .grid-3,
       .stats {
         grid-template-columns: 1fr 1fr;
       }
-
-      .project-grid > .project-card:first-child {
-        grid-column: span 2;
-      }
     }
 
     @media (max-width: 900px) {
-      .hero {
+      .hero,
+      .engineering-landscape-pair {
         grid-template-columns: 1fr;
       }
     }
@@ -517,15 +543,10 @@
       .hero,
       .contact-card,
       .project-grid,
-      .proof-grid,
       .grid-2,
       .grid-3,
       .stats {
         grid-template-columns: 1fr;
-      }
-
-      .project-grid > .project-card:first-child {
-        grid-column: span 1;
       }
 
       h1 {
@@ -594,7 +615,7 @@
         </div>
       </div>
 
-      <div class="hero-visual">
+      <div class="hero-visual engineering-hero-media">
         <img
           src="/assets/images/hero flagship visual.png"
           alt="TowleVision flagship visual showing a cinematic ship scene"
@@ -846,10 +867,18 @@
         to caption fidelity, presentation, and multi-format adaptation.
       </p>
 
-      <div class="proof-grid">
-        <article class="proof-card">
-          <div class="proof-stack">
-            <div class="proof-image-block">
+      <div class="engineering-proof-layout">
+        <article class="proof-card engineering-caption-proof">
+          <div>
+            <h3>Caption fidelity across styles</h3>
+            <p>
+              Captioning is treated as a first-class system concern. TowleVision Studio supports multiple polished caption styles
+              while maintaining punctuation fidelity, readable line breaking, and presentation quality across different output contexts.
+            </p>
+          </div>
+
+          <div class="engineering-landscape-pair">
+            <figure class="engineering-landscape-figure">
               <img
                 src="/assets/images/caption fidelity shot2.png"
                 alt="TowleVision frame showing polished caption rendering with punctuation fidelity in one caption style"
@@ -858,13 +887,15 @@
                 loading="lazy"
                 decoding="async"
               />
-              <div class="proof-image-label">Caption style 1</div>
-              <p class="proof-image-note">
-                Serif presentation with strong punctuation handling, clean line breaks, and visually integrated captions.
-              </p>
-            </div>
+              <figcaption>
+                <div class="proof-image-label">Caption style 1</div>
+                <p class="proof-image-note">
+                  Serif presentation with strong punctuation handling, clean line breaks, and visually integrated captions.
+                </p>
+              </figcaption>
+            </figure>
 
-            <div class="proof-image-block">
+            <figure class="engineering-landscape-figure">
               <img
                 src="/assets/images/caption fidelity shot.png"
                 alt="TowleVision frame showing an alternate caption style with emphasized highlighted text"
@@ -873,34 +904,36 @@
                 loading="lazy"
                 decoding="async"
               />
-              <div class="proof-image-label">Caption style 2</div>
-              <p class="proof-image-note">
-                Alternate caption styling for emphasis-heavy moments while preserving readability and polished presentation.
-              </p>
-            </div>
+              <figcaption>
+                <div class="proof-image-label">Caption style 2</div>
+                <p class="proof-image-note">
+                  Alternate caption styling for emphasis-heavy moments while preserving readability and polished presentation.
+                </p>
+              </figcaption>
+            </figure>
           </div>
-
-          <h3>Caption fidelity across styles</h3>
-          <p>
-            Captioning is treated as a first-class system concern. TowleVision Studio supports multiple polished caption styles
-            while maintaining punctuation fidelity, readable line breaking, and presentation quality across different output contexts.
-          </p>
         </article>
 
-        <article class="proof-card">
-          <img
-            src="/assets/images/short form screen with TV logo.png"
-            alt="TowleVision vertical short-form layout with captions and branding"
-            width="1212"
-            height="2158"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>Format-aware social output handling</h3>
-          <p>
-            TowleVision Studio is designed to extend beyond a single output format. This includes vertical short-form presentation,
-            branding, caption handling, and layout choices that feel productized rather than improvised.
-          </p>
+        <article class="proof-card engineering-portrait-proof">
+          <div class="engineering-portrait-copy">
+            <h3>Format-aware social output handling</h3>
+            <p>
+              TowleVision Studio is designed to extend beyond a single output format. This includes vertical short-form presentation,
+              branding, caption handling, and layout choices that feel productized rather than improvised.
+            </p>
+          </div>
+
+          <figure class="engineering-portrait-figure">
+            <img
+              class="engineering-portrait-media"
+              src="/assets/images/short form screen with TV logo.png"
+              alt="TowleVision vertical short-form layout with captions and branding"
+              width="1212"
+              height="2158"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </article>
       </div>
     </section>
@@ -926,7 +959,7 @@
             <img
               src="/assets/images/The Snow Queen thumbnail semifinalist.png"
               alt="The Snow Queen thumbnail with semifinalist recognition"
-              class="project-image"
+              class="project-image engineering-project-media"
               width="1280"
               height="720"
               loading="lazy"
@@ -961,7 +994,7 @@
             <img
               src="/assets/images/Lord of the Flies in 10 minutes summary yt thumbnail.png"
               alt="Lord of the Flies Summary YouTube thumbnail"
-              class="project-image"
+              class="project-image engineering-project-media"
               width="1280"
               height="720"
               loading="lazy"
@@ -994,7 +1027,7 @@
             <img
               src="/assets/images/beowulf summary youtube thumbnail.png"
               alt="Beowulf Summary YouTube thumbnail"
-              class="project-image"
+              class="project-image engineering-project-media"
               width="1280"
               height="720"
               loading="lazy"
