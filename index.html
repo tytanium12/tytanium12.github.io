@@ -984,14 +984,44 @@
       <div class="media-proof-grid" aria-label="TowleVision production proof">
         <article class="media-card">
           <div class="media-player media-player--16x9">
-            <!-- Approved client video: use only the complete final YouTube embed. -->
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/itUekhpj3jw"
-              title="Nutraberry scientific explainer produced by TowleVision"
-              loading="lazy"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+            <!-- Approved client video: use only the complete final YouTube video. -->
+            <a
+              class="media-player__fallback"
+              href="https://www.youtube.com/watch?v=itUekhpj3jw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/posters/client/nutraberry-particle-size.jpg"
+                alt="Nutraberry scientific explainer thumbnail reading Particle Size Changes Everything"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="media-player__scrim"></span>
+              <span class="media-player__play" aria-hidden="true"></span>
+              <span class="media-player__label">Watch the Nutraberry Scientific Explainer on YouTube</span>
+            </a>
+            <button
+              class="media-player__button"
+              type="button"
+              data-youtube-id="itUekhpj3jw"
+              data-youtube-title="Nutraberry scientific explainer produced by TowleVision"
+              aria-label="Load video: Nutraberry Scientific Explainer"
+            >
+              <img
+                src="assets/posters/client/nutraberry-particle-size.jpg"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="media-player__scrim"></span>
+              <span class="media-player__play" aria-hidden="true"></span>
+              <span class="media-player__label">Load the Nutraberry Scientific Explainer</span>
+            </button>
           </div>
           <div class="media-card__body">
             <div class="project-tag">Client example - Shared with permission</div>
