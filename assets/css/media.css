@@ -183,6 +183,138 @@
   height: 100%;
 }
 
+.chemistry-proof-grid,
+.chemistry-character-grid,
+.chemistry-production-stills,
+.architecture-flow,
+.interface-evolution-grid,
+.review-proof-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.chemistry-proof-grid,
+.interface-evolution-grid,
+.review-proof-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.chemistry-production-stills {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.chemistry-character-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.chemistry-character-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line, rgba(120, 167, 214, 0.2));
+  border-radius: var(--radius, 20px);
+  background: linear-gradient(180deg, rgba(21, 39, 63, 0.78), rgba(12, 27, 45, 0.96));
+  box-shadow: var(--shadow, 0 18px 50px rgba(0, 0, 0, 0.2));
+}
+
+.chemistry-character-card__portrait {
+  display: grid;
+  min-height: 18rem;
+  place-items: end center;
+  padding: 1rem 1rem 0;
+  background:
+    linear-gradient(180deg, rgba(88, 196, 221, 0.08), rgba(127, 228, 176, 0.07)),
+    rgba(255, 255, 255, 0.02);
+}
+
+.chemistry-character-card__portrait img {
+  width: auto;
+  max-width: 100%;
+  max-height: 24rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.chemistry-character-card__body {
+  padding: 1rem;
+}
+
+.chemistry-character-card__body h3 {
+  margin: 0 0 0.35rem;
+}
+
+.chemistry-character-card__body p {
+  color: var(--muted, #a8b7c9);
+  margin: 0;
+}
+
+.chemistry-image-link {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line, rgba(120, 167, 214, 0.2));
+  border-radius: var(--radius, 20px);
+  background: rgba(2, 7, 13, 0.72);
+  color: inherit;
+}
+
+.chemistry-image-link:hover {
+  border-color: rgba(88, 196, 221, 0.48);
+}
+
+.chemistry-image-link:focus-visible {
+  outline: 3px solid var(--accent-2, #7fe4b0);
+  outline-offset: 4px;
+}
+
+.chemistry-landscape-image,
+.chemistry-portrait-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.chemistry-landscape-image {
+  aspect-ratio: 16 / 9;
+}
+
+.chemistry-portrait-image {
+  max-height: 42rem;
+  margin: 0 auto;
+}
+
+.chemistry-logo-lockup {
+  display: grid;
+  grid-template-columns: minmax(7rem, 12rem) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.chemistry-logo-lockup img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.architecture-flow {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.architecture-flow li {
+  position: relative;
+  min-width: 0;
+  min-height: 7rem;
+  padding: 1rem;
+  border: 1px solid var(--line, rgba(120, 167, 214, 0.2));
+  border-radius: var(--radius, 20px);
+  background: linear-gradient(180deg, rgba(21, 39, 63, 0.82), rgba(16, 29, 47, 0.95));
+  color: var(--text, #e8eff8);
+  font-weight: 750;
+}
+
 .media-card__image-link:focus-visible {
   outline: 3px solid var(--accent-2, #7fe4b0);
   outline-offset: -5px;
@@ -473,6 +605,12 @@ body.media-lightbox-open {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .chemistry-character-grid,
+  .chemistry-production-stills,
+  .architecture-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .shorts-results-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -515,8 +653,30 @@ body.media-lightbox-open {
   .media-range-grid,
   .media-technical-layout,
   .studio-gallery,
+  .chemistry-proof-grid,
+  .chemistry-character-grid,
+  .chemistry-production-stills,
+  .architecture-flow,
+  .interface-evolution-grid,
+  .review-proof-grid,
   .shorts-results-grid {
     grid-template-columns: 1fr;
+  }
+
+  .chemistry-logo-lockup {
+    grid-template-columns: 1fr;
+  }
+
+  .chemistry-logo-lockup img {
+    width: min(100%, 12rem);
+  }
+
+  .chemistry-character-card__portrait {
+    min-height: 15rem;
+  }
+
+  .chemistry-character-card__portrait img {
+    max-height: 20rem;
   }
 
   .media-player__play {

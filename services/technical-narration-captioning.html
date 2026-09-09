@@ -347,51 +347,56 @@
     <section id="technical-language-in-practice">
       <h2>Technical Language in Practice</h2>
       <p class="section-intro">
-        Specialized vocabulary needs more than automated transcription. This example shows how
-        careful segmentation, readable line lengths, and terminology review support technical narration.
+        Specialized vocabulary needs more than automated transcription. TowleVision can treat
+        approved script text as authoritative while speech-recognition and alignment systems assist
+        with timing. The engineering distinction is separating what the words should be from when
+        they occur in the audio.
       </p>
 
       <div class="media-technical-layout">
         <article class="media-card">
-          <div class="media-player media-player--16x9">
-            <a class="media-player__fallback" href="https://www.youtube.com/watch?v=suMkVMwrWK8" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/posters/demos/scientific-terminology-technical-captions.webp" alt="Illustrative syringe scene with a caption containing the term plutonium" width="1280" height="720" loading="lazy" decoding="async" />
-              <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Watch Scientific Terminology and Technical Captions on YouTube</span>
-            </a>
-            <button class="media-player__button" type="button" data-youtube-id="suMkVMwrWK8" data-youtube-title="TowleVision demonstration of scientific terminology and technical captions" aria-label="Load video: Scientific Terminology and Technical Captions">
-              <img src="../assets/posters/demos/scientific-terminology-technical-captions.webp" alt="" width="1280" height="720" loading="lazy" decoding="async" />
-              <span class="media-player__scrim"></span><span class="media-player__play" aria-hidden="true"></span><span class="media-player__label">Load Scientific Terminology and Technical Captions</span>
-            </button>
-          </div>
+          <img
+            class="media-card__image"
+            src="../assets/images/chemistry-tv/soap-hydrophilic-hydrophobic.webp"
+            alt="Chemistry TV SOAP frame with caption text about hydrophilic and hydrophobic regions"
+            width="1800"
+            height="1014"
+            loading="lazy"
+            decoding="async"
+          />
           <div class="media-card__body">
-            <h3>Scientific Terminology and Technical Captions</h3>
-            <p>Terms involving radioactive materials, including plutonium, require accurate spelling and readable caption timing.</p>
+            <h3>Technical Terminology Without Surrendering the Source Text</h3>
+            <p>
+              In the SOAP example, approved wording includes hydrophilic and hydrophobic. Caption
+              alignment can help place those words in time without handing the source text over to
+              an unreviewed transcript.
+            </p>
           </div>
         </article>
 
         <article class="media-card">
           <img
             class="media-card__image"
-            src="../assets/images/demos/technical-caption-plutonium.webp"
-            alt="Illustrative historical storytelling frame showing a syringe beside the caption phrase plutonium injections"
-            width="1600"
-            height="900"
+            src="../assets/images/chemistry-tv/rust-technical-terminology.webp"
+            alt="Chemistry TV RUST frame with caption terms iron oxides, hydroxides, and oxyhydroxides"
+            width="1800"
+            height="1010"
             loading="lazy"
             decoding="async"
           />
           <div class="media-card__body">
-            <h3>Human review is part of the quality check</h3>
+            <h3>Reviewed Spelling, Segmentation, and Timing</h3>
             <p>
-              AI can help with a first pass, but it does not guarantee correct terminology,
-              pronunciation, or captions. Human review checks supplied vocabulary and repairs
-              segmentation or spelling where needed.
-            </p>
-            <p>
-              The syringe is an illustrative visual-storytelling choice in historical narration;
-              it is not presented as documentary evidence or a literal technical diagram.
+              The RUST example includes iron oxides, hydroxides, and oxyhydroxides. Technical
+              spelling, caption segmentation, timing, and final readability remain review concerns
+              rather than assumptions of perfect automatic accuracy.
             </p>
           </div>
         </article>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button-secondary" href="../examples.html#chemistry-tv">Watch the Complete Chemistry TV Example</a>
       </div>
     </section>
 

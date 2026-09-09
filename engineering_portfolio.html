@@ -38,6 +38,7 @@
   <meta name="author" content="Tyrell Towle, PhD" />
 
   <link rel="stylesheet" href="assets/css/media.css?v=20260801-header-shell" />
+  <script defer src="assets/js/click-to-load-video.js"></script>
 
   <style>
     :root {
@@ -269,6 +270,10 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1rem;
       margin-top: 2rem;
+    }
+
+    .architecture-flow {
+      margin-bottom: 1.35rem;
     }
 
     .stat {
@@ -586,21 +591,21 @@
         <h1>TowleVision Engineering Portfolio</h1>
 
         <p class="hero-subtitle">
-          A technical portfolio documenting the software, local-first systems, review tools,
-          automation, and engineering workflows behind TowleVision.
+          A Python-centered multimodal production platform built through sustained development,
+          deterministic validation, model-backed systems, heuristics, and human review.
         </p>
 
         <p class="hero-copy">
-          TowleVision Studio is the flagship software platform documented in this portfolio. It
-          demonstrates modular Python architecture, applied AI orchestration, workflow automation,
-          and product thinking across a complete pipeline from text intake through narration,
-          captions, planning, image generation, final assembly, social clips, metadata, and
-          publishing-oriented workflows.
+          TowleVision Studio combines conventional software, structured artifacts, AI-assisted
+          media systems, explicit rerun paths, and operator-facing review tools. The engineering
+          target is repeatable production: real source material enters the system, outputs are
+          inspected and repaired, and finished work becomes publishable media.
         </p>
 
         <div class="hero-actions">
           <a class="button" href="https://github.com/tytanium12" target="_blank" rel="noopener noreferrer">View GitHub</a>
-          <a class="button-secondary" href="#projects">See selected projects</a>
+          <a class="button-secondary" href="#platform">See the Architecture</a>
+          <a class="button-secondary" href="#proof">Current Production Proof</a>
           <a class="button-secondary" href="services/coding-services.html">Software Services</a>
           <a class="button-secondary" href="https://tally.so/r/ODKx2R?service=collaboration&amp;source_page=engineering-portfolio&amp;campaign=website" target="_blank" rel="noopener">Start a Conversation</a>
         </div>
@@ -609,6 +614,8 @@
           <a href="#snapshot">Snapshot</a>
           <a href="#overview">Overview</a>
           <a href="#platform">Platform</a>
+          <a href="#operator-interfaces">Interfaces</a>
+          <a href="#characters">Characters</a>
           <a href="#proof">Proof</a>
           <a href="#projects">Projects</a>
           <a href="art.html">Explore Creative Work</a>
@@ -617,118 +624,110 @@
 
       <div class="hero-visual engineering-hero-media">
         <img
-          src="/assets/images/hero flagship visual.png"
-          alt="TowleVision flagship visual showing a cinematic ship scene"
-          width="1280"
-          height="720"
+          src="assets/images/chemistry-tv/chemistry-tv-banner.webp"
+          alt="Chemistry TV banner with TowleVision recurring science presenters"
+          width="1672"
+          height="941"
         />
         <div class="hero-visual-label">
-          <div class="hero-visual-kicker">Flagship output</div>
-          <p class="hero-visual-caption">The Snow Queen • long-form pipeline showcase</p>
+          <div class="hero-visual-kicker">Current platform output</div>
+          <p class="hero-visual-caption">Chemistry TV - recurring characters, voices, captions, and generated visual production</p>
         </div>
       </div>
     </header>
 
-    <section id="snapshot" aria-label="June 2026 engineering snapshot">
-      <h2>June 2026 Engineering Snapshot</h2>
+    <section id="snapshot" aria-label="September 2026 engineering snapshot">
+      <h2>September 2026 Engineering Snapshot</h2>
 
       <p class="section-intro">
-        TowleVision_Codex baseline audit &mdash; June 2026. TowleVision Studio is a local-first AI
-        media production platform built around structured project creation, narration, captioning,
-        image generation, video assembly, review, repair, metadata preparation, and publishing support.
+        September 2026 audited repository snapshot for the active TowleVision production platform.
+        The audit covers 702 source files, 9 workflow groups, and 9 materially distinct model-backed
+        systems or families.
       </p>
 
       <div class="stats">
         <div class="stat">
-          <span class="stat-value">228k+</span>
-          <span class="stat-label">Strict source lines of code</span>
+          <span class="stat-value">1,174</span>
+          <span class="stat-label">Git commits</span>
         </div>
         <div class="stat">
-          <span class="stat-value">254k+</span>
-          <span class="stat-label">Engineering-surface lines</span>
+          <span class="stat-value">277 days</span>
+          <span class="stat-label">Reachable development history</span>
         </div>
         <div class="stat">
-          <span class="stat-value">199k+</span>
-          <span class="stat-label">Python lines of code</span>
+          <span class="stat-value">423,667</span>
+          <span class="stat-label">Physical source lines</span>
         </div>
         <div class="stat">
-          <span class="stat-value">18k+</span>
-          <span class="stat-label">JavaScript lines of code</span>
+          <span class="stat-value">659</span>
+          <span class="stat-label">Tracked Python files</span>
         </div>
         <div class="stat">
-          <span class="stat-value">23k+</span>
-          <span class="stat-label">Frontend lines across local browser tools</span>
+          <span class="stat-value">192</span>
+          <span class="stat-label">Test files</span>
         </div>
         <div class="stat">
-          <span class="stat-value">30k+</span>
-          <span class="stat-label">Test lines across 78 test files</span>
+          <span class="stat-value">~2,823</span>
+          <span class="stat-label">Static test definitions / call sites</span>
         </div>
         <div class="stat">
-          <span class="stat-value">8</span>
-          <span class="stat-label">Complete local browser app groups</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">9</span>
-          <span class="stat-label">Backend/server entrypoints</span>
+          <span class="stat-value">57</span>
+          <span class="stat-label">Canonical pipeline steps</span>
         </div>
         <div class="stat">
           <span class="stat-value">70</span>
-          <span class="stat-label">Registered workflow commands</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">2</span>
-          <span class="stat-label">Built-in Project Runner workflows</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">35</span>
-          <span class="stat-label">Config, schema, and preset files</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">June 2026</span>
-          <span class="stat-label">Baseline audit date</span>
+          <span class="stat-label">Current production / review operations</span>
         </div>
       </div>
 
       <article class="card" style="margin-top: 1rem;">
         <h3>Snapshot definition</h3>
         <p>
-          These numbers come from a June 2026 baseline audit of the active TowleVision_Codex
-          development repository. Generated media, runtime project outputs, caches, dependencies,
-          and virtual environments were excluded from source-code counts. The strict LOC definition
-          is nonblank strict source LOC. The engineering-surface number includes broader source,
-          test, frontend, config, schema, preset, script, and documentation surface.
+          These numbers are not presented as standalone measures of software quality. Together they
+          document the scale and sustained iteration behind a working production system that evolved
+          through more than 1,100 Git commits from CLI-driven tooling into an integrated multimodal
+          platform.
+        </p>
+        <p>
+          The static test count is an audited identification of test definitions and call sites; it
+          is not a claim that every counted item was executed during the audit. The pipeline count
+          preserves the distinction between 57 canonical pipeline steps and 70 registered, current
+          production and review operations.
         </p>
       </article>
     </section>
 
     <section id="overview">
-      <h2>What this project is designed to show</h2>
+      <h2>What the Platform Demonstrates</h2>
 
       <p class="section-intro">
-        TowleVision Studio is presented here as a serious flagship engineering project rather than
-        a creative hobby. The outputs matter, but the deeper value is the system behind them: a large Python platform that
-        coordinates dependent stages, integrates multiple AI capabilities, and turns raw input into polished deliverables.
+        The outputs matter because they are visible proof of the underlying system. The deeper
+        engineering work is coordinating dependent media stages while preserving source text,
+        workflow state, review decisions, repair paths, and repeatable operator control.
       </p>
 
       <div class="grid grid-3">
         <article class="card">
-          <h3>Large-scale Python systems design</h3>
+          <h3>Python-centered systems design</h3>
           <p>
-            Built as a modular platform with meaningful architectural scope rather than a single-purpose script.
+            A modular backend organizes source material, generated artifacts, workflow registration,
+            validation, media assembly, and review-oriented state.
           </p>
         </article>
 
         <article class="card">
-          <h3>Applied AI orchestration</h3>
+          <h3>Applied model orchestration</h3>
           <p>
-            Demonstrates how multiple AI-driven capabilities can be integrated into one coherent production workflow.
+            Model-backed capabilities are coordinated with conventional software instead of being
+            treated as a complete end-to-end replacement for production judgment.
           </p>
         </article>
 
         <article class="card">
           <h3>Automation with product intent</h3>
           <p>
-            Focused on repeatability, usability, accessibility, and finished output quality instead of isolated experiments.
+            CLI and browser/operator workflows are designed around setup, execution, review,
+            repair, and deliberate reruns.
           </p>
         </article>
       </div>
@@ -744,13 +743,26 @@
     </section>
 
     <section id="platform">
-      <h2>TowleVision Studio: Flagship Platform</h2>
+      <h2>TowleVision Studio: Conceptual Architecture</h2>
 
       <p class="section-intro">
-        The platform spans a structured workflow from source material through narrated,
-        captioned, image-based video production. It is designed around orchestration,
-        modularity, review, repair, and controlled transformation across many dependent stages.
+        A real production contains branches, retries, review loops, optional stages, and manual
+        acceptance decisions. This flow is a conceptual overview of how a structured project moves
+        from approved content toward finished media.
       </p>
+
+      <ol class="architecture-flow" aria-label="Conceptual TowleVision Studio workflow">
+        <li>Script / structured content</li>
+        <li>Voice, character &amp; pronunciation configuration</li>
+        <li>TTS candidate generation &amp; review</li>
+        <li>Master audio &amp; caption alignment</li>
+        <li>Story / scene / timing / shot planning</li>
+        <li>Prompt planning &amp; image generation</li>
+        <li>Image review / regeneration</li>
+        <li>Section video rendering</li>
+        <li>Final assembly</li>
+        <li>Human review / repair / publishing workflows</li>
+      </ol>
 
       <div class="grid grid-2">
         <article class="feature-card">
@@ -774,7 +786,7 @@
             <li>Multimodal AI integration and automation</li>
             <li>Accessibility-aware captioning and presentation</li>
             <li>Product thinking from raw input to finished deliverable</li>
-            <li>A platform mindset that extends beyond one media use case</li>
+            <li>Review and repair paths before final acceptance</li>
           </ul>
         </article>
 
@@ -791,164 +803,335 @@
         <article class="feature-card request-only">
           <h3>Additional technical materials available upon request</h3>
           <p>
-            I maintain a private technical appendix for deeper review, including a polished pipeline diagram,
-            a metrics summary, and a curated repo snapshot.
+            I maintain private technical materials for deeper review, including audited metrics,
+            repository summaries, and workflow documentation.
           </p>
         </article>
       </div>
     </section>
 
     <section id="engineering-different">
-      <h2>What Makes the Engineering Different</h2>
+      <h2>AI Is One Component of the System</h2>
 
       <p class="section-intro">
-        TowleVision Studio treats AI output as editable production material, not a final one-shot result.
-        The system combines configurable presets, artifact tracking, guarded automation, and
-        human-in-the-loop review so media can be inspected, repaired, and rerun through defined paths.
+        TowleVision Studio does not frame AI as a one-shot video generator. The system is built from
+        cooperating layers that separate generation, validation, state, heuristics, and human judgment.
       </p>
 
-      <div class="grid grid-3">
+      <div class="grid grid-2">
         <article class="feature-card">
-          <h3>Structured project packages</h3>
+          <h3>AI / model-backed systems</h3>
+          <ul>
+            <li>TTS candidate generation</li>
+            <li>ASR and caption alignment assistance</li>
+            <li>Planning and prompt support</li>
+            <li>Image generation</li>
+            <li>Image and VLM review or judging where applicable</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Deterministic software</h3>
+          <ul>
+            <li>Project contracts and artifact state management</li>
+            <li>Source-text preservation</li>
+            <li>Validation and workflow registration</li>
+            <li>Explicit rerun paths</li>
+            <li>Production and review operation boundaries</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Heuristics</h3>
+          <ul>
+            <li>Pacing and timing allocation</li>
+            <li>Ranking and scoring support</li>
+            <li>Motion and layout decisions where applicable</li>
+            <li>Format-aware presentation choices</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Human judgment</h3>
+          <ul>
+            <li>Review, selection, and correction</li>
+            <li>Regeneration and repair decisions</li>
+            <li>Caption, image, audio, and video acceptance</li>
+            <li>Final production approval</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="operator-interfaces">
+      <h2>CLI First. GUI Where the GUI Saves Human Time.</h2>
+
+      <p class="section-intro">
+        TowleVision Studio grew from CLI and registry-driven operations. Those remain important
+        because they make stages explicit and rerunnable, while browser/operator tools reduce the
+        human cost of setup, execution, review, repair, and project navigation.
+      </p>
+
+      <div class="interface-evolution-grid">
+        <article class="media-card">
+          <a
+            class="chemistry-image-link"
+            href="assets/images/chemistry-tv/final-cli.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="CLI-driven operation"
+            data-lightbox-alt="TowleVision CLI operation showing registry-driven production commands"
+            data-lightbox-caption="CLI and registry-driven operations remain part of the production system."
+          >
+            <img class="chemistry-landscape-image" src="assets/images/chemistry-tv/final-cli.webp" alt="TowleVision CLI operation showing registry-driven production commands" width="1549" height="1003" loading="lazy" decoding="async" />
+          </a>
+          <div class="media-card__body">
+            <h3>CLI-driven operations</h3>
+            <p>
+              The CLI makes project operations explicit, traceable, and rerunnable across the pipeline.
+            </p>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <a
+            class="chemistry-image-link"
+            href="assets/images/studio/studio-project-runner.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Project Runner"
+            data-lightbox-alt="TowleVision Studio project runner browser interface"
+            data-lightbox-caption="Operator-facing tooling provides project execution and monitoring without hiding the underlying stages."
+          >
+            <img class="chemistry-landscape-image" src="assets/images/studio/studio-project-runner.webp" alt="TowleVision Studio project runner browser interface" width="1568" height="1003" loading="lazy" decoding="async" />
+          </a>
+          <div class="media-card__body">
+            <h3>Browser/operator tooling</h3>
+            <p>
+              Interfaces provide project setup, execution, review, and repair views where visual
+              context helps humans make faster decisions.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="review">
+      <h2>Human-in-the-Loop Review and Repair</h2>
+
+      <p class="section-intro">
+        Candidate generation is not the same as approval. TowleVision Studio treats generated
+        media as reviewable production material: outputs can be compared, selections can be locked,
+        weak assets can be regenerated, and downstream stages can be rerun deliberately.
+      </p>
+
+      <div class="review-proof-grid">
+        <article class="media-card">
+          <a
+            class="chemistry-image-link"
+            href="assets/images/studio/studio-image-reviewer.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Image Reviewer"
+            data-lightbox-alt="TowleVision Studio image reviewer interface"
+            data-lightbox-caption="Review generated candidates, compare alternatives, and select the strongest visual before downstream work proceeds."
+          >
+            <img class="chemistry-landscape-image" src="assets/images/studio/studio-image-reviewer.webp" alt="TowleVision Studio image reviewer interface" width="1568" height="1003" loading="lazy" decoding="async" />
+          </a>
+          <div class="media-card__body">
+            <h3>Image Reviewer</h3>
+            <p>
+              Generated candidates can be reviewed and selected instead of automatically becoming
+              approved production assets.
+            </p>
+          </div>
+        </article>
+
+        <article class="media-card">
+          <a
+            class="chemistry-image-link"
+            href="assets/images/studio/studio-human-repair.webp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-media-lightbox
+            data-lightbox-title="Human Repair"
+            data-lightbox-alt="TowleVision Studio human repair interface"
+            data-lightbox-caption="Repair workflows let a human describe what needs to change, replace weak assets, and rerun downstream work deliberately."
+          >
+            <img class="chemistry-landscape-image" src="assets/images/studio/studio-human-repair.webp" alt="TowleVision Studio human repair interface" width="1586" height="992" loading="lazy" decoding="async" />
+          </a>
+          <div class="media-card__body">
+            <h3>Human Repair</h3>
+            <p>
+              Captions, audio, images, and video output can be corrected or regenerated through
+              controlled repair paths before final acceptance.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid grid-3" style="margin-top: 1rem;">
+        <article class="feature-card">
+          <h3>Review before acceptance</h3>
           <p>
-            Projects are organized around source material, presets, generated artifacts,
-            review decisions, repair sessions, caption edits, metadata plans, and downstream rerun paths.
+            Produced artifacts can be inspected before they are treated as final deliverables.
           </p>
         </article>
 
         <article class="feature-card">
-          <h3>Local browser app groups</h3>
+          <h3>Deliberate regeneration</h3>
           <p>
-            The platform includes Studio Home / Project Workspace, Project Creator and Editor,
-            Script Editor, Project Runner, Video Reviewer, Human Repair GUI, YouTube Upload Assistant,
-            and Music-to-Video Studio.
+            Weak or failed assets can be regenerated around a human review decision.
           </p>
         </article>
 
         <article class="feature-card">
-          <h3>Registry-driven workflow architecture</h3>
+          <h3>Rerunnable downstream work</h3>
           <p>
-            Dozens of discrete workflow commands are registered and organized so project creation,
-            narration, captioning, image generation, assembly, review, and repair can be run deliberately.
+            Repairing an upstream asset can be followed by intentional downstream reruns.
           </p>
         </article>
+      </div>
+    </section>
 
-        <article class="feature-card">
-          <h3>Human-in-the-loop review</h3>
-          <p>
-            Review and repair layers support images, audio, captions, and final video review, keeping
-            human judgment in the workflow before deliverables are treated as finished.
-          </p>
+    <section id="characters">
+      <h2>Persistent Characters as Production Entities</h2>
+
+      <p class="section-intro">
+        TowleVision recurring characters are reusable production entities rather than one-off
+        generated pictures. Character configuration can connect identity, voice routing,
+        presentation and visual style, compositing, and speaker-aware downstream behavior.
+      </p>
+
+      <div class="chemistry-character-grid" aria-label="Chemistry TV recurring presenters">
+        <article class="chemistry-character-card">
+          <div class="chemistry-character-card__portrait">
+            <img src="assets/images/chemistry-tv/victor-lab.webp" alt="Victor, Chemistry TV laboratory presenter" width="900" height="1350" loading="lazy" decoding="async" />
+          </div>
+          <div class="chemistry-character-card__body">
+            <h3>Victor</h3>
+            <p>Laboratory</p>
+          </div>
         </article>
 
-        <article class="feature-card">
-          <h3>Guarded publishing support</h3>
-          <p>
-            Upload planning and YouTube publishing support are guarded with dry-run and confirmation
-            safeguards, so publishing-related steps can be reviewed before action.
-          </p>
+        <article class="chemistry-character-card">
+          <div class="chemistry-character-card__portrait">
+            <img src="assets/images/chemistry-tv/freyja-history.webp" alt="Freyja, Chemistry TV history and context presenter" width="900" height="1350" loading="lazy" decoding="async" />
+          </div>
+          <div class="chemistry-character-card__body">
+            <h3>Freyja</h3>
+            <p>History &amp; Context</p>
+          </div>
         </article>
 
-        <article class="feature-card">
-          <h3>Serious platform direction</h3>
-          <p>
-            The June 2026 snapshot shows a working local-first platform direction with broad engineering
-            surface area, while still keeping production claims tied to validated workflows and human review.
-          </p>
+        <article class="chemistry-character-card">
+          <div class="chemistry-character-card__portrait">
+            <img src="assets/images/chemistry-tv/miles-industrial.webp" alt="Miles, Chemistry TV industrial and practical chemistry presenter" width="900" height="1350" loading="lazy" decoding="async" />
+          </div>
+          <div class="chemistry-character-card__body">
+            <h3>Miles</h3>
+            <p>Industrial &amp; Practical Chemistry</p>
+          </div>
+        </article>
+
+        <article class="chemistry-character-card">
+          <div class="chemistry-character-card__portrait">
+            <img src="assets/images/chemistry-tv/sue-field.webp" alt="Sue, Chemistry TV field observation presenter" width="900" height="1350" loading="lazy" decoding="async" />
+          </div>
+          <div class="chemistry-character-card__body">
+            <h3>Sue</h3>
+            <p>Field Observation</p>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="proof">
-      <h2>Visible proof of polish and implementation depth</h2>
+      <h2>The Engineering Ends in Actual Production</h2>
 
       <p class="section-intro">
-        These examples show that the platform produces polished, readable, format-aware outputs with attention
-        to caption fidelity, presentation, and multi-format adaptation.
+        Chemistry TV is an ongoing TowleVision-produced educational series. It combines recurring
+        characters, multiple speakers and persistent voices, specialized terminology, authoritative
+        captions, generated visual material, structured planning, human review, and final video assembly.
       </p>
 
-      <div class="engineering-proof-layout">
-        <article class="proof-card engineering-caption-proof">
-          <div>
-            <h3>Caption fidelity across styles</h3>
-            <p>
-              Captioning is treated as a first-class system concern. TowleVision Studio supports multiple polished caption styles
-              while maintaining punctuation fidelity, readable line breaking, and presentation quality across different output contexts.
-            </p>
+      <article class="proof-card chemistry-proof-grid">
+        <a
+          class="chemistry-image-link"
+          href="assets/images/chemistry-tv/soap-hydrophilic-hydrophobic.webp"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-media-lightbox
+          data-lightbox-title="Chemistry TV SOAP terminology frame"
+          data-lightbox-alt="Chemistry TV SOAP frame with caption text about hydrophilic and hydrophobic regions"
+          data-lightbox-caption="Authoritative caption text remains distinct from audio timing and alignment work."
+        >
+          <img class="chemistry-landscape-image" src="assets/images/chemistry-tv/soap-hydrophilic-hydrophobic.webp" alt="Chemistry TV SOAP frame with caption text about hydrophilic and hydrophobic regions" width="1800" height="1014" loading="lazy" decoding="async" />
+        </a>
+
+        <div>
+          <h3>Current production proof</h3>
+          <p>
+            The SOAP episode demonstrates the system working on real educational material with
+            technical language such as hydrophilic and hydrophobic. The engineering goal is not
+            merely to generate media, but to preserve approved wording, coordinate voices and
+            visuals, align captions, and leave room for human review.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="examples.html#chemistry-tv">View Chemistry TV Showcase</a>
           </div>
-
-          <div class="engineering-landscape-pair">
-            <figure class="engineering-landscape-figure">
-              <img
-                src="/assets/images/caption fidelity shot2.png"
-                alt="TowleVision frame showing polished caption rendering with punctuation fidelity in one caption style"
-                width="3838"
-                height="2160"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <div class="proof-image-label">Caption style 1</div>
-                <p class="proof-image-note">
-                  Serif presentation with strong punctuation handling, clean line breaks, and visually integrated captions.
-                </p>
-              </figcaption>
-            </figure>
-
-            <figure class="engineering-landscape-figure">
-              <img
-                src="/assets/images/caption fidelity shot.png"
-                alt="TowleVision frame showing an alternate caption style with emphasized highlighted text"
-                width="3834"
-                height="2160"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <div class="proof-image-label">Caption style 2</div>
-                <p class="proof-image-note">
-                  Alternate caption styling for emphasis-heavy moments while preserving readability and polished presentation.
-                </p>
-              </figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <article class="proof-card engineering-portrait-proof">
-          <div class="engineering-portrait-copy">
-            <h3>Format-aware social output handling</h3>
-            <p>
-              TowleVision Studio is designed to extend beyond a single output format. This includes vertical short-form presentation,
-              branding, caption handling, and layout choices that feel productized rather than improvised.
-            </p>
-          </div>
-
-          <figure class="engineering-portrait-figure">
-            <img
-              class="engineering-portrait-media"
-              src="/assets/images/short form screen with TV logo.png"
-              alt="TowleVision vertical short-form layout with captions and branding"
-              width="1212"
-              height="2158"
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-        </article>
-      </div>
+        </div>
+      </article>
     </section>
 
     <section id="projects">
-      <h2>Selected projects</h2>
+      <h2>Selected Projects</h2>
 
       <p class="section-intro">
-        These projects are presented as evidence of real system execution, not just as creative samples.
-        Together they show platform depth, output quality, and broader technical range.
+        The current engineering story centers on TowleVision Studio and Chemistry TV. Older
+        productions remain useful as representative milestones, but they are no longer the primary
+        proof of the platform.
       </p>
 
       <div class="project-grid">
         <article class="project-card">
-          <div class="project-tag">Flagship showcase</div>
+          <div class="project-tag">Current platform showcase</div>
+
+          <a
+            href="examples.html#chemistry-tv"
+            aria-label="View Chemistry TV platform showcase"
+          >
+            <img
+              src="assets/images/chemistry-tv/fire-victor-combustion.webp"
+              alt="Chemistry TV FIRE episode frame with Victor presenting combustion chemistry"
+              class="project-image engineering-project-media"
+              width="1800"
+              height="1011"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+
+          <h3>Chemistry TV</h3>
+          <p class="project-meta">Ongoing educational science series</p>
+
+          <p>
+            Current TowleVision production proof: recurring characters, persistent voices,
+            technical terminology, aligned captions, generated visuals, structured planning,
+            review, repair, and final video assembly working together across episodes.
+          </p>
+
+          <div class="project-links">
+            <a class="button-secondary" href="examples.html#chemistry-tv">View Showcase</a>
+            <a class="button-secondary" href="https://youtu.be/JVOCWGbnlB0" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-tag">Earlier long-form milestone</div>
 
           <a
             href="https://youtu.be/GmUZ5xlt5rM?si=JltPlhY9VXOmEA3J"
@@ -957,7 +1140,7 @@
             aria-label="Watch The Snow Queen on YouTube"
           >
             <img
-              src="/assets/images/The Snow Queen thumbnail semifinalist.png"
+              src="assets/images/The Snow Queen thumbnail semifinalist.png"
               alt="The Snow Queen thumbnail with semifinalist recognition"
               class="project-image engineering-project-media"
               width="1280"
@@ -968,12 +1151,12 @@
           </a>
 
           <h3>The Snow Queen</h3>
-          <p class="project-meta">Long-form showcase — Semifinalist recognition</p>
+          <p class="project-meta">Long-form execution - Semifinalist recognition</p>
 
           <p>
-            The strongest flagship example of TowleVision Studio as a complete system. It highlights end-to-end workflow
-            execution across narration, captioning, story planning, image generation, pacing, and final assembly,
-            while also carrying external recognition as a semifinalist.
+            An earlier long-form milestone demonstrating end-to-end execution across narration,
+            captioning, story planning, image generation, pacing, and final assembly, with external
+            semifinalist recognition.
           </p>
 
           <div class="project-links">
@@ -983,110 +1166,52 @@
         </article>
 
         <article class="project-card">
-          <div class="project-tag">Supporting output</div>
+          <div class="project-tag">Older representative outputs</div>
 
-          <a
-            href="https://youtu.be/UwoIeYWsClg?si=gxT_jjgktKGmJiMM"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Watch Lord of the Flies Summary on YouTube"
-          >
-            <img
-              src="/assets/images/Lord of the Flies in 10 minutes summary yt thumbnail.png"
-              alt="Lord of the Flies Summary YouTube thumbnail"
-              class="project-image engineering-project-media"
-              width="1280"
-              height="720"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
+          <img
+            src="assets/images/services/shorts-pack-source-to-five-shorts.webp"
+            alt="One finished source production becoming five captioned vertical shorts"
+            class="project-image engineering-project-media"
+            width="1600"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
 
-          <h3>Lord of the Flies Summary</h3>
-          <p class="project-meta">Educational summary pipeline output</p>
+          <h3>Educational and Format Work</h3>
+          <p class="project-meta">Literary summaries and source-to-shorts adaptation</p>
 
           <p>
-            A strong example of turning complex source material into structured, accessible output through narration,
-            visuals, pacing, and caption-supported presentation.
+            Lord of the Flies, Beowulf, and source-to-shorts work remain examples of applying
+            narration, captions, visual pacing, and format-aware delivery to different source
+            materials.
           </p>
 
           <div class="project-links">
-            <a class="button-secondary" href="https://youtu.be/UwoIeYWsClg?si=gxT_jjgktKGmJiMM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-tag">Supporting output</div>
-
-          <a
-            href="https://youtu.be/KWygXvIJbmA?si=1fya8JQXKrl7F7C2"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Watch Beowulf Summary on YouTube"
-          >
-            <img
-              src="/assets/images/beowulf summary youtube thumbnail.png"
-              alt="Beowulf Summary YouTube thumbnail"
-              class="project-image engineering-project-media"
-              width="1280"
-              height="720"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-
-          <h3>Beowulf Summary</h3>
-          <p class="project-meta">Classic text adapted through the platform</p>
-
-          <p>
-            Demonstrates flexibility across different literary source material while preserving coherent delivery,
-            visual pacing, and polished finished presentation.
-          </p>
-
-          <div class="project-links">
-            <a class="button-secondary" href="https://youtu.be/KWygXvIJbmA?si=1fya8JQXKrl7F7C2" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+            <a class="button-secondary" href="examples.html#creative-technical-range">Creative / Literary Work</a>
+            <a class="button-secondary" href="services/shorts-pack.html#demo">Source-to-Shorts Demo</a>
           </div>
         </article>
       </div>
 
-      <p class="section-intro" style="margin-top: 1rem;">
-        Beyond TowleVision Studio, the broader software portfolio includes applied tools in air-quality
-        reporting, backup and version-control workflows, computer vision, web data extraction, and
-        scientific and technical machine learning.
-      </p>
-
-      <div class="grid grid-2" style="margin-top: 1rem;">
-        <article class="project-card">
-          <div class="project-tag">Secondary technical project</div>
-          <h3>AQI Informer</h3>
-          <p class="project-meta">Python data integration and user-facing utility</p>
-          <p>
-            A Python application for monitoring local air quality through API-backed data retrieval, transformation,
-            and visualization. Included here as evidence of practical, user-facing software development beyond TowleVision Studio.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <div class="project-tag">Secondary technical project</div>
-          <h3>Mushroom Detection App</h3>
-          <p class="project-meta">Computer vision, Android interface, applied ML prototype</p>
-          <p>A computer vision Android app experiment focused on mushroom image recognition and classification-style workflows. Not intended for food-safety, medical, or foraging decisions.</p>
-        </article>
-      </div>
-
-      <div class="grid grid-2" style="margin-top: 1rem;">
-        <article class="project-card">
-          <div class="project-tag">Research tooling</div>
-          <h3>Kannapedia Webscraper</h3>
-          <p class="project-meta">Web data extraction, structured datasets, Python tooling</p>
-          <p>A web data extraction tool built to collect and organize structured information from Kannapedia-style cannabis strain and chemotype resources for research and analysis workflows.</p>
-        </article>
-        <article class="project-card">
-          <div class="project-tag">Applied data science</div>
-          <h3>Cannabis Chemotype ML Model</h3>
-          <p class="project-meta">PyTorch, TensorFlow, scientific and technical modeling</p>
-          <p>A research-oriented machine learning project exploring cannabis chemotype classification from structured chemical profile data. It is not presented as medically, diagnostically, clinically, or legally validated.</p>
-        </article>
+      <div
+        class="media-lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="engineering-lightbox-title"
+        aria-describedby="engineering-lightbox-caption"
+        data-media-lightbox-dialog
+        hidden
+      >
+        <div class="media-lightbox__panel">
+          <div class="media-lightbox__header">
+            <h2 class="media-lightbox__title" id="engineering-lightbox-title" data-media-lightbox-title>TowleVision Studio interface</h2>
+            <button class="media-lightbox__close" type="button" data-media-lightbox-close aria-label="Close image viewer">Close</button>
+          </div>
+          <img class="media-lightbox__image" src="assets/images/chemistry-tv/final-cli.webp" alt="" width="1549" height="1003" loading="lazy" decoding="async" data-media-lightbox-image />
+          <p class="media-lightbox__caption" id="engineering-lightbox-caption" data-media-lightbox-caption></p>
+          <a class="media-lightbox__full" href="assets/images/chemistry-tv/final-cli.webp" target="_blank" rel="noopener noreferrer" data-media-lightbox-full>Open full-size image</a>
+        </div>
       </div>
     </section>
 
