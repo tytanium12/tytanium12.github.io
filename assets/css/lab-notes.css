@@ -1,0 +1,303 @@
+/* TowleVision Lab Notes - publication-specific styles.
+   Shared TowleVision header/footer behavior remains in media.css. */
+
+:root {
+  --bg: #071321;
+  --panel: #10223a;
+  --panel-soft: #0c1b2e;
+  --text: #e8eff8;
+  --muted: #a7b8cb;
+  --accent: #58c4dd;
+  --accent-2: #7fe4b0;
+  --line: rgba(120, 167, 214, 0.22);
+  --radius: 20px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  --max-width: 1180px;
+  --article-width: 760px;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(88, 196, 221, 0.10), transparent 32rem),
+    linear-gradient(180deg, #071321 0%, #081827 45%, #06111d 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-2); }
+img { max-width: 100%; }
+
+.lab-shell {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+}
+
+.lab-hero {
+  padding: clamp(3.5rem, 8vw, 7rem) 0 3rem;
+}
+
+.lab-eyebrow,
+.lab-kicker {
+  margin: 0 0 0.75rem;
+  color: var(--accent-2);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lab-eyebrow {
+  font-size: 0.98rem;
+  letter-spacing: 0.135em;
+}
+
+.lab-kicker {
+  font-size: 0.82rem;
+}
+
+.lab-hero h1,
+.lab-article-header h1 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 5.25rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.lab-hero__lead,
+.lab-article-dek {
+  max-width: 760px;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+}
+
+.lab-definition {
+  max-width: 850px;
+  margin: 0 0 3.5rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid rgba(127, 228, 176, 0.22);
+  border-radius: 16px;
+  background: rgba(127, 228, 176, 0.055);
+  color: var(--muted);
+}
+
+.lab-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 4rem;
+}
+
+.lab-note-card {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(21, 39, 63, 0.94), rgba(12, 27, 45, 0.98));
+  box-shadow: var(--shadow);
+}
+
+.lab-note-card--pending {
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.lab-note-card h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.lab-note-card p { margin: 0; color: var(--muted); }
+
+.lab-note-card--featured {
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.lab-note-card__image-link {
+  display: block;
+  min-height: 100%;
+  overflow: hidden;
+  background: #02070d;
+}
+
+.lab-note-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 15rem;
+  object-fit: cover;
+}
+
+.lab-note-card__content {
+  display: grid;
+  align-content: center;
+  gap: 0.7rem;
+  padding: 1.35rem;
+}
+
+.lab-note-card__content h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.lab-note-card__content h2 a:hover {
+  color: var(--accent-2);
+}
+
+.lab-note-card__read {
+  font-weight: 800;
+}
+
+.lab-note-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.lab-future-signup {
+  margin: 3.5rem 0 5rem;
+  padding: 1.35rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.lab-future-signup h2 { margin-top: 0; }
+.lab-future-signup p { max-width: 680px; margin-bottom: 0; color: var(--muted); }
+
+.lab-article-header {
+  width: min(100% - 2rem, var(--article-width));
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 6.5rem) 0 2rem;
+}
+
+.lab-article-header h1 { max-width: 24ch; }
+
+.lab-article-hero {
+  width: min(100% - 2rem, 1040px);
+  margin: 0 auto 2.5rem;
+}
+
+.lab-article-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-soft);
+  box-shadow: var(--shadow);
+}
+
+.lab-article-body {
+  width: min(100% - 2rem, var(--article-width));
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  font-size: 1.07rem;
+}
+
+.lab-article-body > :first-child { margin-top: 0; }
+
+.lab-article-body h2,
+.lab-article-body h3 {
+  margin-top: 2.5em;
+  line-height: 1.2;
+}
+
+.lab-article-body h2 { font-size: clamp(1.55rem, 3vw, 2.1rem); }
+.lab-article-body h3 { font-size: clamp(1.25rem, 2.5vw, 1.55rem); }
+
+.lab-article-body p,
+.lab-article-body ul,
+.lab-article-body ol,
+.lab-article-body blockquote,
+.lab-article-body pre,
+.lab-article-body figure { margin: 1.25rem 0; }
+
+.lab-article-body blockquote {
+  padding: 0.25rem 0 0.25rem 1.2rem;
+  border-left: 3px solid var(--accent-2);
+  color: var(--muted);
+}
+
+.lab-article-body pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #02070d;
+}
+
+.lab-article-body code {
+  font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.93em;
+}
+
+.lab-article-body :not(pre) > code {
+  padding: 0.12em 0.35em;
+  border-radius: 6px;
+  background: rgba(88, 196, 221, 0.09);
+}
+
+.lab-article-body figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.lab-article-body figcaption {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.lab-back {
+  width: min(100% - 2rem, var(--article-width));
+  margin: 0 auto;
+  padding: 1rem 0 4rem;
+  border-top: 1px solid var(--line);
+}
+
+.lab-template-note {
+  padding: 1rem;
+  border: 1px dashed var(--accent);
+  border-radius: 14px;
+  color: var(--muted);
+}
+
+.site-footer {
+  width: min(100% - 2rem, var(--max-width));
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 760px) {
+  .lab-hero { padding-top: 2.5rem; }
+  .lab-note-card { padding: 1rem; }
+
+  .lab-note-card--featured {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .lab-note-card__image {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .lab-note-card__content {
+    padding: 1rem;
+  }
+}
