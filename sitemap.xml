@@ -60,4 +60,19 @@
   <url>
     <loc>https://towlevision.com/lab-notes/overengineered-space-heater/</loc>
   </url>
+  <url>
+    <loc>https://towlevision.com/research/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://towlevision.com/research/crypto/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://towlevision.com/research/crypto/packet-001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
