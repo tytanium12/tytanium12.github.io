@@ -14,6 +14,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/towle-therapeutics.css?v=1">
 <script defer src="assets/js/site.js"></script>
+<style>.form-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}.form-status[data-state="success"]{color:#13643b;font-weight:700}.form-status[data-state="error"]{color:#9b2431;font-weight:700}.form-status[data-state="pending"]{color:#245c70}</style>
 </head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="header-inner">
@@ -23,10 +24,12 @@
 <nav id="primary-nav" class="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="process.html">How It Works</a><a href="research.html">Research</a><a href="inquiry.html" aria-current="page">Get Started</a></nav>
 </div></header>
 <main id="main"><section class="page-hero"><div class="wrap narrow"><p class="eyebrow light">GET STARTED</p><h1>Tell us about your research question.</h1><p>Initial inquiry is free. The first paid scientific consultation is $100. No additional research work begins without your approval.</p></div></section>
-<section class="section wrap inquiry-grid"><div class="inquiry-intro"><h2>Start with the science.</h2><p>Use the brief questionnaire to prepare a structured email inquiry. No account is required, and this website does not transmit your answers to a backend database.</p><div class="notice"><strong>Nonconfidential information only.</strong> Please do not send proprietary structures, unpublished drug candidates, protected datasets, or sensitive institutional materials before we agree on a secure transfer method.</div>
+<section class="section wrap inquiry-grid"><div class="inquiry-intro"><h2>Start with the science.</h2><p>Use this form to send a nonconfidential research inquiry directly. Submissions are processed by Web3Forms, a third-party form service, and forwarded to our business email. No account is required.</p><div class="notice"><strong>Nonconfidential information only.</strong> Please do not send proprietary structures, unpublished drug candidates, protected datasets, or sensitive institutional materials before we agree on a secure transfer method.</div>
 <h3>What happens next?</h3><ol><li>We review the inquiry for fit.</li><li>We arrange a $100 initial scientific consultation.</li><li>You receive a scoped estimate before any further paid work.</li></ol><p>Prefer a direct message? <a href="mailto:contact@towlevision.com">contact@towlevision.com</a></p></div>
-<form class="inquiry-form" id="research-inquiry" autocomplete="on" method="post" novalidate>
-<noscript><p class="notice">The structured inquiry requires JavaScript. Please send a nonconfidential description using <a href="mailto:contact@towlevision.com">email instead</a>.</p></noscript>
+<form class="inquiry-form" id="research-inquiry" autocomplete="on" action="https://api.web3forms.com/submit" method="post">
+<input type="hidden" name="access_key" value="6b4d5884-2b27-45e0-8c2e-12023e73dbb8">
+<label class="form-honeypot" aria-hidden="true">Leave this field blank<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
+<noscript><p class="notice">For the inline confirmation experience, enable JavaScript. Otherwise this form uses the provider submission page, or send a nonconfidential description using <a href="mailto:contact@towlevision.com">email instead</a>.</p></noscript>
 <h2>Research inquiry</h2><p class="muted">Fields marked * are required.</p>
 <div class="form-row"><label for="name">Full name *</label><input id="name" name="name" required maxlength="100" autocomplete="name" placeholder="Your name"></div>
 <div class="form-row"><label for="email">Email address *</label><input id="email" name="email" type="email" required maxlength="140" autocomplete="email" placeholder="you@institution.edu"></div>
@@ -41,9 +44,9 @@
 <div class="form-row"><label for="budget">Approximate budget</label><select id="budget" name="budget"><option value="">Not decided</option><option>Under $250</option><option>$250–$500</option><option>$500–$1,000</option><option>$1,000–$2,500</option><option>$2,500–$5,000</option><option>Over $5,000</option></select></div></div>
 <div class="form-row"><label for="restrictions">Confidentiality or external-compute restrictions</label><textarea id="restrictions" name="restrictions" rows="2" maxlength="400" placeholder="Describe restrictions generally; no confidential details."></textarea></div>
 <label class="consent"><input type="checkbox" name="safe" required> I understand this initial inquiry is nonconfidential and will not include proprietary research files. *</label>
-<div class="form-actions"><button class="btn btn-primary" type="submit">Prepare Email Inquiry →</button><button class="btn btn-quiet" type="button" id="copy-inquiry" disabled>Copy Inquiry Text</button></div>
-<div role="status" class="form-status" id="inquiry-status" aria-live="polite">Submitting opens your email application for review before sending. The message is not sent automatically.</div>
-<p class="fine-print">If your email application is not configured, use “Copy Inquiry Text” and paste it into an email to <a href="mailto:contact@towlevision.com">contact@towlevision.com</a>. You may also use the <a href="https://tally.so/r/ODKx2R?service=computational-chemistry&amp;source_page=towle-therapeutics" target="_blank" rel="noopener noreferrer">existing TowleVision inquiry form ↗</a>.</p>
+<div class="form-actions"><button class="btn btn-primary" type="submit">Submit Research Inquiry →</button></div>
+<div role="status" class="form-status" id="inquiry-status" aria-live="polite">The form submits to Web3Forms and shows a confirmation once accepted. Please do not include confidential research materials.</div>
+<p class="fine-print">Prefer email instead? Send a nonconfidential summary to <a href="mailto:contact@towlevision.com">contact@towlevision.com</a>. You may also use the <a href="https://tally.so/r/ODKx2R?service=computational-chemistry&amp;source_page=towle-therapeutics" target="_blank" rel="noopener noreferrer">existing TowleVision inquiry form ↗</a>.</p>
 </form></section></main>
 <footer class="site-footer"><div class="wrap footer-grid"><div><a class="footer-title" href="index.html">Towle Therapeutics</a>
 <p>Independent computational chemistry consulting led by Tyrell R. Towle, PhD.</p>
